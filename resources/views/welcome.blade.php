@@ -13,12 +13,12 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
-                color: #636b6f;
+                background-color: #999;
+                color: black;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
                 height: 100vh;
-                margin: 0;
+                margin: 100px 50px;
             }
 
             .full-height {
@@ -58,6 +58,16 @@
                 text-decoration: none;
                 text-transform: uppercase;
             }
+            .writing {
+                padding: 0 50px;
+                color: black;
+                font-size: 20px;
+                font-weight: bold;
+            }
+            .flex {
+                display: flex;
+                justify-content: space-around;
+            }
 
             .m-b-md {
                 margin-bottom: 30px;
@@ -80,11 +90,40 @@
             <div class="content">
                 <div class="title m-b-md">
                     A Blog Code Diary with Laravel
-                    <h4>R1D19 #100daysofcode</h4>
                 </div>
+                <div>
+                    <h3><i>Read, code, and write with me.</i></h3>
+                </div>
+                <div class="flex">
+                    <h1>July 9, 2018 21:00</h1>
+                    <h1>R1D1 #100daysofcode</h1>
+                </div>
+                    
+                <div class="writing">
+                    <p>Distractions play their role well. I suppose that goes without saying. But on further examination, what manifests deeper inside, begs curiosity. 
 
-                <div class="links">
-                    When dark cold nights are no longer silent, and growing whispers pierce through the fragile veil of peace, the townsfolk hide away. Soft cold snow fell indecisively only to be broken and pressed under the freshly forged adamantite boots founding the knight’s armor set. Hanging scantily clad from his waist were two bastard swords nearly long enough to make trails in the fresh snow and craft their own impression. Their adorning sheaths were worn, matching the wear on the exposed hilts. He wore no banner on his heavily scratched breastplate. Behind him flowed a long nightmarish cloak, dragging along the floor as he walked, engulfing darkness with the depth and glare of an infinite abyss. His presence was commanding as each step resonated creating a surrounding aura of immobilizing fear around him. Each step, each metal clink shattered the glass thin grasp that solace was still upon them. His movements echoed like imploding spheres of force waves. When finally he arrived. A hopeful fire crackled before him. The fire burning in his eyes dashed around at the circle of men before him. He clasped his hands together as a sharp clang from the gauntlets echoed through the darkness. He spoke: “Let no man bear burden so undesired. Let no unjustified tyrant bear reign upon you. And let not any such king, man, or God cast down ill will without consequence. Heed forth gentlemen, tread lightly. A new dawn of chaos is upon us. Embrace yourselves and one another for the night will rain crimson, and the morning rot in decay. But in the light of mornings to come, each rising day, each new victor championing a red stained sword of justice, will be born a new guild of well-bred weathered men from whom will rise a new nation. History may be unforgiving, but we will not be forgotten. Cry loud and let your swords ring even louder for into the abyss do we march tonight.”
+                    A lot of the ‘swirling chaos’ has faded, or subsided, at least to some degree. While on another, it seems to have only lessened in magnitude, interwoven between distractions that dance in the air. Oblivious to sensation, but obvious to the curious mind. The frequency, the resonation are all very much the same, but the storm itself somehow feels hidden. The intensity holds steadfast, but there is no trace in its passing. 
+
+                    Far fewer pieces fly about destructively, less thoughts turmoil and cloud reality. And yet a very distinct haze still remains. Uncertainty still rings loudly, layered atop the fragile silence. 
+
+                    The piercing void echoes into the past. </p>
+
+
+                    <p> I stand knee deep in this swampy morass, covered in a dense, disillusioning fog. And yet in the distance, I can see, or perhaps imagine, mountaintops, and ravines. 
+
+                    The air is cold but there is no breeze. However warmth is more than fathomable. It is beyond a construct of imagination, yet its existence is still questionable. 
+
+                    I close my eyes and try to ‘feel’ outward. To document with my mind and senses the reality that I’m currently experiencing and facing. But all I hear is silence. All I feel is nothing. 
+
+                    I close my eyes harder, focus more intently, open my soul more honestly. </p>
+
+
+                    <p>I might’ve imagined that a breeze washed across my face. Some cold gentle hand that for a moment felt soothing.</p>
+
+                    <p>My eyes snapped open and the sorrowful swamp was but a knee high meadow. The fog but a light dusky haze, the sun barely breaking the horizon. And yet... the same empty feeling remained. This hidden void lingered. </p> 
+
+
+                    <p>I sighed and trekked forward through the swampy meadow of shackles towards the mountains. </p>
                 </div>
             </div>
         </div>
