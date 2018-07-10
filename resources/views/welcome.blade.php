@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>A Blog Code Diary</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -18,11 +18,11 @@
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
                 height: 100vh;
-                margin: 100px 50px;
+                margin: 10px 50px;
             }
 
             .full-height {
-                height: 100vh;
+                height: 20px;
             }
 
             .flex-center {
@@ -46,7 +46,7 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 50px;
             }
 
             .links > a {
@@ -59,7 +59,6 @@
                 text-transform: uppercase;
             }
             .writing {
-                padding: 0 50px;
                 color: black;
                 font-size: 20px;
                 font-weight: bold;
@@ -72,21 +71,36 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+            @media only screen 
+                and (min-device-width : 375px) 
+                and (max-device-width : 667px) 
+                and (orientation : portrait) { 
+                    .flex, .flex-center { 
+                        display: block;
+                        justify-content: space-between; }
+                    html,body {
+                        margin: 10px;
+                    }
+                    .top-right {
+                        right: -100px;
+                    }
+                    .full-height {
+                        height:50px;
+                        width: 75%;
+                    }
+                }
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
+        <div class="flex-center position-ref full-height m-b-md">
                 <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
+                        <a href="#">Home</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Code</a>
+                        <a href="#">Diary</a>
                 </div>
-            @endif
-
+        </div>
+        <div>
             <div class="content">
                 <div class="title m-b-md">
                     A Blog Code Diary with Laravel
@@ -95,11 +109,11 @@
                     <h3><i>Read, code, and write with me.</i></h3>
                 </div>
                 <div class="flex">
-                    <h1>July 9, 2018 21:00</h1>
-                    <h1>R1D1 #100daysofcode</h1>
+                    <h2>July 9, 2018 21:00</h2>
+                    <h2>R1D1 #100daysofcode</h2>
                 </div>
                     
-                <div class="writing">
+                <div class="writing m-b-md">
                     <p>Distractions play their role well. I suppose that goes without saying. But on further examination, what manifests deeper inside, begs curiosity. 
 
                     A lot of the ‘swirling chaos’ has faded, or subsided, at least to some degree. While on another, it seems to have only lessened in magnitude, interwoven between distractions that dance in the air. Oblivious to sensation, but obvious to the curious mind. The frequency, the resonation are all very much the same, but the storm itself somehow feels hidden. The intensity holds steadfast, but there is no trace in its passing. 
