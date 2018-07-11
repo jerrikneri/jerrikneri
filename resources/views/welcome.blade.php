@@ -43,6 +43,8 @@
 
             .content {
                 text-align: center;
+                background-color: white;
+                padding: 10px;
             }
 
             .title {
@@ -108,12 +110,42 @@
                 <div>
                     <h3><i>Read, code, and write with me.</i></h3>
                 </div>
+
+                <div class="flex">
+                    <h2>July 10, 2018 23:30</h2>
+                    <h2>R1D2 #100daysofcode</h2>
+                </div>
+                    
+                <div class="writing m-b-md">
+                    <h3>Sometimes</h3>
+                    <p>
+                        Sometimes the world seems so much heavier than it really is. And sometimes, there are what seem initially, life changing realizations, that either later play out to be false hope, temporary reliefs, or potential opportunities that maybe have just lacked the required effort and attention. 
+                    </p>
+                    <p>
+                        In a world of perspective and supposed infinite possibilities, the possibilities themselves incite inaction. Impulsive and yet frozen in indecision, everything continues to fly by. Sometimes... well sometimes things fall into place and other times not. 
+                    </p>
+                    <p>
+                        But fascination and curiosity as it may seem, makes everything manageable... sometimes. 
+                    </p>
+                    <p>
+                        And other times the rain falls harder than anticipated or that one strike of lightning hits closer to home than comfort would have it,
+                        But as luck might have it, even though desire would not, the world continues to spin majestically, too proud to admit, and too loyal to do otherwise. 
+                    </p>
+                    <p>
+                        And although what may seemingly only be strings of cliches tied nonsensically together, the harmonious tandem of each makes sense. 
+                        Sometimes...
+                    </p>
+                </div>
+
+                <hr>
+
                 <div class="flex">
                     <h2>July 9, 2018 21:00</h2>
                     <h2>R1D1 #100daysofcode</h2>
                 </div>
                     
                 <div class="writing m-b-md">
+                    <h3>Distractions</h3>
                     <p>Distractions play their role well. I suppose that goes without saying. But on further examination, what manifests deeper inside, begs curiosity. 
 
                     A lot of the ‘swirling chaos’ has faded, or subsided, at least to some degree. While on another, it seems to have only lessened in magnitude, interwoven between distractions that dance in the air. Oblivious to sensation, but obvious to the curious mind. The frequency, the resonation are all very much the same, but the storm itself somehow feels hidden. The intensity holds steadfast, but there is no trace in its passing. 
@@ -139,6 +171,7 @@
 
                     <p>I sighed and trekked forward through the swampy meadow of shackles towards the mountains. </p>
                 </div>
+                
             </div>
         </div>
     </body>
