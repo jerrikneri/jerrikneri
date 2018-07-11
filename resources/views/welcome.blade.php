@@ -84,7 +84,7 @@
                         margin: 10px;
                     }
                     .top-right {
-                        right: -100px;
+                        right: -104px;
                     }
                     .full-height {
                         height:50px;
