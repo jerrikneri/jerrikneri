@@ -96,7 +96,7 @@
     <body>
         <div class="flex-center position-ref full-height m-b-md">
                 <div class="top-right links">
-                        <a href="#">Home</a>
+                        <a href="#">About</a>
                         <a href="#">Blog</a>
                         <a href="#">Code</a>
                         <a href="#">Diary</a>
@@ -117,7 +117,7 @@
                 </div>
                     
                 <div class="writing m-b-md">
-                    <h3>Sometimes</h3>
+                    <h3>Sometimes (DIARY)</h3>
                     <p>
                         Sometimes the world seems so much heavier than it really is. And sometimes, there are what seem initially, life changing realizations, that either later play out to be false hope, temporary reliefs, or potential opportunities that maybe have just lacked the required effort and attention. 
                     </p>
@@ -145,7 +145,7 @@
                 </div>
                     
                 <div class="writing m-b-md">
-                    <h3>Distractions</h3>
+                    <h3>Distractions (DIARY)</h3>
                     <p>Distractions play their role well. I suppose that goes without saying. But on further examination, what manifests deeper inside, begs curiosity. 
 
                     A lot of the ‘swirling chaos’ has faded, or subsided, at least to some degree. While on another, it seems to have only lessened in magnitude, interwoven between distractions that dance in the air. Oblivious to sensation, but obvious to the curious mind. The frequency, the resonation are all very much the same, but the storm itself somehow feels hidden. The intensity holds steadfast, but there is no trace in its passing. 
