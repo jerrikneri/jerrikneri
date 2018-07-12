@@ -28,7 +28,7 @@
             .flex-center {
                 align-items: center;
                 display: flex;
-                justify-content: center;
+                justify-content: space-between;
             }
 
             .position-ref {
@@ -96,10 +96,11 @@
     <body>
         <div class="flex-center position-ref full-height m-b-md">
                 <div class="top-right links">
-                        <a href="#">About</a>
+                        <a href="#">About Me</a>
                         <a href="#">Blog</a>
                         <a href="#">Code</a>
                         <a href="#">Diary</a>
+                        <a href="#">Epitome</a>
                 </div>
         </div>
         <div>
@@ -110,6 +111,60 @@
                 <div>
                     <h3><i>Read, code, and write with me.</i></h3>
                 </div>
+                
+                <div class="flex">
+                    <h2>July 11, 2018 21:00</h2>
+                    <h2>R1D3 #100daysofcode</h2>
+                </div>
+                    
+                <div class="writing m-b-md">
+                    <h3>Filtered, rampant, 15 minute thoughts. (DIARY)</h3>
+                    <p>
+                        Happy Slurpy Day.
+                    </p>
+                    <p>
+                        It’s July 11 aka 7-11 aka free slurpies. This is most certainly going to be a filtered recollection of the day, past days, or what have you, because I know beforehand I’ll be posting this on my site for the 3rd day of my 100 day challenge. So bear with the awkward erm... words as I search for appropriate ways to let manifest what I’ve been feeling, thinking, living?
+                    </p>
+                    <p>
+                        It’s a Wednesday. So hump day... I can hear my internal voice withering and cringing at all these half-assed attempts to try to sound appropriate.
+                    </p>
+                    <p>
+                        I suppose as the veil continues to fall or exposure becomes more consistent and natural, all of this, this whole internal voice, the overwhelming consciousness and hesitation, will all slowly resolve into some new formation of a voice. An online voice perhaps?
+                    </p>
+                    <p>
+                        Who knows, but write I shall in spite of all the preconceived judgment I’m anticipating whether wholly from myself, or the rogue internet visitors what have you.
+                    </p>
+                    <p>
+                        So welcome, welcome, come one come all and listen to the journey that I may profess.
+                    <p>
+                        Ok words. Too many lame words that may or may not be naturally used. Is it a facade, or is it this internal voice I keep claiming to be building.
+                    </p>
+                    <p>
+                        Bear with me as I bounce around between trivial and... less trivial thoughts and tones, and just... weird expressions.
+                    </p>
+                    <p>
+                        No longer can I proofread every single line, grammatically correct every sentence, and find an optimal aestheticism between each and every paragraph, word, and concept even. I’m trying... to spill out my thoughts as they may come, freely, while also being wary of the lack of privacy this document shall hold.
+                    </p>
+                    <p>
+                        Fear not friend, for eventually we’ll get there. You need not continue to read my ramblings should interest not arise, but eventually my daily outings, thoughts, casual emotions and feelings will spill out onto this parchment.... Digital parchment that is. We’re building. We’ll get there, as time shall uncontrollably pass, comfort shall... settle in?
+                    </p>
+                    <p>
+                        So on another note, and completely different tone, perspective, personality. Kaizen. It’s a Japanese word that at least from what I’ve read in articles, is best analogous to the idea 10,000 hours for mastery. Essentially any task, skill, goal, dream can be accomplished when broken down into smaller, achievable, consistent goals. The whole premise of this 100 day code challenge is to stay accountable, while building and promoting habits to learn and get used to coding each and every day, whether it be for a mere 30 minutes to an hour at a time.
+                    </p>
+                    <p>
+                        Where motivation may fail or run thin, discipline will continue to carry you. While you may not be looking forward to setting forth with the small menial task for the day, if you have the discipline to do it anyway, the habit that.. transgresses (?) will be worth your while.
+                    </p>
+                    <p>
+                        So thats words... that describe in one way or another why I’m doing this. And I’ve always loved to write. It’s been my only creative expression. And now I’m helping create an outlet for that creativity, while building meaningful skills to advance in other aspects of life!
+                    </p>
+                    <p>
+                        So learn with me code with me read with me write with me. I’ll be here. :)
+                    </p>
+                </div>
+
+                <hr>
+
+
 
                 <div class="flex">
                     <h2>July 10, 2018 23:30</h2>
