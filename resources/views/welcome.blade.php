@@ -120,7 +120,7 @@
                 <div class="writing m-b-md">
                     <h3>Filtered, rampant, 15 minute thoughts. (DIARY)</h3>
                     <p>
-                        Happy Slurpy Day.
+                        Happy Slurpee Day.
                     </p>
                     <p>
                         It’s July 11 aka 7-11 aka free slurpies. This is most certainly going to be a filtered recollection of the day, past days, or what have you, because I know beforehand I’ll be posting this on my site for the 3rd day of my 100 day challenge. So bear with the awkward erm... words as I search for appropriate ways to let manifest what I’ve been feeling, thinking, living?
