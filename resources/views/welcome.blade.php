@@ -111,6 +111,52 @@
                 <div>
                     <h3><i>Read, code, and write with me.</i></h3>
                 </div>
+
+                <div class="flex">
+                    <h2>July 12, 2018 18:24</h2>
+                    <h2>R1D4 #100daysofcode</h2>
+                </div>
+                    
+                <div class="writing m-b-md">
+                    <h3>15 minute run ons (DIARY)</h3>
+                    <p>
+                        Themes and regurgitating information. Internally processing what this will probably be about, is what that line was meant to be...
+                    </p>
+                    <p>
+                        So lately, I think the reoccurring theme in my life, or actually, for the whole year of 2018, has been patience. I think God, life, the upper power - whatever you’d like to call it or label it as, has been recreating that lesson for me daily.
+                    </p>
+                    <p>
+                        Even with daily recognition, it still takes a daily reminder to humble yourself, realize what you can control, and let manifest the work you’ve put in thus far. Perhaps I grew up with an over arching theme or sense of being impulsive - always thinking I was going to be left behind by life, or that if I didn’t make the next life decision soon or quick enough, that it would deter me from better things. Constantly trying to min/max each path in my life and ironically shackling myself with indecision and inaction in the process. The countless options and opportunities when all presented before you create paralysis and are more than staggering.
+                    </p>
+                    <p>
+                        With all that said, patience. Letting things grow. Letting yourself grow. Letting things just simply be, for nothing other than the fact that it’s simply out of your reach or influence.
+                    </p>
+                    <p>
+                        I started this year with a couple of resolutions, some of which I’ve been able to maintain, and others which I’m still trying to redeem myself in. July being about the half-way point through the year, I suppose this writing is a good time to reflect on that.
+                    </p>
+                    <p>
+                        I intended to finish the #100daysofcode challenge, which I started about a month or two ago, and fell off on about 20 or so days in. I’ve now restarted and am on Day 4.
+                        I made it a goal to read at least one book each month. With the audiobooks and pdfs that I’ve been able to rent with a library card, I’ve probably tripled that. Some might argue that audiobooks aren’t really reading, or you don’t retain the information as well, and I would agree. Which is why I revisited a couple of the audiobooks again to listen for any information I might’ve missed the first time around.
+                    </p>
+                    <p>
+                        Through that course of seeking new information a lot of great things happened. I developed a genuine hunger to read and learn more. I dedicate - on most days - at least an hour to reading something, coding, self-improvement, or even for entertainment. For better or for worse, I read Grain Brain and fell into some anti-carb blackhole and came out the other side a full-fledged Keto participant. The health benefits are amazing so far.
+                    </p>
+                    <p>
+                        And what I’ve taken away from the majority of books that I’ve read, which in many ways aren’t even related is a uniting theme - meditate. Setting the foundation for your mind to snowball positivity. Making your bed the first thing in the morning for that first win. Honing in on the idea that your mind can’t discern thought from reality - so visualizing your dreams and goals as well as the steps you need to take daily, weekly, monthly, and yearly to achieve them, is almost guaranteed to get you there.
+                    </p>
+                    <p>
+                        Along the way, there are distractions. There are always distractions. Video games, social media, and girls namely. But through outright discipline, and the building of genuinely positive and productive habits, shit gets done.
+                    </p>
+                    <p>
+                        I lost my train of thought, following the trail of breadcrumbs from all these tangents. But here I am, writing, professing, reflecting. Attempting to flow an open mind onto digital parchment.
+                    </p>
+                    <p>
+                        Happy Thursday fam. <333
+                    </p>
+                </div>
+
+                <hr>
+
                 
                 <div class="flex">
                     <h2>July 11, 2018 21:00</h2>
@@ -161,22 +207,22 @@
                         So learn with me code with me read with me write with me. I’ll be here. :)
                     </p>
                 </div>
-
+f
                 <hr>
+f
 
-
-
+f
                 <div class="flex">
                     <h2>July 10, 2018 23:30</h2>
-                    <h2>R1D2 #100daysofcode</h2>
+                    <h2f>R1D2 #100daysofcode</h2>
                 </div>
-                    
+                    f
                 <div class="writing m-b-md">
-                    <h3>Sometimes (DIARY)</h3>
+                    <h3f>Sometimes (DIARY)</h3>
                     <p>
-                        Sometimes the world seems so much heavier than it really is. And sometimes, there are what seem initially, life changing realizations, that either later play out to be false hope, temporary reliefs, or potential opportunities that maybe have just lacked the required effort and attention. 
+                       f Sometimes the world seems so much heavier than it really is. And sometimes, there are what seem initially, life changing realizations, that either later play out to be false hope, temporary reliefs, or potential opportunities that maybe have just lacked the required effort and attention. 
                     </p>
-                    <p>
+                    <p>f
                         In a world of perspective and supposed infinite possibilities, the possibilities themselves incite inaction. Impulsive and yet frozen in indecision, everything continues to fly by. Sometimes... well sometimes things fall into place and other times not. 
                     </p>
                     <p>
