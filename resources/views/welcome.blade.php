@@ -20,6 +20,9 @@
                 height: 100vh;
                 margin: 10px 50px;
             }
+            h3 {
+                text-align: center;
+            }
 
             .full-height {
                 height: 20px;
@@ -42,7 +45,7 @@
             }
 
             .content {
-                text-align: center;
+                text-align: left;
                 background-color: white;
                 padding: 10px;
             }
@@ -207,22 +210,19 @@
                         So learn with me code with me read with me write with me. I’ll be here. :)
                     </p>
                 </div>
-f
-                <hr>
-f
 
-f
+                <hr>
+
                 <div class="flex">
                     <h2>July 10, 2018 23:30</h2>
-                    <h2f>R1D2 #100daysofcode</h2>
+                    <h2>R1D2 #100daysofcode</h2>
                 </div>
-                    f
                 <div class="writing m-b-md">
-                    <h3f>Sometimes (DIARY)</h3>
+                    <h3>Sometimes (DIARY)</h3>
                     <p>
-                       f Sometimes the world seems so much heavier than it really is. And sometimes, there are what seem initially, life changing realizations, that either later play out to be false hope, temporary reliefs, or potential opportunities that maybe have just lacked the required effort and attention. 
+                        Sometimes the world seems so much heavier than it really is. And sometimes, there are what seem initially, li changing realizations, that either later play out to be false hope, temporary reliefs, or potential opportunities that maybe have just lacked the required effort and attention. 
                     </p>
-                    <p>f
+                    <p>
                         In a world of perspective and supposed infinite possibilities, the possibilities themselves incite inaction. Impulsive and yet frozen in indecision, everything continues to fly by. Sometimes... well sometimes things fall into place and other times not. 
                     </p>
                     <p>
