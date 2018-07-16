@@ -2,6 +2,8 @@
 
 @section('aboutContent')
   <div class="content">
-    about me
+    <div class="center">
+      <img src="" alt="">
+    </div>
   </div>
 @endsection
