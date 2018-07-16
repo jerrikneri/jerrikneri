@@ -17,7 +17,8 @@ Route::group(['middleware' => ['stripTags', 'monitorIp']], function () {
         'code',
         'diary',
         'epitome'
-    ];
+    ]
+};
 
 
 Route::get('/', 'HomeController@home');
