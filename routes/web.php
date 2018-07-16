@@ -10,16 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::group(['middleware' => ['stripTags', 'monitorIp']], function () {
-    $routes = [
-        'about',
-        'blog',
-        'code',
-        'diary',
-        'epitome'
-    ]
-};
-
 
 Route::get('/', 'HomeController@home');
 Route::get('/about', 'HomeController@about');
