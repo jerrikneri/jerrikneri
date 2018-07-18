@@ -1,6 +1,43 @@
 @extends('base')
 
 @section('diaryContent')
+
+
+<div class="content">
+<div class="flex">
+    <h2>July 17, 2018 21:00</h2>
+    <h2>R1D9 #100daysofcode</h2>
+</div> 
+<div class="writing m-b-md">
+    <h3>“Nothing changes if nothing changes.”</h3> 
+    <p>
+    There’s so many ways to dissect that quote. It’s applicable in a lot of different ways. I’m conflicted with how to interpret it, let alone apply it. I suppose depending on your views of destiny, how things play out, and just life in general it can be positive?
+    </p><p>
+    I’m a strong believer in holding true to who you are as a person. That alone has its troubles, as it becomes increasingly easy to make excuses for the type of person you are, and fall into some perpetual motion, or chain of blanket excuses to stay in your comfortable shell. On the other hand, I’m also a strong proponent that growth happens when you’re uncomfortable - at your edges and limits. Perhaps I’m picking and choosing the bits and pieces that give me positive affirmation, while ignoring the parts that disagree with my values, I can readily admit that that is a possibility. I don’t think anything falls into your lap, at least not anymore. I was naive and entitled enough at least at one point in my life to think that I deserved more without working harder for it. Caught in some incessant battle of comparisons with others, with blame placed only outwardly. I think working towards something continually, each day, eventually snowballing into visceral and measurable change can at one point seem like things fall into your lap.
+    </p><p>
+    “What got you here, won’t get you there.”
+    </p><p>
+    On the surface, it makes sense. But at what cost I suppose? Is it worth becoming someone who you’re not, to get what you wanted? Wherein between does passion wane, and your greed or pleasure or appreciation for things meet or clash? If destiny plays it’s part - depending on your own personal interpretation of that phenomenon - you could argue that the choices you make in between may not matter as much. But that’s not to say they don’t matter at all as they have a direct impact on the journey and quality of life, happiness, success - however you’d like to measure and gauge, label even, your metric of a good life.
+    </p><p>
+    I can personally say that I’ve held onto the crutch of being shy. That in one way or another, I tend to entrap myself in that bubble, limit myself even, because I see it as an attribute of what makes me, me. I’m mindful enough to realize that much, but naive enough to have not taken enough dutiful action on it thus far? 
+    </p><p>
+    On some deep internal reflection, I could look at this whole train of thought, even documenting these opinions as some self attempt to justify who I am and what I believe. Therein lies the ideas that sometimes thinking wholly just incites inaction or indecision. After angling a thought or perspective, you just come full circle. Geometrically, that makes sense right? If you ‘curve’ your box enough and attack your own thought process with enough angles... we’re drawing some analogous circle now.
+    </p><p>
+    I think change, or growth, or teeming on the limits of your boundaries, can be measured in different ways, more specifically, smaller units of... change? That’s a lot of confusing words in a round about manner to attempt to say that, I think a lot of the focus on changing and growing is too macro. You don’t become a new person over night. 
+    </p><p>
+    Kaizen.
+    </p><p>
+    There’s that word again. Google says:
+    </p><p>
+    “Kaizen, also known as continuous improvement, is a long-term approach to work that systematically seeks to achieve small, incremental changes in processes in order to improve efficiency and quality.”
+    </p><p>
+    So nothing changes if nothing changes, but if you’re making small micro changes each day, they’re not necessarily observable? I think these are all different angles of saying the same thing and these quotes are meant to be vague and interpreted, and maybe even incite a little bit of controversy.
+    </p><p>
+    I’m proud of who I am and the small steps I’m taking each day to work towards becoming a better person. I think that’s enough.
+    </p>
+    </div>
+</div>
+
 <div class="content">
 <div class="flex">
         <h2>July 16, 2018 23:00</h2>
