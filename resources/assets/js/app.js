@@ -1,5 +1,5 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
 
 Vue.use(VueRouter)
 
@@ -42,7 +42,7 @@ const router = new VueRouter({
     ],
 });
 
-new Vue({
+const app = new Vue({
     el: '#app',
     components: { Home, Blog, Code, Diary, Epitome },
     router,
