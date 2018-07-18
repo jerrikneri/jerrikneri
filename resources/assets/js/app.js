@@ -1,30 +1,49 @@
 import Vue from 'vue'
-// import VueRouter from 'vue-router'
+import VueRouter from 'vue-router'
 
-// Vue.use(VueRouter)
+Vue.use(VueRouter)
 
-import App from './components/App'
-// import Hello from './views/Hello'
-// import Home from './views/Home'
+import Home from './components/main/Home';
+import Blog from './components/blog/Blog';
+import Code from './components/code/Code';
+import Diary from './components/diary/Diary';
+import Epitome from './components/epitome/Epitome';
 
-// const router = new VueRouter({
-//     mode: 'history',
-//     routes: [
-//         {
-//             path: '/',
-//             name: 'home',
-//             component: Home
-//         },
-//         {
-//             path: '/hello',
-//             name: 'hello',
-//             component: Hello,
-//         },
-//     ],
-// });
+
+const router = new VueRouter({
+    mode: 'history',
+    routes: [
+        {
+            path: '/',
+            name: 'Home',
+            component: Home
+        },
+        {
+            path: '/blog',
+            name: 'Blog',
+            component: Blog
+        },
+        {
+            path: '/code',
+            name: 'Code',
+            component: Code
+        },
+        {
+            path: '/diary',
+            name: 'Diary',
+            component: Diary
+        },
+        {
+            path: '/epitome',
+            name: 'Epitome',
+            component: Epitome
+        }
+        
+    ],
+});
 
 new Vue({
     el: '#app',
-    components: { App },
-    // router,
+    components: { Home, Blog, Code, Diary, Epitome },
+    router,
 });

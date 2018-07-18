@@ -26,7 +26,7 @@
       @yield('epitomeContent', '')
 
       <div id="app">
-        <App></App>
+        <Home></Home>
       </div>
         
     </body>
