@@ -2,6 +2,42 @@
 
 @section('diaryContent')
 
+<div class="content">
+<div class="flex">
+    <h2>July 18, 2018 23:30</h2>
+    <h2>R1D10 #100daysofcode</h2>
+</div> 
+<div class="writing m-b-md">
+    <h3>Life is short.</h3> 
+    <p>
+    My heart dropped and the room froze to a still silence. Suddenly I was the only one standing in the room. The person before me held a powerful gravity. Silence rung. Time seemed to slow down. My breaths ran short. My heart sunk deeper and deeper. I felt either reality slipping away or crashing abruptly like a consuming wave. 
+    </p><p>
+    I couldn’t help but stare at his face - I was compelled to do so, locked in on the moment. I was trying to make sense of the situation. Reason something into why and what lay before me. I waited patiently and watched closely for movement. 
+    </p><p>
+    Nothing. Silence. 
+    </p><p>
+    Meanwhile, the room seemed to get heavier. The ceiling sinking closer to my face. The walls caving in to create a narrow passage.
+    </p><p>
+    I heard my breath echo. I felt my chest rise and fall. I waited for him to do the same.
+    </p><p>
+    Still nothing.
+    </p><p>
+    I felt empty. More empty than the body that lay before me. Reason and Logic shied away from the moment, failing to attribute any answers.
+    </p><p>
+    I was locked in some strange illusory trance. I couldn’t look away. His presence was pulling me closer, striking the chords of my curiosity, while baffling my mind and reason in the same instant.
+    </p><p>
+    Everything seemed to shrink and implode upon itself. I felt frozen, while the very environment around me seemed to collapse.
+    </p><p>
+    Then someone broke my gaze, and I gasped for breath. The aura of isolation surrounding me vanished. The phenomenon that was occurring right before me didn’t make any more sense. But that’s OK.
+    </p><p>
+    Life is short. Terminal. Full circle. Untimely.
+    </p><p>
+    “Ride safe bro.”
+    </p>
+    </div>
+</div>
+
+<hr>
 
 <div class="content">
 <div class="flex">
@@ -38,8 +74,10 @@
     </div>
 </div>
 
+<hr>
+
 <div class="content">
-<div class="flex">
+    <div class="flex">
         <h2>July 16, 2018 23:00</h2>
         <h2>R1D8 #100daysofcode</h2>
     </div>
@@ -78,9 +116,11 @@
             And it was beautiful in it’s own way.
         </p>
     </div>
+</div>
 
     <hr>
 
+<div class="content">
     <div class="flex">
         <h2>July 13, 2018 19:30</h2>
         <h2>R1D5 #100daysofcode</h2>
@@ -107,9 +147,11 @@
             Thanks fam.
         </p>
     </div>
+</div>
 
     <hr>
 
+<div class="content">
     <div class="flex">
         <h2>July 12, 2018 18:24</h2>
         <h2>R1D4 #100daysofcode</h2>
@@ -152,9 +194,11 @@
             Happy Thursday fam. <333
         </p>
     </div>
+</div>
 
     <hr>
 
+<div class="content">
     <div class="flex">
         <h2>July 11, 2018 21:00</h2>
         <h2>R1D3 #100daysofcode</h2>
@@ -203,9 +247,11 @@
             So learn with me code with me read with me write with me. I’ll be here. :)
         </p>
     </div>
+</div>
 
     <hr>
 
+<div class="content">
     <div class="flex">
         <h2>July 10, 2018 23:30</h2>
         <h2>R1D2 #100daysofcode</h2>
@@ -230,9 +276,11 @@
             Sometimes...
         </p>
     </div>
+</div>
 
     <hr>
 
+<div class="content">
     <div class="flex">
         <h2>July 9, 2018 21:00</h2>
         <h2>R1D1 #100daysofcode</h2>
@@ -265,6 +313,6 @@
 
         <p>I sighed and trekked forward through the swampy meadow of shackles towards the mountains. </p>
     </div>
-    
+</div>    
 </div>
 @endsection('diaryContent')

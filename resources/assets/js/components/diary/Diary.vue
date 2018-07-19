@@ -1,15 +1,18 @@
 <template>
-  <div class="content">
+  <div>
     
     <section v-for="entry in entries">
-      <div class="flex">
-        <h2>{{ entry.date }}</h2>
-        <h2>{{ entry.tag }}</h2>
+      <div class="content">
+        <div class="flex">
+          <h2>{{ entry.date }}</h2>
+          <h2>{{ entry.tag }}</h2>
+        </div>
+        <div class="writing m-b-md">
+          <h3>{{ entry.title }}</h3>
+          <p>{{ entry.content }}</p>
+        </div>
       </div>
-      <div class="writing m-b-md">
-        <h3>{{ entry.title }}</h3>
-        <p>{{ entry.content }}</p>
-      </div>
+      <hr>
     </section>
     
 
@@ -25,6 +28,37 @@ import Entry from './Entry';
   data () {
     return {
       entries: [
+        {
+          date: 'July 18, 2018 23:30',
+          tag: 'R1D10 #100daysofcode',
+          title: 'Life is short',
+          content: `
+  My heart dropped and the room froze to a still silence. Suddenly I was the only one standing in the room. The person before me held a powerful gravity. Silence rung. Time seemed to slow down. My breaths ran short. My heart sunk deeper and deeper. I felt either reality slipping away or crashing abruptly like a consuming wave. 
+
+I couldn’t help but stare at his face - I was compelled to do so, locked in on the moment. I was trying to make sense of the situation. Reason something into why and what lay before me. I waited patiently and watched closely for movement. 
+
+Nothing. Silence. 
+
+Meanwhile, the room seemed to get heavier. The ceiling sinking closer to my face. The walls caving in to create a narrow passage.
+
+I heard my breath echo. I felt my chest rise and fall. I waited for him to do the same.
+
+Still nothing.
+
+I felt empty. More empty than the body that lay before me. Reason and Logic shied away from the moment, failing to attribute any answers.
+
+I was locked in some strange illusory trance. I couldn’t look away. His presence was pulling me closer, striking the chords of my curiosity, while baffling my mind and reason in the same instant.
+
+Everything seemed to shrink and implode upon itself. I felt frozen, while the very environment around me seemed to collapse.
+
+Then someone broke my gaze, and I gasped for breath. The aura of isolation surrounding me vanished. The phenomenon that was occurring right before me didn’t make any more sense. But that’s OK.
+
+Life is short. Terminal. Full circle. Untimely.
+
+“Ride safe bro.”
+          `
+        },
+
         {
           date: 'July 17, 2018 21:00',
           tag: 'R1D9 #100daysofcode',
