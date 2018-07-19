@@ -1,15 +1,17 @@
 <template>
   <div>
     
-    <section v-for="entry in entries">
+    <section>
       <div class="content">
+        <h3>Latest Entry</h3>
         <div class="flex">
-          <h2>{{ entry.date }}</h2>
-          <h2>{{ entry.tag }}</h2>
+          <h2>{{ entries[0].date }}</h2>
+          <h2>{{ entries[0].tag }}</h2>
         </div>
         <div class="writing m-b-md">
-          <h3>{{ entry.title }}</h3>
-          <p>{{ entry.content }}</p>
+          
+          <h3>{{ entries[0].title }}</h3>
+          <p>{{ entries[0].content }}</p>
         </div>
       </div>
       <hr>
