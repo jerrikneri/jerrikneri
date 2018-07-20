@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <h3>Latest Project:</h3>
-    <img class="img-center" src="../../../img/ls.jpg" height="250px">
+    <img class="img-center" src="../../../../../public/images/ls.jpg" height="250px">
     <div class="writing m-b-md">
       <h3>Let's Split</h3>
       <ul class="text-center">
