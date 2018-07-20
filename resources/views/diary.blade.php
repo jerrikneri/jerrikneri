@@ -4,6 +4,45 @@
 
 <div class="content">
 <div class="flex">
+    <h2>July 19, 2018 17:00</h2>
+    <h2>R1D11 #100daysofcode</h2>
+</div> 
+<div class="writing m-b-md">
+    <h3>“Never compare yourself and your progress to anyone but yourself.”</h3> 
+    <p>
+    I’m proud to say that I’m learning to read a lot. I always liked to write creatively, but never found a passion or appreciation for reading. In fact, I always dreaded it. But through sheer discipline, some motivation, and a growing hunger to learn, I’ve found the beauty in setting time to read every day.
+    </p><p>
+    So from time to time, I might just try to reflect on the articles or book that I’ve read for the day and regurgitate it here to see if I really understand it. Or, to see what I really took from it and possibly how I can apply it or agree/disagree with it.
+    </p><p>
+    Here’s a quote from an article I read today:
+    </p><p>
+    “Never compare yourself and your progress to anyone but yourself.”
+    </p><p>
+    Like most advise and quotes, that’s much easier said than done. Comparison, I think is something that plagues everyone. It’s almost too natural not to do. As if envy is just seething in our veins, waiting to surface if we allow it or pay it too much attention.
+    </p><p>
+    I think it’s good to know where you stand in comparison to others. To be mindful in that sense. To not be overly oblivious to what’s happening around you, or what other people in your field or industry or circle of friends are doing. It’s good to have perspective and perhaps some sort of measurable metric? But once those metrics start to generate negative thoughts or make you feel less of a person and accomplished for what you’ve personally done, then it becomes detrimental. Suddenly your acknowledge of such is hindering. 
+    </p><p>
+    It’s far too easy to focus on what you don’t have, haven’t accomplished, or aren’t yet. I also think it’s easy to forget that we’re all unique individuals with our own unique paths. For each person, things happen at different times, in different ways, in different mediums. As much as our society tries to cling onto some sort of structure - which has to be necessary to some degree, for some shape and organization, right? - people inevitably will mold their own paths, and figure things out at their own pace. Being “asian” and not having finished college is more than shameful. It burdens me to this day to have to think about it, and continue to accept that. 
+    </p><p>
+    But why?
+    </p><p>
+    Culture? Tradition? Social precedence? I’m not less of a person because of that, and yet somewhere ingrained in my head, I’ve developed, acquired, the mindset that I am. That thought process can be and is paralyzing. It’s demoralizing. I can’t help but internally hang my head low when the discussion of college comes up. Or subconsciously try to over compensate with varying skill sets for the paper degree I haven’t accomplished.
+    </p><p>
+    It feels like trying to walk a straight line blindfolded versus trying to balance on a narrow plank suspended in the air. You can walk confidently in any which direction and not really know where you’re going. Or you can freeze in indecision and demoralization as you absorb how narrow you perceive your path to be and the height at which you’re trying to scale this path at - the more you look around and take in what’s around you, the less you feel like moving, the less you realize how far you’ve come, and the plank beneath you seems to shrink and narrow and your path to be journeyed, fade farther into the distance. 
+    </p><p>
+    Learning therefore to believe in yourself. Be mindful enough of who and what’s around you so that you’re not blindfolded, but focused enough that you realize the plank is on the ground, and all you have to do is believe in yourself and continue to inch forward.
+    </p><p>
+    That’s a lot of weird drawn out analogies for such a simple quote. It’s more than relevant for me in my life as I constantly remind myself to count my blessings and regale in my accomplishments. Dividing each task that needs to be done into millimeters of my plank walk.
+    </p><p>
+    I’m going to keep reading and believing in myself, and have faith that it will work itself out.
+    </p>
+    </div>
+</div>
+
+<hr>
+
+<div class="content">
+<div class="flex">
     <h2>July 18, 2018 23:30</h2>
     <h2>R1D10 #100daysofcode</h2>
 </div> 

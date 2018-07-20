@@ -1,4 +1,4 @@
-<div class="navbar flex-center"> 
+<!-- <div class="navbar flex-center"> 
   <div class="links">
     <a href="/">Home</a>
     <a href="/about">About Me</a>
@@ -7,12 +7,12 @@
     <a href="/diary">Diary</a>
     <a href="/epitome">Epitome</a>
   </div>
-</div>
-<div class="content head-title">
+</div> -->
+<!-- <div class="content head-title">
     <div class="title m-b-md">
         A Blog Code Diary
     </div>
     <div>
         <h3><i>Read, code, and write with me.</i></h3>
     </div>
-</div>
+</div> -->

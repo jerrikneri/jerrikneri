@@ -2,10 +2,14 @@
 <div>
   <div class="navbar flex-center"> 
     <div class="links">
-      <router-link class=""
+      <!-- <router-link class=""
       to="/">
       <span>Home</span>
     </router-link>
+    <router-link class=""
+      to="/about">
+      <span>About</span>
+    </router-link> -->
     <router-link class=""
       to="/blog">
       <span>Blog</span>

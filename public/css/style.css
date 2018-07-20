@@ -16,6 +16,14 @@ hr {
     border-top: 1px solid #999;
     padding: 0; 
 }
+ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: #636b6f;
+}
 
 .navbar {
   background-color: #999;
@@ -53,7 +61,7 @@ hr {
 }
 
 .content {
-  text-align: left;
+  text-align: center;
   background-color: white;
   padding: 50px;
 }
@@ -63,7 +71,7 @@ hr {
   font-size: 50px;
 }
 
-.links > a {
+.links > a  {
   color: #636b6f;
   padding: 0 25px;
   font-size: 12px;
@@ -73,6 +81,7 @@ hr {
   text-decoration: none;
   text-transform: uppercase;
 }
+
 .writing {
   color: black;
   font-size: 20px;
@@ -83,7 +92,31 @@ hr {
   display: flex;
   justify-content: space-around;
 }
-
+.flex-vue {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: stretch
+}
+.flex-vue-item {
+  border: 1px solid #999;
+  width: 33%;
+  height: 500px;
+  flex-grow: 1;
+}
+.ellipsis {
+  overflow: hidden;
+  white-space: normal;
+  height: 400px;
+}
+.img-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.text-center {
+  text-align: center;
+}
 .m-b-md {
   margin-bottom: 30px;
 }
@@ -96,6 +129,12 @@ hr {
           justify-content: space-between; }
       html,body {
           margin: 10px;
+      }
+      .flex-vue {
+        flex-direction: column;
+      }
+      .flex-vue-item {
+        width: 100%;
       }
       .top-right {
           right: -104px;

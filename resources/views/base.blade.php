@@ -16,7 +16,7 @@
     </head>
     @include('header')
     <body>
-      
+      <!-- <router-view></router-view> -->
       @yield('homeContent', '')
 
       @yield('aboutContent', '')
