@@ -1,7 +1,10 @@
 <template>
 <div>
   <div class="content">
-    <img class="img-center" src="../../../img/me.jpg" height="250px">
+    <div class="title">JERRIKNERI</div>
+    <div class="text-center">
+        <span v-for="trait in traits"> {{ trait }} <strong>|</strong> </span>
+      </div>
   </div>
 
 <hr>
@@ -12,7 +15,7 @@
 
 
 export default {
-  name: 'About',
+  name: 'Footer',
   components: { },
   data () {
     return {

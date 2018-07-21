@@ -1,6 +1,16 @@
 <template>
   <div class="content">
-    <h3>Latest Entry</h3>
+    <div v-show="preview === true">
+      <div class="flex">
+        <h5>{{ entries[0].date }}</h5>
+        <h5>{{ entries[0].tag }}</h5>
+      </div>
+      <div class="writing m-b-md">   
+          <h6>{{ entries[0].title }}</h6>
+          <p class="preview">{{ entries[0].content }}</p>
+      </div>
+    </div>
+
     <section v-for="entry in entries">
       <div class="flex">
         <h2>{{ entry.date }}</h2>
@@ -20,6 +30,7 @@
 import Entry from './Entry';
 
   export default {
+  props: [ 'preview' ],
   name: 'Diary',
   components: { Entry },
   data () {
@@ -126,4 +137,5 @@ Life is short. Terminal. Full circle. Untimely.
 </script>
 
 <style>
+
 </style>

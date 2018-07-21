@@ -101,7 +101,7 @@ a {
 .flex-vue-item {
   border: 1px solid #999;
   width: 33%;
-  height: 500px;
+  height: 550px;
   flex-grow: 1;
 }
 .ellipsis {
@@ -116,6 +116,9 @@ a {
 }
 .text-center {
   text-align: center;
+}
+.preview {
+  font-size: 10px;
 }
 .m-b-md {
   margin-bottom: 30px;

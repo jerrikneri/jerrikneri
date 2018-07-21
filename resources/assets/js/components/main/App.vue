@@ -1,27 +1,12 @@
 <template>
   <div>
     <Navbar></Navbar>
-    <hr>
-    <div class="flex-container">
-      <div class="flex-vue">
-        <router-link class="flex-vue-item"
-        to="/blog">
-          <Blog class="ellipsis"></Blog>
-        </router-link>
-        <router-link class="flex-vue-item"
-        to="/code">
-          <Code class="ellipsis"></Code>
-        </router-link>
-        <router-link class="flex-vue-item"
-        to="/diary">
-        <Diary class="ellipsis"></Diary>
-        </router-link>
-      </div>
-    </div>
+    <SPA></SPA>
     <hr>
     <router-view v-show="$route.path!=='/'"></router-view>
-    
+    <hr>
     <About></About>
+    <Footer></Footer>
   </div>
 </template>
 
@@ -30,14 +15,20 @@ import About from './About';
 import Blog from './../blog/Blog';
 import Code from './../code/Code';
 import Diary from './../diary/Diary';
+import Footer from './Footer';
 import Navbar from './Navbar';
+import SPA from './SPA';
 
 export default {
   name: 'Home',
-  components: { About, Blog, Code, Diary, Navbar },
+  components: { 
+    About, Blog, Code, 
+    Diary, Footer, Navbar, 
+    SPA 
+    },
   data () {
     return {
-      "test": router
+      
     }
   }
   
