@@ -1,5 +1,6 @@
 <template>
   <div class="content">
+
     <div v-show="preview === true"
       class="preview-margin">
         <h6>Let's Split</h6>
@@ -11,6 +12,7 @@
         </ul>
     </div>
     <!-- <img class="img-center" src="../../../img/ls.jpg" height="250px"> -->
+
     <div class="writing m-b-md">
       <h3>Let's Split</h3>
       <ul class="text-center">

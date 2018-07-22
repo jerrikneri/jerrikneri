@@ -1,7 +1,9 @@
 <template>
 <div>
   <div class="content">
+
     <!-- <img class="img-center" src="../../../img/me.jpg" height="250px"> -->
+
   </div>
 
 <hr>
