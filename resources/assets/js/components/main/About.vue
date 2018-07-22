@@ -1,7 +1,7 @@
 <template>
 <div>
   <div class="content">
-    <img class="img-center" src="../../../img/me.jpg" height="250px">
+    <!-- <img class="img-center" src="../../../img/me.jpg" height="250px"> -->
   </div>
 
 <hr>
@@ -16,14 +16,7 @@ export default {
   components: { },
   data () {
     return {
-      traits: [
-        'Aspiring Developer',
-        'Dances with Words',
-        'Keyboard Warrior & Enthusiast',
-        'Esports Fanatic',
-        'Keto Connoisseur',
-        'Iron Lifter'
-      ]
+      
     }
   }
 }

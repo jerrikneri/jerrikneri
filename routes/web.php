@@ -17,3 +17,5 @@ Route::get('blog', 'HomeController@blog');
 Route::get('code', 'HomeController@code');
 Route::get('diary', 'HomeController@diary');
 Route::get('epitome', 'HomeController@epitome');
+
+Route::post('diary/post', 'DiaryController@postEntry');

@@ -1,6 +1,16 @@
 <template>
   <div class="content">
-    <img class="img-center" src="../../../img/ls.jpg" height="250px">
+    <div v-show="preview === true"
+      class="preview-margin">
+        <h6>Let's Split</h6>
+        <ul class="text-center preview">
+          <li>Acrylic sandwich plate</li>
+          <li>Cherry Silent Black MX Switches</li>
+          <li>RGB LED Strips</li>
+          <li>Blank Cherry Profile PBT Caps</li>
+        </ul>
+    </div>
+    <!-- <img class="img-center" src="../../../img/ls.jpg" height="250px"> -->
     <div class="writing m-b-md">
       <h3>Let's Split</h3>
       <ul class="text-center">
@@ -26,6 +36,7 @@
 
 
   export default {
+  props: ['preview'],
   name: 'Code',
   components: {  },
   data () {
@@ -37,4 +48,7 @@
 </script>
 
 <style>
+.preview-margin {
+  margin-bottom: 300px;
+}
 </style>
