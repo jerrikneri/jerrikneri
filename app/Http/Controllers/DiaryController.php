@@ -11,8 +11,8 @@ use Illuminate\Support\Facades\Validator;
 class DiaryController extends Controller
 {
 
-  public function index() {
-    
+  public function getIndex() {
+    return App\DiaryEntries;
   }
   public function edit() {
     

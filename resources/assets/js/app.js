@@ -1,7 +1,16 @@
 import Vue from 'vue';
+
+import Vuex from 'vuex';
+import state from './components/store/state';
+import getters from './components/store/getters';
+import mutations from './components/store/mutations';
+import actions from './components/store/actions';
+Vue.use(Vuex);
+
 import VueRouter from 'vue-router';
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
+
 
 import Home from './components/main/App';
 import Blog from './components/blog/Blog';
@@ -40,6 +49,13 @@ const router = new VueRouter({
         }
         
     ],
+});
+
+const store = new Vuex.Store({
+    state,
+    getters,
+    mutations,
+    actions,
 });
 
 const app = new Vue({

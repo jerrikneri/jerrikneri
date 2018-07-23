@@ -15,7 +15,8 @@ Route::get('/', 'HomeController@home');
 Route::get('/about', 'HomeController@about');
 Route::get('blog', 'HomeController@blog');
 Route::get('code', 'HomeController@code');
-Route::get('diary', 'HomeController@diary');
+// Route::get('diary', 'HomeController@diary');
 Route::get('epitome', 'HomeController@epitome');
 
+Route::get('diary', 'DiaryController@getIndex');
 Route::post('diary/post', 'DiaryController@postEntry');

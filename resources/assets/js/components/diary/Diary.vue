@@ -27,12 +27,13 @@
 
 </template>
 <script>
-import Entry from './Entry';
+import axios from 'axios';
+import { mapGetters, mapMutations, mapActions } from "vuex";
 
   export default {
   props: [ 'preview' ],
   name: 'Diary',
-  components: { Entry },
+  components: { },
   data () {
     return {
       entries: [
@@ -131,8 +132,17 @@ Life is short. Terminal. Full circle. Untimely.
           `
       },
     ]
-  }
-  }
+  }  
+  },
+  methods: {
+    ...mapActions([
+        'getEntries',
+        'submitEntry',
+      ]),
+  },
+  mounted() {
+    this.getEntries();
+  },
 }
 </script>
 

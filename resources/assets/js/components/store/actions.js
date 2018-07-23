@@ -1,6 +1,14 @@
-import axios from 'common/axios';
-
 export default {
+
+  getEntires: ({commit, state}) => {
+    axios
+      .get('diary')
+      .then(response => console.log(response))
+      .catch(error => {
+        console.error('Unable to load entries.', error);
+      })
+  },
+
   submitEntry: ({ commit, state }, entry) => {
     return axios
       .post('diary/post', {
