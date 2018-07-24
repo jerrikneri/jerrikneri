@@ -40,6 +40,35 @@ import { mapGetters, mapMutations, mapActions } from "vuex";
     return {
       entries: [
         {
+          date: 'July 24, 2018 18:00',
+          tag: 'R1D15 #100daysofcode',
+          title: '“You can only see the stars when it’s dark enough - sometimes that means journeying into the darkest of valleys.”',
+          content: `
+          That’s a quote my friend and I made up the other day. It’s really just a spin off on this: “You have to experience the lows to appreciate the highs.” And with that quote comes to mind a bunch of other ideas and quotes, like “Ignorance is bliss.” Or simply not knowing any better. Or being a product of your own society, although, the more I go on, the farther off base they seem to land, at least in my head.
+
+With everyone going through some sort of duress, pain, stress, struggle at one point or another in their lives, I think that attests to the necessity of it. As uncomfortable as it makes you in the moment, it’s that same discomfort and unease that’s forcing you to grow and forcing you to appreciate the higher notes in your life. If not so much when they happen eventually - because things will get better in time - then, the countless blessings you do have that are always present.
+
+I think constantly living on some higher plain might possibly make you naive, grow too comfortable, or even oblivious and less mindful to what really surrounds you. Not to say that we should be finding ways to fall and suffer, but find a beauty and appreciation for them as they happen naturally and organically in our lives. In some odd way, find the positivity that stems from falling into a rut. Allowing us to take time to really reflect and see where we are and how far we’ve come.
+
+If you don’t know any better, it’s harder to appreciate what you already have. Going to the Philippines multiple times with my parents thrust me into the conditions of a third world country, and I appreciated it. Not having hot water, not having a running shower head. Having to manually flush the toilet with a bucket of water. Having to bathe yourself in the right mixture of boiled and cold water, warm to the touch, fetched with a ladle from another bucket. Among so many other living conditions that we take for granted each day, it was more than just a culture shock. Being young, naive, moldable even, it was easy to find the beauty in that country. To appreciate the livestock. How my distant family led their lives. How the priority and structure of problems is completely different when your standard of living is a tier or two below that of what we have in this country.
+
+On that note, and in another regard, falling in and out of love has taught me a lot as well. Heartbreak is the worst, most unnecessary type of feeling. It seems diminutive to be affected by, or ponder heavily on such things, when people across the world have “real” problems. It’s all relative perhaps, but that’s not an excuse to not be mindful.
+
+At any rate, falling, or experience the darkness is necessary to appreciate the light. If the sun never set, how could we ever appreciate the stars and the moon? Alternatively, if we never experienced sun light, would the stars be so bad?`
+        },
+        {
+          date: 'July 23, 2018 18:00',
+          tag: 'R1D14 #100daysofcode',
+          title: 'College',
+          content: `
+          "I'm studying computer engineering at UCSD"
+
+He said when suddenly his tone took a dip. The words seemed to flow out too quickly, too routinely, to only come to a sudden stop like a man running towards the edge of a cliff. The sentence ended abruptly, the silence hung, as doubt and questions ensued crashing at the wall he had suddenly thrown up by looking away in dismay. He gave a lighthearted smile and shrugged, turning his head away. I watched the pain and shame engulf his face, wishing he was invisible. I looked off in the distance for a moment, hoping it would ease the steadily rising tension and make fleeting any awkwardness that may follow. I thought about my short comings as well as my accomplishments, my achievements and my failures. It was too easy to get lost in them, to feel paralyzed with regret and hopeful mendings. And suddenly I felt as if I was drowning, in fear, in regret, in some awful pool of self loathing. I held my breath looking up for a break of light in the enshrouding failures of my past, I reached upward hoping blindly for something, someone to pull me out of these self inflicting self perpetuated senses of misery. 
+
+Silence rung, I shook my head and glanced at him. I took a moment to trace out my recent train of thoughts and how easily I had stumbled under some seemingly innocent passive contemplation. I mustered the courage to smile, if not for myself, then at least for him. I thought on some shallow, narrow level, I understood the pain he tried so hard to hide behind the mask be wore when he spoke. I thought if in some sense I could align the events in our lives I could sympathize with him on a deeper level.  I immediately felt sad, as I felt the darkness come try to wash over me again. My heart sunk, my will weakened, as I stared off into the distance in the same direction as he, trying to align some sense of emotion with him. I felt sympathy slip away. 
+`
+        },
+        {
           date: 'July 19, 2018 17:00',
           tag: 'R1D11 #100daysofcode',
           title: '“Never compare yourself and your progress to anyone but yourself.”',
