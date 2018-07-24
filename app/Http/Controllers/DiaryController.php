@@ -2,22 +2,24 @@
 
 namespace App\Http\Controllers;
 
-use App\Posts;
+use App\DiaryEntries;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Validator;
 
+
+
 class DiaryController extends Controller
 {
 
-  public function getIndex() {
-    return App\DiaryEntries;
+  function getIndex() {
+    Response::json(DiaryEntries);
   }
-  public function edit() {
+  function edit() {
     
   }
-  public function postEntry() {
+  function postEntry() {
 
     $input = Input::only('title', 'date', 'tag', 'content');
     $rules = [
@@ -40,12 +42,12 @@ class DiaryController extends Controller
     $entry->save();
 
     return response($entry->jsonSerialize(), Response::HTTP_CREATED);
-}
   }
-  public function update() {
+  
+  function update() {
     
   }
-  public function destroy() {
+  function destroy() {
     
   }
 }

@@ -62,4 +62,5 @@ const app = new Vue({
     el: '#app',
     components: { Home, Blog, Code, Diary, Epitome },
     router,
+    store
 });

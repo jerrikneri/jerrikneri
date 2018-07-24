@@ -1,6 +1,8 @@
+import axios from 'axios';
+
 export default {
 
-  getEntires: ({commit, state}) => {
+  getEntries: ({commit, state}) => {
     axios
       .get('diary')
       .then(response => console.log(response))

@@ -1,5 +1,7 @@
 <template>
   <div class="content">
+    <EntryForm></EntryForm>
+
     <div v-show="preview === true">
       <div class="flex">
         <h5>{{ entries[0].date }}</h5>
@@ -27,13 +29,13 @@
 
 </template>
 <script>
-import axios from 'axios';
+import EntryForm from './EntryForm';
 import { mapGetters, mapMutations, mapActions } from "vuex";
 
   export default {
   props: [ 'preview' ],
   name: 'Diary',
-  components: { },
+  components: { EntryForm },
   data () {
     return {
       entries: [
