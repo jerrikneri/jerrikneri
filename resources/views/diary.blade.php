@@ -1,4 +1,4 @@
-@extends('base')
+<!-- @extends('base')
 
 @section('diaryContent')
 
@@ -354,4 +354,4 @@
     </div>
 </div>    
 </div>
-@endsection('diaryContent')
+@endsection('diaryContent') -->
