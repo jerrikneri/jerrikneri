@@ -5,7 +5,7 @@
     <hr>
     <router-view v-show="$route.path!=='/'"></router-view>
     <hr>
-    <About></About>
+    <!-- <About></About> -->
     <Footer></Footer>
   </div>
 </template>

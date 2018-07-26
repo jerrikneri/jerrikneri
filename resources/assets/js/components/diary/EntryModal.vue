@@ -82,6 +82,8 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
+    max-height: 100vh;
+    overflow-y: scroll;
 }
 
 .ui-modal {
@@ -104,6 +106,7 @@ export default {
     z-index: 1;
     transition: all 0.3s ease;
     font-family: Helvetica, Arial, sans-serif;
+    width: 50%;
 }
 
 .modal-enter, .modal-leave-to {
@@ -196,5 +199,15 @@ export default {
         transform: translateZ(0) rotateX(0);
     }
 }
+@media only screen 
+    and (max-device-width : 667px) 
+    and (orientation : portrait) { 
+        .ui-modal-content {
+            position: absolute;
+            width: 100%;
+}
+    }
+
+
 </style>
 
