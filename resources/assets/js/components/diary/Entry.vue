@@ -18,9 +18,12 @@
           <div class="flex-vue">
             <h3>{{ date }}</h3><h3>{{ tag }}</h3>
           </div>
-          <div>
-          <p>{{ content }}</p>
-          </div>
+          <p v-for="line in formattedContent">
+            {{ line }}
+          </p>
+          <!-- <div v-text='`${content}`'>
+          `${content}`
+          </div> -->
       </div>
           
     </EntryModal>
@@ -37,12 +40,19 @@ import EntryModal from './EntryModal';
   components: { EntryModal },
   data () {
     return {
+      formattedContent: '',
       showModal: false
     }  
   },
   methods: {
+    splitNewLine(){
+      this.formattedContent = this.content.split('\n');
+    }
     
-    
+  },
+  mounted() {
+    this.splitNewLine();
+    console.log(this.content);
   }
 }
 </script>
