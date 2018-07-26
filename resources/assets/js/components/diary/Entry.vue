@@ -1,10 +1,11 @@
 <template>
   <div>
     <div @click="showModal = true" class="content">
-      <div class="flex-vue">
+      <div class="flex-vue entry-content">
         <h3>{{ title }}</h3><h3>{{ date }}</h3>
       </div>
     </div>
+    <hr>
 
     <EntryModal 
       :show="showModal"
@@ -47,5 +48,7 @@ import EntryModal from './EntryModal';
 </script>
 
 <style>
-
+.entry-content {
+  padding: 20px;
+}
 </style>
