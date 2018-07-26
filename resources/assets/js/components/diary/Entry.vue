@@ -1,30 +1,51 @@
 <template>
-  <div class="content">
-  <div class="flex">
-        <h2>July 16, 2018 23:00</h2>
-        <h2>R1D8 #100daysofcode</h2>
+  <div>
+    <div @click="showModal = true" class="content">
+      <div class="flex-vue">
+        <h3>{{ title }}</h3><h3>{{ date }}</h3>
+      </div>
     </div>
 
-    <div class="writing m-b-md">
-        
-    </div>
+    <EntryModal 
+      :show="showModal"
+      @close="showModal = false">
+      <div class="content">
+        <div class="flex-vue">
+           <h1>{{ title }}</h1>
+           <span @click="showModal = false">X</span>
+        </div>
+          <div class="flex-vue">
+            <h3>{{ date }}</h3><h3>{{ tag }}</h3>
+          </div>
+          <div>
+          <p>{{ content }}</p>
+          </div>
+      </div>
+          
+    </EntryModal>
 
-    <hr>
-
-</div>
+  </div>
 
 </template>
 <script>
-export default {
-    name: 'Entry',
-    prop: [],
-    data () {
-        return {
-            test: 'Test'
-        }
-    }
+import EntryModal from './EntryModal';
+
+  export default {
+  props: ['title', 'tag', 'date', 'content'],
+  name: 'Entry',
+  components: { EntryModal },
+  data () {
+    return {
+      showModal: false
+    }  
+  },
+  methods: {
+    
+    
+  }
 }
 </script>
 
 <style>
+
 </style>

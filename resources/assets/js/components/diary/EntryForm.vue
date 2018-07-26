@@ -1,7 +1,6 @@
 <template>
   <form class="content"
     @submit.prevent="submit">
-    <h1>Write with me...</h1>
     <p>Title:</p>
     <input type="text"
         id="title"
