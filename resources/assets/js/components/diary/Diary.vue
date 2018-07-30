@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <div v-show="preview === true">
-      <h3>Write with me...</h3>
+      <!-- <h3>Write with me...</h3> -->
     </div> 
     
 
