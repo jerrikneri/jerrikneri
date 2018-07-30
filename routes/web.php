@@ -10,13 +10,22 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::group(['middleware' => ['stripTags', 'monitorIp']], function () {
+  $routes = [
+      'about',
+      'blog',
+      'code',
+      'diary',
+  ];
+});
 Route::get('/', 'HomeController@home');
-Route::get('/about', 'HomeController@about');
+Route::get('about', 'HomeController@about');
 Route::get('blog', 'HomeController@blog');
 Route::get('code', 'HomeController@code');
-// Route::get('diary', 'HomeController@diary');
+Route::get('diary', 'HomeController@diary');
 Route::get('epitome', 'HomeController@epitome');
 
-Route::get('diary', 'DiaryController@getIndex');
+Route::get('diary-entries', 'DiaryController@getEntries');
 Route::post('diary/post', 'DiaryController@postEntry');
+
+Route::get('blog-entries', 'BlogController@getEntries');

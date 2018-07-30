@@ -14,7 +14,10 @@
         
 
     </head>
+    @if(!Request::is('/'))
     @include('header')
+    @endif
+    
     <body>
       <!-- <router-view></router-view> -->
       @yield('homeContent', '')

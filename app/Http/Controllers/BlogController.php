@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\DiaryEntries;
+use App\BlogEntries;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Input;
@@ -11,13 +11,11 @@ use Illuminate\Support\Facades\Validator;
 
 
 
-class DiaryController extends Controller
 {
     public function getEntries()
     {
-        $entries = DiaryEntries::where('id', '>', '0')
+        $entries = BlogEntries::where('id', '>', '0')
           ->orderBy('id', 'desc')->get();
-        // return Response::json($entries);
         return $entries;
     }
 
@@ -39,7 +37,7 @@ class DiaryController extends Controller
             return Response::json($validator->failed(), 422);
         }
 
-        $entry = new DiaryEntries();
+        $entry = new BlogEntries();
         $entry->title = Input::get('title');
         $entry->date = Input::get('date');
         $entry->tag = Input::get('tag');

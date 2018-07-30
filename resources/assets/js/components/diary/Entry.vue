@@ -32,29 +32,28 @@
 
 </template>
 <script>
-import EntryModal from './EntryModal';
+import EntryModal from "./EntryModal";
 
-  export default {
-  props: ['title', 'tag', 'date', 'content'],
-  name: 'Entry',
+export default {
+  props: ["title", "tag", "date", "content"],
+  name: "Entry",
   components: { EntryModal },
-  data () {
+  data() {
     return {
-      formattedContent: '',
+      formattedContent: "",
       showModal: false
-    }  
+    };
   },
   methods: {
-    splitNewLine(){
-      this.formattedContent = this.content.split('\n');
+    splitNewLine() {
+      this.formattedContent = this.content.split("\n");
     }
-    
   },
   mounted() {
     this.splitNewLine();
     console.log(this.content);
   }
-}
+};
 </script>
 
 <style>

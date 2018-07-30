@@ -35,18 +35,16 @@
 </template>
 
 <script>
-
-
-  export default {
-  props: ['preview'],
-  name: 'Code',
-  components: {  },
-  data () {
+export default {
+  props: ["preview"],
+  name: "Code",
+  components: {},
+  data() {
     return {
-      test: 'Test'
-    }
+      test: "Test"
+    };
   }
-}
+};
 </script>
 
 <style>

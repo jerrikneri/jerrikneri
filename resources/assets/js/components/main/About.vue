@@ -11,20 +11,14 @@
 </template>
 
 <script>
-
-
 export default {
-  name: 'About',
-  components: { },
-  data () {
-    return {
-      
-    }
+  name: "About",
+  components: {},
+  data() {
+    return {};
   }
-}
+};
 </script>
 
 <style>
-
-
 </style>
