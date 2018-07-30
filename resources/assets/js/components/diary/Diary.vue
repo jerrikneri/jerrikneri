@@ -2,7 +2,8 @@
   <div class="content">
     <div v-show="preview === true">
       <h1>Write with me...</h1>
-    </div>
+    </div> 
+    
 
     <!-- Find a way to preview the latest entries. Logging out
     console to see what type and format entries is from DB. -->
@@ -17,7 +18,7 @@
       </div>
     </div> -->
 
-    <!-- <EntryForm></EntryForm> -->
+    <EntryForm></EntryForm>
 
     <div v-for="entry in entries">
       <Entry
@@ -44,48 +45,42 @@
 
 </template>
 <script>
-import EntryModal from './EntryModal';
-import Entry from './Entry';
-import EntryForm from './EntryForm';
+import EntryModal from "./EntryModal";
+import Entry from "./Entry";
+import EntryForm from "./EntryForm";
 import { mapGetters, mapMutations, mapActions } from "vuex";
 
-  export default {
-  props: [ 'preview' ],
-  name: 'Diary',
+export default {
+  props: ["preview"],
+  name: "Diary",
   components: { EntryForm, EntryModal, Entry },
-  data () {
+  data() {
     return {
-      entries: '',
+      entries: "",
       loading: true,
       showEntry: false
-  }  
+    };
   },
   methods: {
-    ...mapActions([
-        'getEntries',
-        'submitEntry',
-      ]),  
+    ...mapActions(["getEntries", "submitEntry"])
   },
   mounted() {
     let self = this;
-    this.getEntries()
-    .then(() => {
-      self.entries = self.$store.state.entries; 
+    this.getEntries().then(() => {
+      self.entries = self.$store.state.entries;
       // self.entries = self.addShowProperty(self.$store.state.entries);
       self.loading = false;
-      console.log('loadedentries', self.entries);
-      });
-    console.log('mount', this.entries)
+      console.log("loadedentries", self.entries);
+    });
+    console.log("mount", this.entries);
   },
   computed: {
     entriesLoaded() {
       return !this.loading;
     }
-
   }
-}
+};
 </script>
 
 <style>
-
 </style>
