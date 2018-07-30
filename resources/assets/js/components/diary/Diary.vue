@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <div v-show="preview === true">
-      <h1>Write with me...</h1>
+      <h3>Write with me...</h3>
     </div> 
     
 
@@ -70,10 +70,9 @@ export default {
       self.entries = self.$store.state.entries;
       // self.entries = self.addShowProperty(self.$store.state.entries);
       self.loading = false;
-      console.log("loadedentries", self.entries);
     });
-    console.log("mount", this.entries);
   },
+  created() {},
   computed: {
     entriesLoaded() {
       return !this.loading;

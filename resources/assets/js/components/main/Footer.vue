@@ -1,6 +1,11 @@
 <template>
 <div>
   <div class="content">
+    <hr>
+
+
+
+    
     <div class="title">JERRIKNERI</div>
     <div class="text-center">
         <span v-for="trait in traits"> {{ trait }} 

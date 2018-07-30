@@ -2,9 +2,9 @@
   <div>
     <Navbar></Navbar>
     <SPA></SPA>
-    <hr>
+
     <router-view v-show="$route.path!=='/'"></router-view>
-    <hr>
+    
     <!-- <About></About> -->
     <Footer></Footer>
   </div>

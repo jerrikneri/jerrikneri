@@ -5,7 +5,6 @@ export default {
         axios
             .get("diary-entries")
             .then(response => {
-                console.log("getEntries", response.data);
                 commit("updateEntries", response.data);
             })
             .catch(error => {
@@ -21,9 +20,7 @@ export default {
                 tag: entry.tag,
                 content: entry.content
             })
-            .then(response => {
-                console.log("submit entry", response);
-            })
+            .then(response => {})
             .catch(error => {
                 console.error("Post submission unsuccessful.", error);
             });

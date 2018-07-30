@@ -51,7 +51,6 @@ export default {
   },
   mounted() {
     this.splitNewLine();
-    console.log(this.content);
   }
 };
 </script>
