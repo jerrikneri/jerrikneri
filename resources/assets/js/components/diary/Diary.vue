@@ -18,7 +18,7 @@
       </div>
     </div> -->
 
-    <EntryForm></EntryForm>
+    <!-- <EntryForm></EntryForm> -->
 
     <div v-for="entry in entries">
       <Entry

@@ -45,7 +45,7 @@ class DiaryController extends Controller
         $entry->tag = Input::get('tag');
         $entry->content = Input::get('content');
 
-        $entry->save();
+        // $entry->save();
 
         return response($entry->jsonSerialize(), Response::HTTP_CREATED);
     }
