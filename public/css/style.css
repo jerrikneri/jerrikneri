@@ -5,9 +5,11 @@ body {
     font-family: "Raleway", sans-serif;
     font-weight: 100;
     height: 100vh;
-    padding: 10px 50px;
+    padding: 15px 0;
     /* margin: 10px 50px; */
 }
+h1,
+h2,
 h3 {
     text-align: center;
 }
@@ -65,12 +67,16 @@ a {
 .content {
     text-align: center;
     background-color: white;
-    padding: 50px;
+    padding: 10px 50px;
+}
+.content-projects {
+    padding: 0 400px;
 }
 
 .title {
     text-align: center;
     font-size: 50px;
+    padding: 10px;
 }
 
 .links > a {
@@ -90,6 +96,10 @@ a {
     font-weight: bold;
     padding: 20px;
 }
+.head-title {
+    text-align: center;
+    margin-top: 50px;
+}
 .flex {
     display: flex;
     justify-content: space-around;
@@ -100,7 +110,7 @@ a {
     align-items: flex-start;
     align-content: stretch;
 }
-.flex-vue-item {
+.flex-vue-item-three {
     width: 33%;
     flex-grow: 1;
 }
@@ -128,10 +138,10 @@ a {
         display: block;
         justify-content: space-between;
     }
-    html,
+    /* html,
     body {
-        padding: 5px;
-    }
+        padding: 15px 0;
+    } */
     .flex-vue {
         flex-direction: column;
     }
@@ -148,6 +158,9 @@ a {
     .content {
         text-align: center;
         padding: 5px;
+    }
+    .content-projects {
+        padding: 0;
     }
     .head-title {
         text-align: center;

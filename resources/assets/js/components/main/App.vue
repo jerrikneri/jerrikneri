@@ -1,6 +1,8 @@
 <template>
-  <div>
+  <div class="content">
     <Navbar></Navbar>
+    <img class="img-responsive title-picture" src="http://placehold.it/350x350" alt="Place holder face">
+    <hr>
     <SPA></SPA>
 
     <router-view v-show="$route.path!=='/'"></router-view>

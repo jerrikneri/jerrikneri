@@ -108,11 +108,15 @@ body.ui-modal-visible {
 }
 
 .ui-modal-content {
+  /* border-top: 1px solid #999; */
+  /* background-color: rgba(0, 0, 0, 0.5); */
   position: absolute;
   z-index: 1;
   transition: all 0.3s ease;
   font-family: Helvetica, Arial, sans-serif;
-  width: 50%;
+  width: 75%;
+  padding: 10%;
+  margin: 5%;
   top: 0;
 }
 
@@ -232,6 +236,8 @@ body.ui-modal-visible {
   .ui-modal-content {
     position: absolute;
     width: 100%;
+    padding: 0;
+    margin: 0;
   }
 }
 </style>

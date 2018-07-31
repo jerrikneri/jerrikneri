@@ -7,6 +7,7 @@
     </div>
     <!-- <img class="img-center" src="../../../img/ls.jpg" height="250px"> -->
     <div v-show="preview == null">
+      <h1><u>PROJECTS</u></h1>
       <div  class="writing m-b-md">
         <h3>Let's Split</h3>
         <ul class="text-center">
@@ -18,7 +19,7 @@
       </div>
 
       <h3>Coding Projects</h3>
-      <div class="links">
+      <div class="flex-vue content-projects links">
         <a href="https://github.com/jerrikneri">github: jerrikneri</a>
         
         <a href="https://codepen.io/jaewrek/">codepen: jerrikneri</a>

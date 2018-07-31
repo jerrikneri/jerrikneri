@@ -5,7 +5,6 @@
         <h3>{{ title }}</h3><h3>{{ date }}</h3>
       </div>
     </div>
-    <hr>
 
     <EntryModal 
       :show="showModal"
@@ -13,7 +12,7 @@
       <div class="content">
         <div class="flex-vue">
            <h1>{{ title }}</h1>
-           <span @click="showModal = false">X</span>
+           <button class="text-center" @click="showModal = false">X</button>
         </div>
           <div class="flex-vue">
             <h3>{{ date }}</h3><h3>{{ tag }}</h3>

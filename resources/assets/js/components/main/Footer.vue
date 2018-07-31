@@ -11,7 +11,7 @@
         <span v-for="trait in traits"> {{ trait }} 
           <span v-if="trait !== traits[traits.length-1]"><strong>|</strong> </span>
         </span>
-        <div>
+        <div class="social">
           IG | FB | YT
         </div>
           
@@ -42,4 +42,7 @@ export default {
 </script>
 
 <style>
+.social {
+  padding: 5px;
+}
 </style>
