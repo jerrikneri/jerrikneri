@@ -116,7 +116,6 @@ body.ui-modal-visible {
   font-family: Helvetica, Arial, sans-serif;
   width: 75%;
   padding: 10%;
-  margin: 5%;
   top: 0;
 }
 

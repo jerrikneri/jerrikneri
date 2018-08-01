@@ -1,4 +1,3 @@
-
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 
@@ -6,9 +5,195 @@
 @import "variables";
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
+
+// Partials
+@import "abstracts";
+@import "base";
+@import "components";
+@import "layout";
+@import "pages";
+@import "themes";
+@import "vendors";
+
+// TODO
+// BEM - [ ] BEM Block Element Modifier block__element—modifier
 
 .navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+html,
+body {
+    /* background-color: #999; */
+    color: black;
+    font-family: "Raleway", sans-serif;
+    font-weight: 100;
+    height: 100vh;
+    padding: 15px 0;
+    /* margin: 10px 50px; */
+}
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #999;
+    padding: 0;
+}
+ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: #636b6f;
+}
+
+.navbar {
+    /* background-color: #999; */
+    height: 50px;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+
+.navbar a {
+    /* color: #f2f2f2; */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar a:hover {
+    background: #ddd;
+    color: black;
+}
+
+.full-height {
+    height: 20px;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.content {
+    text-align: center;
+    background-color: white;
+    padding: 10px 50px;
+}
+.content-projects {
+    padding: 0 400px;
+}
+
+.title {
+    text-align: center;
+    font-size: 50px;
+    padding: 10px;
+}
+
+.links > a {
+    color: #636b6f;
+    padding: 0 25px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    line-height: 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.writing {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
+}
+.head-title {
+    text-align: center;
+    margin-top: 50px;
+}
+.flex {
+    display: flex;
+    justify-content: space-around;
+}
+.flex-vue {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: stretch;
+}
+.flex-vue-item-three {
+    width: 33%;
+    flex-grow: 1;
+}
+.ellipsis {
+    overflow: hidden;
+    white-space: normal;
+}
+.img-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.text-center {
+    text-align: center;
+}
+.preview {
+    font-size: 10px;
+}
+.m-b-md {
+    margin-bottom: 30px;
+}
+@media only screen and (max-device-width: 667px) and (orientation: portrait) {
+    .flex,
+    .flex-center {
+        display: block;
+        justify-content: space-between;
+    }
+    /* html,
+    body {
+        padding: 15px 0;
+    } */
+    .flex-vue {
+        flex-direction: column;
+    }
+    .flex-vue-item {
+        width: 100%;
+    }
+    .top-right {
+        right: -104px;
+    }
+    .full-height {
+        height: 50px;
+        width: 75%;
+    }
+    .content {
+        text-align: center;
+        padding: 5px;
+    }
+    .content-projects {
+        padding: 0;
+    }
+    .head-title {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .writing {
+        font-size: 16px;
+        padding: 0px;
+    }
 }
