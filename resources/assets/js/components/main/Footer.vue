@@ -1,24 +1,22 @@
 <template>
-<div>
-  <div class="content">
+<div class="footer has-text-centered">
+  <div class="">
     <hr>
 
 
 
     
-    <div class="title">JERRIKNERI</div>
-    <div class="text-center">
+    <div class="is-size-1">JERRIKNERI</div>
+    <div class="">
         <span v-for="trait in traits"> {{ trait }} 
           <span v-if="trait !== traits[traits.length-1]"><strong>|</strong> </span>
         </span>
-        <div class="social">
+        <div class="">
           IG | FB | YT
         </div>
           
     </div>
   </div>
-
-<hr>
 </div>
 </template>
 
@@ -42,7 +40,4 @@ export default {
 </script>
 
 <style>
-.social {
-  padding: 5px;
-}
 </style>

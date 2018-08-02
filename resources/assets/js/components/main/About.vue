@@ -1,6 +1,6 @@
 <template>
 <div>
-  <div class="content">
+  <div class="">
 
     <!-- <img class="img-center" src="../../../img/me.jpg" height="250px"> -->
 

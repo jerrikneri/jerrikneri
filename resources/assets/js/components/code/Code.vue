@@ -43,7 +43,4 @@ export default {
 </script>
 
 <style>
-.preview-margin {
-  margin-bottom: 300px;
-}
 </style>

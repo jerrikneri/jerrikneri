@@ -55,7 +55,4 @@ export default {
 </script>
 
 <style>
-.entry-content {
-  padding: 20px;
-}
 </style>

@@ -10,29 +10,22 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-        <link href="{!! URL::asset('css/style.css') !!}" rel="stylesheet" type="text/css">
-        
-
+        <link href="{!! URL::asset('css/app.css') !!}" rel="stylesheet" type="text/css">
     </head>
     @if(!Request::is('/'))
     @include('header')
     @endif
     
-    <body>
-      <!-- <router-view></router-view> -->
-      @yield('homeContent', '')
-
+    <body class="body has-navbar-fixed-top">
+      <!-- @yield('homeContent', '')
       @yield('aboutContent', '')
       @yield('blogContent', '')
       @yield('codeContent', '')
       @yield('diaryContent', '')
-      @yield('epitomeContent', '')
-
+      @yield('epitomeContent', '') -->
       <div id="app">
         <Home></Home>
-      </div>
-        
+      </div>       
     </body>
-
     @include('footer')
 </html>

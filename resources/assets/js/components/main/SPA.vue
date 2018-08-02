@@ -37,9 +37,4 @@ export default {
 </script>
 
 <style>
-@media only screen and (max-device-width: 800px) and (orientation: portrait) {
-  .spa {
-    display: block;
-  }
-}
 </style>

@@ -1,2 +1,40 @@
-// * 		layout: used to layout the different parts of your page,
-// that is to say, your header, footer, navigation, section, your own grid, and more.
+// Body
+$body-bg: #ddd;
+$body-font-color: #333;
+$font-family-sans-serif: "Raleway", sans-serif;
+$font-size-base: 1.1rem;
+$line-height-base: 1.6;
+
+.body {
+    color: $body-font-color;
+    background-color: $body-bg;
+    font-family: $font-family-sans-serif;
+    font-size: $font-size-base;
+    font-weight: 100;
+}
+
+// Footer
+$footer-bg: #333;
+$footer-font-size: 3rem;
+$footer-font-color: #fff;
+.footer {
+    background-color: $footer-bg;
+    color: $footer-font-color;
+}
+
+html {
+    font-size: 100%;
+}
+
+// Navigation Bar
+$nav-bg: #333;
+$nav-font-color: #fff;
+$nav-font-size: 1.5rem;
+
+$navbar-dropdown-arrow: #000;
+
+@media only screen and (max-device-width: 812px) and (orientation: portrait) {
+    .navbar__dropdown--hide {
+        display: none;
+    }
+}

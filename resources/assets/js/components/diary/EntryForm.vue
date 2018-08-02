@@ -36,21 +36,19 @@
 <script>
 import { mapActions } from "vuex";
 
-  export default {
-  name: 'EntryForm',
-  components: { },
-  data () {
+export default {
+  name: "EntryForm",
+  components: {},
+  data() {
     return {
-      title: '',
-      date: '',
-      tag: '',
-      content: ''
-    }  
+      title: "",
+      date: "",
+      tag: "",
+      content: ""
+    };
   },
   methods: {
-    ...mapActions([
-        'submitEntry'
-      ]),
+    ...mapActions(["submitEntry"]),
     submit() {
       this.submitEntry({
         title: this.title,
@@ -60,18 +58,8 @@ import { mapActions } from "vuex";
       });
     }
   }
-}
+};
 </script>
 
 <style>
-.form-control-content{
-  width: 100%;
-  text-align: left;
-}
-
-/* .boxsizingBorder {
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
-} */
 </style>

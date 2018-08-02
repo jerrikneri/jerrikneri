@@ -1,7 +1,8 @@
 <template>
-  <div class="content">
+  <div>
     <Navbar></Navbar>
-    <img class="img-responsive title-picture" src="http://placehold.it/350x350" alt="Place holder face">
+    <Header></Header>
+    <img class="" src="http://placehold.it/350x350" alt="Place holder face">
     <hr>
     <SPA></SPA>
 
@@ -17,6 +18,7 @@ import About from "./About";
 import Blog from "./../blog/Blog";
 import Code from "./../code/Code";
 import Diary from "./../diary/Diary";
+import Header from "./Header";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import SPA from "./SPA";
@@ -28,6 +30,7 @@ export default {
     Blog,
     Code,
     Diary,
+    Header,
     Footer,
     Navbar,
     SPA

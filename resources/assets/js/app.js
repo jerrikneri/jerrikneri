@@ -1,26 +1,24 @@
-import Vue from 'vue';
+import Vue from "vue";
 
-import Vuex from 'vuex';
-import state from './components/store/state';
-import getters from './components/store/getters';
-import mutations from './components/store/mutations';
-import actions from './components/store/actions';
+import Vuex from "vuex";
+import state from "./components/store/state";
+import getters from "./components/store/getters";
+import mutations from "./components/store/mutations";
+import actions from "./components/store/actions";
 Vue.use(Vuex);
 
-import VueRouter from 'vue-router';
+import VueRouter from "vue-router";
 
 Vue.use(VueRouter);
 
-
-import Home from './components/main/App';
-import Blog from './components/blog/Blog';
-import Code from './components/code/Code';
-import Diary from './components/diary/Diary';
-import Epitome from './components/epitome/Epitome';
-
+import Home from "./components/main/App";
+import Blog from "./components/blog/Blog";
+import Code from "./components/code/Code";
+import Diary from "./components/diary/Diary";
+import Epitome from "./components/epitome/Epitome";
 
 const router = new VueRouter({
-    mode: 'history',
+    mode: "history",
     scrollBehavior(to, from, savedPosition) {
         if (savedPosition) {
             return savedPosition;
@@ -34,44 +32,43 @@ const router = new VueRouter({
     },
     routes: [
         {
-            path: '/',
-            name: 'Home',
-            alias: '*',
+            path: "/",
+            name: "Home",
+            alias: "*",
             component: Home
         },
         {
-            path: '/blog',
-            name: 'Blog',
+            path: "/blog",
+            name: "Blog",
             component: Blog
         },
         {
-            path: '/code',
-            name: 'Code',
+            path: "/code",
+            name: "Code",
             component: Code
         },
         {
-            path: '/diary',
-            name: 'Diary',
+            path: "/diary",
+            name: "Diary",
             component: Diary
         },
         {
-            path: '/epitome',
-            name: 'Epitome',
+            path: "/epitome",
+            name: "Epitome",
             component: Epitome
         }
-        
-    ],
+    ]
 });
 
 const store = new Vuex.Store({
     state,
     getters,
     mutations,
-    actions,
+    actions
 });
 
 const app = new Vue({
-    el: '#app',
+    el: "#app",
     components: { Home, Blog, Code, Diary, Epitome },
     router,
     store
