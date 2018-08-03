@@ -1,5 +1,5 @@
 // Body
-$body-bg: #ddd;
+$body-bg: #fff;
 $body-font-color: #333;
 $font-family-sans-serif: "Raleway", sans-serif;
 $font-size-base: 1.1rem;
@@ -11,16 +11,20 @@ $line-height-base: 1.6;
     font-family: $font-family-sans-serif;
     font-size: $font-size-base;
     font-weight: 100;
+    margin: 0 10px;
 }
+
+// Header
+$title-line-height: 5rem;
 
 // Footer
 $footer-bg: #333;
 $footer-font-size: 3rem;
 $footer-font-color: #fff;
-.footer {
-    background-color: $footer-bg;
-    color: $footer-font-color;
-}
+// .footer {
+//     background-color: $footer-bg;
+//     color: $footer-font-color;
+// }
 
 html {
     font-size: 100%;
@@ -31,10 +35,18 @@ $nav-bg: #333;
 $nav-font-color: #fff;
 $nav-font-size: 1.5rem;
 
-$navbar-dropdown-arrow: #000;
+// Bulma specific
+$navbar-dropdown-arrow: #333;
+$navbar-item-color: #333;
+$box-padding: 0;
 
 @media only screen and (max-device-width: 812px) and (orientation: portrait) {
     .navbar__dropdown--hide {
         display: none;
     }
+}
+
+//  Section
+.box {
+    margin-bottom: 0;
 }

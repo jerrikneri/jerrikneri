@@ -1,14 +1,14 @@
 <template>
-  <div class="content">
+  <div class="">
 
     <div v-show="preview === true"
-      class="preview-margin">
-        <!-- <h3>Build with me...</h3> -->
+      class="">
     </div>
+        <!-- <h3>Build with me...</h3> -->
     <!-- <img class="img-center" src="../../../img/ls.jpg" height="250px"> -->
-    <div v-show="preview == null">
-      <h1><u>PROJECTS</u></h1>
-      <div  class="writing m-b-md">
+    <section v-show="preview == null" class="box content has-text-centered is-large">
+      <span class="title is-size-2"><u>PROJECTS</u></span>
+      <div class="section">
         <h3>Let's Split</h3>
         <ul class="text-center">
           <li>Acrylic sandwich plate</li>
@@ -18,13 +18,21 @@
         </ul>
       </div>
 
-      <h3>Coding Projects</h3>
-      <div class="flex-vue content-projects links">
-        <a href="https://github.com/jerrikneri">github: jerrikneri</a>
-        
-        <a href="https://codepen.io/jaewrek/">codepen: jerrikneri</a>
+      <div class="box section">
+        <h3>Coding Projects</h3>
+        <div class="columns">
+          <div class="column">
+            <a href="https://github.com/jerrikneri">github: jerrikneri</a> 
+          </div>
+          <div class="is-divider-vertical" data-content="OR"></div>
+          <div class="column">
+            <a href="https://codepen.io/jaewrek/">codepen: jerrikneri</a>
+          </div>
+          
+        </div>
       </div>
-    </div>
+      
+    </section>
 
   </div>  
 </template>
@@ -43,4 +51,9 @@ export default {
 </script>
 
 <style>
+ul,
+li {
+  margin: 0 !important;
+  list-style-type: none;
+}
 </style>

@@ -2,12 +2,18 @@
   <div>
     <Navbar></Navbar>
     <Header></Header>
-    <img class="" src="http://placehold.it/350x350" alt="Place holder face">
+    <section class="section is-flex">
+      <img class="has-image-centered" src="http://placehold.it/1050x350" alt="Place holder face">
+    </section>
+    
     <hr>
+
     <SPA></SPA>
 
     <router-view v-show="$route.path!=='/'"></router-view>
     
+    <!-- <div class="is-divider" data-content="JAN"></div> -->
+    <div class="section"></div>
     <!-- <About></About> -->
     <Footer></Footer>
   </div>

@@ -1,28 +1,30 @@
 <template>
-  <div class="content">
+  <div class="">
     <div v-show="preview === true">
       <!-- <h3>Write with me...</h3> -->
     </div> 
 
     <!-- <EntryForm></EntryForm> -->
-<h1 v-show="preview == null"><u>DIARY</u></h1>
-    <div v-for="entry in entries">
-      <Entry
-        :title="entry.title"
-        :date="entry.date"
-        :tag="entry.tag"
-        :content="entry.content">
-        </Entry>
-        <span v-if="entry !== entries[entries.length-1]">
-          <hr>
-        </span>
-    </div>
+    <section v-show="preview == null" class="box section">
+      <div v-for="entry in entries">
+        <Entry
+          :title="entry.title"
+          :date="entry.date"
+          :tag="entry.tag"
+          :content="entry.content">
+          </Entry>
+          <span v-if="entry !== entries[entries.length-1]">
+            <hr>
+            <div class="is-divider" data-content="..."></div>
+          </span>
+      </div>
+
+    </section>
 
   </div> 
 
 </template>
 <script>
-import EntryModal from "./EntryModal";
 import Entry from "./Entry";
 import EntryForm from "./EntryForm";
 import { mapGetters, mapMutations, mapActions } from "vuex";
@@ -30,7 +32,7 @@ import { mapGetters, mapMutations, mapActions } from "vuex";
 export default {
   props: ["preview"],
   name: "Diary",
-  components: { EntryForm, EntryModal, Entry },
+  components: { EntryForm, Entry },
   data() {
     return {
       entries: "",

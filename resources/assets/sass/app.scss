@@ -1,5 +1,5 @@
 $navbar-dropdown-arrow: #fff;
-@import "~bulma/bulma";
+$navbar-item-color: #fff;
 
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
@@ -15,6 +15,8 @@ $navbar-dropdown-arrow: #fff;
 @import "pages";
 @import "themes";
 @import "vendors";
+
+@import "~bulma/bulma";
 
 // TODO
 // BEM - [ ] BEM Block Element Modifier block__element—modifier

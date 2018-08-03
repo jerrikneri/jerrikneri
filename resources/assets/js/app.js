@@ -28,7 +28,7 @@ const router = new VueRouter({
                 selector: to.hash
             };
         }
-        return { x: 0, y: 850 };
+        return { x: 0, y: 1250 };
     },
     routes: [
         {

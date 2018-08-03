@@ -1,25 +1,23 @@
 <template>
-    <div class="flex-container">
-      <div class="spa">
-        <div class="flex-vue">
-          <router-link class="flex-vue-item-three"
-          to="/blog">
-            <h3>BLOG</h3>
-            <Blog :preview="true"></Blog>
-          </router-link>
-          <router-link class="flex-vue-item-three"
-          to="/code">
-            <h3>PROJECTS</h3>
-            <Code :preview="true"></Code>
-          </router-link>
-          <router-link class="flex-vue-item-three"
-          to="/diary">
-            <h3>JOURNAL</h3>
-            <Diary :preview="true"></Diary>
-          </router-link>
-        </div>
+    <section class="section">
+      <div class="columns">
+        <router-link class="box column has-text-centered is-size-4"
+        to="/blog">
+          <h3>BLOG</h3>
+          <Blog :preview="true"></Blog>
+        </router-link>
+        <router-link class="box column has-text-centered is-size-4"
+        to="/code">
+          <h3>PROJECTS</h3>
+          <Code :preview="true"></Code>
+        </router-link>
+        <router-link class="box column has-text-centered is-size-4"
+        to="/diary">
+          <h3>JOURNAL</h3>
+          <Diary :preview="true"></Diary>
+        </router-link>
       </div>
-    </div>
+    </section>
 </template>
 
 <script>
@@ -37,4 +35,7 @@ export default {
 </script>
 
 <style>
+.box {
+  margin-bottom: 0 !important;
+}
 </style>

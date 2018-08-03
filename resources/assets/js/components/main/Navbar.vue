@@ -1,5 +1,5 @@
 <template>
-<nav class="navbar is-fixed-top is-light">
+<nav class="box navbar is-fixed-top is-light">
   <div class="navbar-item has-dropdown is-hoverable navbar__dropdown--hide">
     <router-link class="navbar-item"
       to="/">
@@ -32,6 +32,13 @@
       </a>
     </div>
   <div class="navbar-menu">
+    <div class="navbar-start">
+      <div class="navbar-item">
+        <div class="has-text-centered is-size-4">
+          A Blog Code Diary <span class="is-size-6"><i>Read, code, and write with me.</i></span>
+        </div>
+      </div>
+    </div>
     <div class="navbar-end">
       <router-link class="navbar-item"
         to="/blog">

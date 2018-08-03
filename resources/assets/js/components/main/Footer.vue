@@ -1,5 +1,5 @@
 <template>
-<div class="footer has-text-centered">
+<div class="footer has-text-centered has-background-light">
   <div class="">
     <hr>
 
