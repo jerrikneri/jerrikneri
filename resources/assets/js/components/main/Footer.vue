@@ -1,5 +1,5 @@
 <template>
-<div class="footer has-text-centered has-background-light">
+<div class="box footer has-text-centered has-background-light">
   <div class="">
     <hr>
 
@@ -12,7 +12,7 @@
           <span v-if="trait !== traits[traits.length-1]"><strong>|</strong> </span>
         </span>
         <div class="">
-          IG | FB | YT
+          IG <strong>|</strong> FB <strong>|</strong> YT
         </div>
           
     </div>

@@ -1,18 +1,33 @@
+// Breaking Point Variables
+$desktop: 812px;
+
+@media only screen and (min-width: $desktop) {
+    .hide-desktop {
+        display: none !important;
+    }
+}
+
 // Body
 $body-bg: #fff;
-$body-font-color: #333;
+$body-font-color: #000;
+$body-font-weight: 400;
 $font-family-sans-serif: "Raleway", sans-serif;
 $font-size-base: 1.1rem;
 $line-height-base: 1.6;
-
+html {
+    font-size: 100%;
+}
 .body {
     color: $body-font-color;
     background-color: $body-bg;
     font-family: $font-family-sans-serif;
     font-size: $font-size-base;
-    font-weight: 100;
+    font-weight: $body-font-weight;
     margin: 0 10px;
 }
+
+// Columns - Bulma
+$column-gap: 2rem;
 
 // Header
 $title-line-height: 5rem;
@@ -26,23 +41,27 @@ $footer-font-color: #fff;
 //     color: $footer-font-color;
 // }
 
-html {
-    font-size: 100%;
+// Modal
+.modal {
+    font-weight: 400;
 }
+
+$modal-content-width: 900px;
+$modal-card-title-color: $body-font-color;
+$modal-card-title-size: 2rem;
 
 // Navigation Bar
 $nav-bg: #333;
 $nav-font-color: #fff;
 $nav-font-size: 1.5rem;
-
 // Bulma specific
 $navbar-dropdown-arrow: #333;
 $navbar-item-color: #333;
 $box-padding: 0;
 
-@media only screen and (max-device-width: 812px) and (orientation: portrait) {
+@media only screen and (max-device-width: $desktop) {
     .navbar__dropdown--hide {
-        display: none;
+        display: none !important;
     }
 }
 

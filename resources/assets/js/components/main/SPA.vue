@@ -1,21 +1,26 @@
 <template>
     <section class="section">
       <div class="columns">
-        <router-link class="box column has-text-centered is-size-4"
-        to="/blog">
-          <h3>BLOG</h3>
+
+        <div class="column has-text-centered is-size-4">
+          <router-link class="box column" to="/blog">
+            BLOG
           <Blog :preview="true"></Blog>
         </router-link>
-        <router-link class="box column has-text-centered is-size-4"
-        to="/code">
-          <h3>PROJECTS</h3>
+        </div>
+        
+        <div class="column has-text-centered is-size-4">
+          <router-link class="box column" to="/code">
+          PROJECTS
           <Code :preview="true"></Code>
-        </router-link>
-        <router-link class="box column has-text-centered is-size-4"
-        to="/diary">
-          <h3>JOURNAL</h3>
+        </router-link></div>
+        
+        <div class="column has-text-centered is-size-4">
+          <router-link class="box column" to="/diary">
+          JOURNAL
           <Diary :preview="true"></Diary>
-        </router-link>
+        </router-link></div>
+        
       </div>
     </section>
 </template>

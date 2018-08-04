@@ -19,6 +19,8 @@
           </span>
       </div>
 
+      <!-- <Pagination :listData=entries></Pagination> -->
+
     </section>
 
   </div> 
@@ -27,12 +29,13 @@
 <script>
 import Entry from "./Entry";
 import EntryForm from "./EntryForm";
+import Pagination from "../UI/Pagination";
 import { mapGetters, mapMutations, mapActions } from "vuex";
 
 export default {
   props: ["preview"],
   name: "Diary",
-  components: { EntryForm, Entry },
+  components: { EntryForm, Entry, Pagination },
   data() {
     return {
       entries: "",

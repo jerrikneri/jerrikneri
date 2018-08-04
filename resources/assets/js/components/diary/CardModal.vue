@@ -13,17 +13,18 @@
   >
     <div :class="classes" v-show="show">
       <div class="modal-background" @click="$emit('close')"></div>
-      <div class="modal-card">
+      <div class="modal-card has-text-centered">
         <header class="modal-card-head">
+          <button class="delete is-pulled-right" @click="$emit('close')"></button>
           <p class="modal-card-title">{{ title }}</p>
-          <button class="delete" @click="$emit('close')"></button>
+          
         </header>
         <section class="modal-card-body">
           <slot></slot>
         </section>
         <footer class="modal-card-foot columns has-text-centered">
-            <div class="column">{{ date }}</div>
-            <div class="column">{{ tag }}</div>
+            <div class="column is-size-4">{{ date }}</div>
+            <div class="column is-size-4">{{ tag }}</div>
           </footer>
       </div>
     </div>
@@ -58,3 +59,8 @@ export default {
   methods: {}
 };
 </script>
+<style>
+.modal-card-head {
+  display: block;
+}
+</style>

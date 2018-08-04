@@ -25,12 +25,37 @@
     </div>
   </div>
   <div class="navbar-brand">
-      <a @click="toggleBurger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-        <span aria-hidden="true">Test</span>
+      <div class="is-size-4 hide-desktop pl5 pt10">A BLOG CODE DIARY</div>
+      <a @click="showNav = !showNav" role="button" class="navbar-burger" 
+      aria-label="menu" aria-expanded="false" :class="{ 'is-active': showNav }">
+      
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
       </a>
-    </div>
+  </div>
+  <div @click="showNav = !showNav" class="navbar-menu hide-desktop" :class="{ 'is-active': showNav }">
+        <div class="navbar-end">
+          <router-link class="navbar-item"
+            to="/blog">
+            <span>Blog</span>
+          </router-link>
+          <router-link class="navbar-item"
+            to="/code">
+            <span>Code</span>
+          </router-link>
+          <router-link class="navbar-item"
+            to="/diary">
+            <span class="">Diary</span>  
+          </router-link>
+          <router-link class="navbar-item"
+            to="/epitome">
+            <span>Epitome</span>
+          </router-link>
+        </div>
+      </div>
+  </div>
   <div class="navbar-menu">
     <div class="navbar-start">
       <div class="navbar-item">
@@ -65,7 +90,11 @@
 <script>
 export default {
   name: "Navbar",
-
+  data() {
+    return {
+      showNav: false
+    };
+  },
   methods: {
     toggleBurger(e) {
       e.target.classList.toggle("is-active");
