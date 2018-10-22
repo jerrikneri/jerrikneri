@@ -1,6 +1,6 @@
-@extends('base')
+@extends('layouts.app')
 
-@section('aboutContent')
+@section('content')
   <div class="content">
     <div class="center">
       <img src="" alt="">

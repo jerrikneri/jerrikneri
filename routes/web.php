@@ -10,14 +10,18 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::group(['middleware' => ['stripTags', 'monitorIp']], function () {
-  $routes = [
-      'about',
-      'blog',
-      'code',
-      'diary',
-  ];
-});
+// Route::get('login', 'HomeController@login');
+// Route::post('login', 'HomeController@postLogin');
+
+// Route::group(['prefix' => 'admin', 'middleware' => 'is_admin'], function () {
+//     Route::get('', 'AdminController@index');
+// });
+
+//TO_DO AUTHENTICATE
+Route::get('admin', 'AdminController@index');
+Route::post('diary/post', 'DiaryController@postEntry');
+
+
 Route::get('/', 'HomeController@home');
 Route::get('about', 'HomeController@about');
 Route::get('blog', 'HomeController@blog');
@@ -29,3 +33,10 @@ Route::get('diary-entries', 'DiaryController@getEntries');
 Route::post('diary/post', 'DiaryController@postEntry');
 
 Route::get('blog-entries', 'BlogController@getEntries');
+
+// Auth::routes();
+
+
+// Route::get('/home', 'HomeController@index')->name('home');
+
+

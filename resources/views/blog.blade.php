@@ -1,6 +1,6 @@
-@extends('base')
+@extends('layouts.app')
 
-@section('blogContent')
+@section('content')
   <div class="content">
     Coding Blog
   </div>

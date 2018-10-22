@@ -6,26 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>A Blog Code Diary</title>
+        <title>ADMIN</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <link href="{!! URL::asset('css/app.css') !!}" rel="stylesheet" type="text/css">
     </head>
-    @if(!Request::is('/'))
-    @include('header')
-    @endif
-    
-    <body class="body has-navbar-fixed-top">
-      <!-- @yield('homeContent', '')
-      @yield('aboutContent', '')
-      @yield('blogContent', '')
-      @yield('codeContent', '')
-      @yield('diaryContent', '')
-      @yield('epitomeContent', '') -->
-      <div id="app">
-        <Home></Home>
-      </div>       
-    </body>
-    @include('footer')
-</html>

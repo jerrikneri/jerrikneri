@@ -1,7 +1,7 @@
-@extends('base')
+@extends('layouts.app')
 
-@section('diaryContent')
+@section('content')
 
 Diary
 
-@endsection('diaryContent') 
+@endsection
