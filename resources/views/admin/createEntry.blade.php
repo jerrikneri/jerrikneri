@@ -7,18 +7,18 @@
         id="title"
         class="form-control"
         name="title"
-        placeholder="Post Title">
+        placeholder="Post Title" required>
     <p>Tag:</p>
     <input type="text"
         id="tag"
         class="form-control"
         name="tag"
-        placeholder="Tag">
+        placeholder="Tag" required>
 
     <p>Dance with words:</p>
     <textarea name="content"
         class="form-control-content"
-        rows="20"></textarea>
+        rows="20" required></textarea>
     <button type="submit"
         class="">Submit Entry</button>
 </form>

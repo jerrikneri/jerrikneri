@@ -11,6 +11,11 @@ class DiaryEntry extends Model
 
     public $timestamps = true;
 
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
+
     public function addNew($data_arr)
     {
         $this->setFieldValues($data_arr);

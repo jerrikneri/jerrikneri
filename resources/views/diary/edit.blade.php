@@ -10,19 +10,22 @@ EDIT
         id="title"
         class="form-control"
         name="title"
-        value="{{ $entry->title }}">
+        value="{{ $entry->title }}"
+        required>
 
     <p>Tag:</p>
     <input type="text"
         id="tag"
         class="form-control"
         name="tag"
-        value="{{ $entry->tag }}">
+        value="{{ $entry->tag }}"
+        required>
 
     <p>Dance with words:</p>
     <textarea name="content"
         class="form-control-content"
-        rows="20">{{ $entry->content }}
+        rows="20"
+        required>{{ $entry->content }}
     </textarea>
 
     <button type="submit">Submit Entry</button>
