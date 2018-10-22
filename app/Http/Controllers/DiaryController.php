@@ -8,9 +8,6 @@ use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Validator;
 
-
-
-
 class DiaryController extends Controller
 {
     public function getEntries()
@@ -22,16 +19,31 @@ class DiaryController extends Controller
         // return $diary->entries()->where('id', '>', '20')->get();
     }
 
-    public function edit()
+    public function show(DiaryEntry $entry)
     {
+        return view('diary.show', compact('entry'));
+    }
+
+    public function edit(DiaryEntry $entry)
+    {
+        return view('diary.edit', compact('entry'));
+    }
+
+    public function update(DiaryEntry $entry)
+    {
+        $entry->title = Input::get('title');
+        $entry->tag = Input::get('tag');
+        $entry->content = Input::get('content');
+
+        $entry->save();
+        return redirect('/');
     }
 
     public function postEntry()
     {
-        $input = Input::only('title', 'date', 'tag', 'content');
+        $input = Input::only('title', 'tag', 'content');
         $rules = [
             'title' => 'required',
-            'date' => 'required',
             'tag' => 'required',
             'content' => 'required'
         ];
@@ -42,7 +54,6 @@ class DiaryController extends Controller
 
         $entry = new DiaryEntry();
         $entry->title = Input::get('title');
-        $entry->date = Input::get('date');
         $entry->tag = Input::get('tag');
         $entry->content = Input::get('content');
 
@@ -52,11 +63,9 @@ class DiaryController extends Controller
         return view('admin.postSuccess');
     }
 
-    public function update()
+    public function delete(DiaryEntry $entry)
     {
-    }
-
-    public function destroy()
-    {
+        $entry->delete();
+        return redirect('/');
     }
 }

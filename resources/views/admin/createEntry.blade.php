@@ -8,12 +8,6 @@
         class="form-control"
         name="title"
         placeholder="Post Title">
-    <p>Date:</p>
-    <input type="text"
-        id="date"
-        class="form-control"
-        name="date"
-        placeholder="Date">
     <p>Tag:</p>
     <input type="text"
         id="tag"

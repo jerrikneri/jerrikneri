@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Validator;
 
 
 
-class BlogController extends Controller{
+class BlogController extends Controller {
     public function getEntries()
     {
         $entries = BlogEntries::where('id', '>', '0')

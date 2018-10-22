@@ -16,7 +16,6 @@ class CreateDiaryPostsTable extends Migration
         Schema::create('diaryEntries', function(Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->string('date');
             $table->string('tag');
             $table->text('content');
             $table->timestamps();

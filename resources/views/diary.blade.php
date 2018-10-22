@@ -2,6 +2,4 @@
 
 @section('content')
 
-Diary
-
 @endsection
