@@ -32,8 +32,10 @@ Route::get('epitome', 'HomeController@epitome');
 Route::get('diary-entries', 'DiaryController@getEntries');
 Route::get('diary/{entry}', 'DiaryController@show');
 Route::get('diary/edit/{entry}', 'DiaryController@edit');
-Route::post('diary/edit/{entry}', 'DiaryController@update');
+Route::patch('diary/edit/{entry}', 'DiaryController@update');
 Route::post('diary/delete/{entry}', 'DiaryController@delete');
+
+Route::post('diary/{entry}/comments', 'CommentsController@store');
 
 Route::get('blog-entries', 'BlogController@getEntries');
 

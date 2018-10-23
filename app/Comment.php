@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comment extends Model
 {
+    protected $fillable = array('body', 'diary_entry_id');
+
     public function diaryEntry()
     {
         return $this->belongsTo(DiaryEntry::class);

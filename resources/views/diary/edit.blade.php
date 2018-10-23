@@ -5,6 +5,7 @@ EDIT
 
 <form method="post" action="{{ url('diary/edit/' . $entry->id) }}">
     {{ csrf_field() }}
+    {{ method_field('PATCH') }}
     <p>Title:</p>
     <input type="text"
         id="title"

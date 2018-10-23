@@ -11,6 +11,11 @@ class DiaryEntry extends Model
 
     public $timestamps = true;
 
+    public function addComment($body)
+    {
+        $this->comments()->create(compact('body'));
+    }
+
     public function comments()
     {
         return $this->hasMany(Comment::class);
