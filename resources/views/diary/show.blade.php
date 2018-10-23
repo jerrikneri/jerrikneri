@@ -1,8 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<!-- if user()->auth() -->
+@if (Auth::check())
 <a href="{{ url('diary/edit/' . $entry->id) }}">Edit</a>
+@endif
 
 <div class="has-text-black">
     {{ $entry->title }}

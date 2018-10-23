@@ -10,6 +10,11 @@ use Illuminate\Support\Facades\Validator;
 
 class DiaryController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => 'show', 'getEntries']);
+    }
+
     public function getEntries()
     {
         return DiaryEntry::getEntries();

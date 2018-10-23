@@ -11,8 +11,9 @@ class User extends Authenticatable
 
     const ADMIN_TYPE = 'admin';
     const DEFAULT_TYPE = 'default';
-    public function isAdmin()    {        
-      return $this->type === self::ADMIN_TYPE;    
+
+    public function isAdmin()    {
+      return $this->type === self::ADMIN_TYPE;
     }
 
 
@@ -40,6 +41,10 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function posts()
+    {
+      return $this->hasMany(Post::class);
+    }
     /**
    * Get the unique identifier for the user.
    *

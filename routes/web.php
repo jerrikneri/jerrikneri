@@ -10,8 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-// Route::get('login', 'HomeController@login');
-// Route::post('login', 'HomeController@postLogin');
+Route::get('login', 'SessionsController@create')->name('login');
+Route::post('logout', 'SessionsController@destroy');
+Route::get('register', 'RegistrationController@create');
+Route::post('register', 'RegistrationController@store');
+
 
 // Route::group(['prefix' => 'admin', 'middleware' => 'is_admin'], function () {
 //     Route::get('', 'AdminController@index');
@@ -22,7 +25,7 @@ Route::get('admin', 'AdminController@index');
 Route::post('diary/post', 'DiaryController@postEntry');
 
 
-Route::get('/', 'HomeController@home');
+Route::get('/', 'HomeController@home')->name('home');
 Route::get('about', 'HomeController@about');
 Route::get('blog', 'HomeController@blog');
 Route::get('code', 'HomeController@code');
@@ -38,8 +41,6 @@ Route::post('diary/delete/{entry}', 'DiaryController@delete');
 Route::post('diary/{entry}/comments', 'CommentsController@store');
 
 Route::get('blog-entries', 'BlogController@getEntries');
-
-// Auth::routes();
 
 
 // Route::get('/home', 'HomeController@index')->name('home');

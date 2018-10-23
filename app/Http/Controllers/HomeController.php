@@ -11,6 +11,14 @@ class HomeController extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
+    public function __construct()
+    {
+        $this->middleware('auth', ['only' => 'index']);
+    }
+
+    public function index()
+    {
+    }
     public function home()
     {
         return view('home');
