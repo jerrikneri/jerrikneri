@@ -61,6 +61,7 @@ class DiaryController extends Controller
         $entry->title = Input::get('title');
         $entry->tag = Input::get('tag');
         $entry->content = Input::get('content');
+        $entry->user_id = auth()->id();
 
         $entry->save();
 

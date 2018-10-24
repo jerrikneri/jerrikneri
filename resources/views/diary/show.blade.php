@@ -7,7 +7,7 @@
 
 <div class="has-text-black">
     {{ $entry->title }}
-    {{ $entry->created_at->toFormattedDateString() }}
+    {{ $entry->user->name }} on {{ $entry->created_at->toFormattedDateString() }}
     {{ $entry->tag }}
 </div>
 

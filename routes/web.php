@@ -11,6 +11,7 @@
 |
 */
 Route::get('login', 'SessionsController@create')->name('login');
+Route::post('login', 'SessionsController@login');
 Route::post('logout', 'SessionsController@destroy');
 Route::get('register', 'RegistrationController@create');
 Route::post('register', 'RegistrationController@store');
@@ -21,7 +22,7 @@ Route::post('register', 'RegistrationController@store');
 // });
 
 //TO_DO AUTHENTICATE
-Route::get('admin', 'AdminController@index');
+Route::get('admin', 'AdminController@index')->name('admin');
 Route::post('diary/post', 'DiaryController@postEntry');
 
 
@@ -44,5 +45,3 @@ Route::get('blog-entries', 'BlogController@getEntries');
 
 
 // Route::get('/home', 'HomeController@index')->name('home');
-
-

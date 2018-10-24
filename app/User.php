@@ -45,6 +45,11 @@ class User extends Authenticatable
     {
       return $this->hasMany(Post::class);
     }
+
+    public function publish(DiaryEntry $entry)
+    {
+      $this->posts()->save($entry);
+    }
     /**
    * Get the unique identifier for the user.
    *
