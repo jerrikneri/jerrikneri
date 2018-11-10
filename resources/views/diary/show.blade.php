@@ -2,19 +2,19 @@
 
 @section('content')
 @if (Auth::check())
-<a href="{{ url('diary/edit/' . $entry->id) }}">Edit</a>
+<a href="{{ url('diary/' . $diary->id . '/edit') }}">Edit</a>
 @endif
 
 <div class="has-text-black">
-    {{ $entry->title }}
-    {{ $entry->user->name }} on {{ $entry->created_at->toFormattedDateString() }}
-    {{ $entry->tag }}
+    {{ $diary->title }}
+    {{ $diary->user->name }} on {{ $diary->created_at->toFormattedDateString() }}
+    {{ $diary->tag }}
 </div>
 
-{{ $entry->content }}
+{{ $diary->content }}
 
 <div>
-    @foreach ($entry->comments as $comment)
+    @foreach ($diary->comments as $comment)
         <article>
             {{ $comment->created_at->diffForHumans() }}: &nbsp;
             {{ $comment->body  }}
@@ -24,7 +24,7 @@
 
 
 
-<form method="post" action="/diary/{{ $entry->id }}/comments">
+<form method="post" action="/diary/{{ $diary->id }}/comments">
     {{ csrf_field() }}
     <div>
         <textarea name="body"

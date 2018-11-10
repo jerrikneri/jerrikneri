@@ -11,19 +11,19 @@
     @beforeLeave="beforeLeave"
     @afterLeave="afterLeave"
   >
-    <div :class="classes" v-show="show">
+    <div :class="classes" v-show="visible">
       <div class="modal-background" @click="$emit('close')"></div>
       <div class="modal-card has-text-centered">
         <header class="modal-card-head">
           <button class="delete is-pulled-right" @click="$emit('close')"></button>
           <p class="modal-card-title">{{ title }}</p>
-          
+
         </header>
         <section class="modal-card-body">
           <slot></slot>
         </section>
         <footer class="modal-card-foot columns has-text-centered">
-            <div class="column is-size-4">{{ date }}</div>
+            <!-- <div class="column is-size-4">{{ date }}</div> -->
             <div class="column is-size-4">{{ tag }}</div>
           </footer>
       </div>
@@ -41,13 +41,16 @@ export default {
     title: {
       type: String
     },
-    date: {
-      type: String
-    },
+    // date: {
+    //   type: String
+    // },
     tag: {
       type: String
     },
-    show: { type: Boolean, default: false }
+    visible: {
+      type: Boolean,
+      default: false
+    }
   },
 
   computed: {

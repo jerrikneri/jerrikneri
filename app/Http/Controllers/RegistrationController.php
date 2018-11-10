@@ -11,7 +11,7 @@ class RegistrationController extends Controller
     {
         return view('register.create');
     }
-    public function store()
+    public function store(Request $request)
     {
         $this->validate(request(), [
             'name' => 'required',
@@ -19,7 +19,11 @@ class RegistrationController extends Controller
             'password' => 'required|confirmed',
         ]);
 
-        $user = User::create(request(['name', 'email', 'password']));
+        $user = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => bcrypt($request->password)
+        ]);
 
         auth()->login($user);
 

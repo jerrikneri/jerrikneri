@@ -18,30 +18,11 @@ class HomeController extends BaseController
 
     public function index()
     {
+
     }
     public function home()
     {
         return view('home');
-    }
-    public function about()
-    {
-        return view('about');
-    }
-    public function blog()
-    {
-        return view('blog');
-    }
-    public function code()
-    {
-        return view('code');
-    }
-    public function diary()
-    {
-        return view('diary');
-    }
-    public function epitome()
-    {
-        return view('epitome');
     }
 
     public function login()

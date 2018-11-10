@@ -18,6 +18,6 @@ use Illuminate\Http\Request;
 // });
 
 
-Route::resource('/diary', 'DiaryController', [
-    'except' => ['show', 'store']
-]);
+// Route::resource('/diary', 'DiaryController', [
+//     'except' => ['show', 'store']
+// ]);

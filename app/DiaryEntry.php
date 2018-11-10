@@ -7,7 +7,7 @@ class DiaryEntry extends Model
 {
     protected $table = 'diaryEntries';
 
-    protected $fillable = array('title', 'date', 'tag', 'content');
+    protected $fillable = array('title', 'tag', 'content');
 
     public $timestamps = true;
 

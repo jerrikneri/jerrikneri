@@ -1,9 +1,9 @@
 import axios from "axios";
 
 export default {
-    getEntries: ({ commit, state }) => {
+    getDiaryEntries: ({ commit, state }) => {
         axios
-            .get("diary-entries")
+            .get("diary/all")
             .then(response => {
                 commit("updateEntries", response.data);
             })

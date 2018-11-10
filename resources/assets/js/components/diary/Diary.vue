@@ -9,7 +9,6 @@
       <div v-for="entry in entries">
         <Entry
           :title="entry.title"
-          :date="entry.date"
           :tag="entry.tag"
           :content="entry.content">
           </Entry>
@@ -44,11 +43,11 @@ export default {
     };
   },
   methods: {
-    ...mapActions(["getEntries", "submitEntry"])
+    ...mapActions(["getDiaryEntries", "submitEntry"])
   },
   mounted() {
     let self = this;
-    this.getEntries().then(() => {
+    this.getDiaryEntries().then(() => {
       self.entries = self.$store.state.entries;
       // self.entries = self.addShowProperty(self.$store.state.entries);
       self.loading = false;

@@ -11,37 +11,45 @@
 |
 */
 Route::get('login', 'SessionsController@create')->name('login');
-Route::post('login', 'SessionsController@login');
-Route::post('logout', 'SessionsController@destroy');
-Route::get('register', 'RegistrationController@create');
-Route::post('register', 'RegistrationController@store');
+Route::post('login', 'SessionsController@login')->middleware('guest');
+Route::post('logout', 'SessionsController@destroy')->middleware('auth');
 
+Route::get('admin', 'AdminController@index')->middleware('auth')->name('admin');
+// Route::get('register', 'RegistrationController@create');
+// Route::post('register', 'RegistrationController@store');
 
-// Route::group(['prefix' => 'admin', 'middleware' => 'is_admin'], function () {
-//     Route::get('', 'AdminController@index');
-// });
+// Route::resource('diary', 'diaryController');
+Route::group(['prefix' => 'diary'], function () {
+    Route::get('/all', 'DiaryController@index');
+    Route::get('/{diary}', 'DiaryController@show');
+    Route::get('/{diary}/edit', 'DiaryController@edit');
+    Route::patch('/{diary}/edit', 'DiaryController@update');
+    Route::post('/', 'DiaryController@store');
+    Route::delete('/{diary}', 'DiaryController@destroy');
+});
 
-//TO_DO AUTHENTICATE
-Route::get('admin', 'AdminController@index')->name('admin');
-Route::post('diary/post', 'DiaryController@postEntry');
-
-
-Route::get('/', 'HomeController@home')->name('home');
-Route::get('about', 'HomeController@about');
-Route::get('blog', 'HomeController@blog');
-Route::get('code', 'HomeController@code');
-Route::get('diary', 'HomeController@diary');
-Route::get('epitome', 'HomeController@epitome');
-
-Route::get('diary-entries', 'DiaryController@getEntries');
-Route::get('diary/{entry}', 'DiaryController@show');
-Route::get('diary/edit/{entry}', 'DiaryController@edit');
-Route::patch('diary/edit/{entry}', 'DiaryController@update');
-Route::post('diary/delete/{entry}', 'DiaryController@delete');
-
-Route::post('diary/{entry}/comments', 'CommentsController@store');
+Route::post('diary/{diary}/comments', 'CommentsController@store');
 
 Route::get('blog-entries', 'BlogController@getEntries');
 
 
 // Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+Route::group(
+    ['middleware' => 'stripTags'],
+    function () {
+        $routes = [
+            '/',
+            'diary',
+            'blog',
+            'code',
+            'epitome',
+            'project'
+        ];
+        foreach ($routes as $route) {
+            Route::get($route, 'HomeController@home');
+        }
+    }
+);

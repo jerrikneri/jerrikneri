@@ -1,6 +1,6 @@
 
 @section('content')
-<form method="POST" action="diary/post" class="content">
+<form method="POST" action="diary" class="content">
     {{ csrf_field() }}
     <p>Title:</p>
     <input type="text"

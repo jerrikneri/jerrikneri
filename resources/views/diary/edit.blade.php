@@ -3,7 +3,7 @@
 @section('content')
 EDIT
 
-<form method="post" action="{{ url('diary/edit/' . $entry->id) }}">
+<form method="post" action="{{ url('diary/edit/' . $diary->id) }}">
     {{ csrf_field() }}
     {{ method_field('PATCH') }}
     <p>Title:</p>
@@ -11,7 +11,7 @@ EDIT
         id="title"
         class="form-control"
         name="title"
-        value="{{ $entry->title }}"
+        value="{{ $diary->title }}"
         required>
 
     <p>Tag:</p>
@@ -19,21 +19,22 @@ EDIT
         id="tag"
         class="form-control"
         name="tag"
-        value="{{ $entry->tag }}"
+        value="{{ $diary->tag }}"
         required>
 
     <p>Dance with words:</p>
     <textarea name="content"
         class="form-control-content"
         rows="20"
-        required>{{ $entry->content }}
+        required>{{ $diary->content }}
     </textarea>
 
     <button type="submit">Submit Entry</button>
 </form>
 
-<form method="post" action="{{ url('diary/delete/' . $entry->id) }}">
+<form method="post" action="{{ url('diary/' . $diary->id) }}">
     {{ csrf_field() }}
+    {{ method_field('DELETE') }}
     <button type="submit">DELETE POST</button>
 </form>
 

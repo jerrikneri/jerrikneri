@@ -12,10 +12,10 @@ class DiaryController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth', ['except' => 'show', 'getEntries']);
+        $this->middleware('auth', ['except' => ['show', 'index']]);
     }
 
-    public function getEntries()
+    public function index()
     {
         return DiaryEntry::getEntries();
         // Query builder to add extra conditions.
@@ -24,27 +24,27 @@ class DiaryController extends Controller
         // return $diary->entries()->where('id', '>', '20')->get();
     }
 
-    public function show(DiaryEntry $entry)
+    public function show(DiaryEntry $diary)
     {
-        return view('diary.show', compact('entry'));
+        return view('diary.show', compact('diary'));
     }
 
-    public function edit(DiaryEntry $entry)
+    public function edit(DiaryEntry $diary)
     {
-        return view('diary.edit', compact('entry'));
+        return view('diary.edit', compact('diary'));
     }
 
-    public function update(DiaryEntry $entry)
+    public function update(DiaryEntry $diary)
     {
-        $entry->title = Input::get('title');
-        $entry->tag = Input::get('tag');
-        $entry->content = Input::get('content');
+        $diary->title = Input::get('title');
+        $diary->tag = Input::get('tag');
+        $diary->content = Input::get('content');
 
-        $entry->save();
+        $diary->save();
         return redirect('/');
     }
 
-    public function postEntry()
+    public function store()
     {
         $input = Input::only('title', 'tag', 'content');
         $rules = [
@@ -69,9 +69,9 @@ class DiaryController extends Controller
         return view('admin.postSuccess');
     }
 
-    public function delete(DiaryEntry $entry)
+    public function destroy(DiaryEntry $diary)
     {
-        $entry->delete();
+        $diary->delete();
         return redirect('/');
     }
 }

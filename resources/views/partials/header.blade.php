@@ -1,7 +1,7 @@
 <div class="navbar">
     <div class="links">
-        <a href="/">Home</a>
         @if (Auth::check())
+        {{-- <a href="/">Home</a> --}}
         <div class="is-pulled-right">
             {{ auth()->user()->name }}
             <form method="post" action="/logout">

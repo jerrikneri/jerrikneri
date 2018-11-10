@@ -9,17 +9,18 @@
         </span>
         <div class="is-divider-vertical" data-content="*"></div>
         <span class="column">
-          <h3>{{ date }} {{ tag }}</h3>
+          <h3>{{ tag }}</h3>
         </span>
       </div>
     </div>
-    
-    <CardModal :show="showModal"
+
+    <CardModal :visible="showModal"
       @close="showModal = false"
-      :title="title" :tag="tag" :date="date">
+      :title="title" :tag="tag">
       <p v-for="line in formattedContent"
         class="mb5"
-        :class="line==formattedContent[formattedContent.length-1] ? 'mb50' : ''">
+        :class="line==formattedContent[formattedContent.length-1] ? 'mb50' : ''"
+        :key="line">
               {{ line }}
             </p>
     </CardModal>
@@ -32,7 +33,7 @@ import CardModal from "./CardModal";
 import EntryModal from "./EntryModal";
 
 export default {
-  props: ["title", "tag", "date", "content"],
+  props: ["title", "tag", "content"],
   name: "Entry",
   components: { CardModal, EntryModal },
   data() {
