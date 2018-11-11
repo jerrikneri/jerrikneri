@@ -13,8 +13,8 @@
 Route::get('login', 'SessionsController@create')->name('login');
 Route::post('login', 'SessionsController@login')->middleware('guest');
 Route::post('logout', 'SessionsController@destroy')->middleware('auth');
-Route::get('register', 'RegistrationController@create');
-Route::post('register', 'RegistrationController@store');
+// Route::get('register', 'RegistrationController@create');
+// Route::post('register', 'RegistrationController@store');
 
 Route::get('/', 'HomeController@home')->name('home');
 Route::group(

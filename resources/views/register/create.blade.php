@@ -1,4 +1,4 @@
-@extends('layouts.app')
+{{-- @extends('layouts.app')
 
 @section('content')
     <div>
@@ -25,4 +25,4 @@
             @include('partials.errors')
         </form>
     </div>
-@endsection
+@endsection --}}
