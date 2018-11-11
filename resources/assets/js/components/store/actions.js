@@ -21,4 +21,14 @@ export default {
                 console.error("Unable to load entries.", error);
             });
     },
+    getProjects: ({ commit, state }) => {
+        axios
+            .get("project/all")
+            .then(response => {
+                commit("updateProjects", response.data);
+            })
+            .catch(error => {
+                console.error("Unable to load entries.", error);
+            });
+    },
 };

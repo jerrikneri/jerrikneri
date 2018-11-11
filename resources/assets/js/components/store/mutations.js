@@ -5,5 +5,8 @@ export default {
   updateBlogPosts: (state, posts) => {
     state.blog_posts = posts;
   },
+  updateProjects: (state, projects) => {
+    state.projects = projects;
+  },
 
 };

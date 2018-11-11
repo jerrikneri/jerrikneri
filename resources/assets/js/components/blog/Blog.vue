@@ -11,8 +11,9 @@
                     <div v-for="post in posts">
                         <a :href="`/blog/${post.id}`">
                             <div class="columns">
-                              <div class="column">
-                                    <img :src="`/images/blog/${post.image}`" alt="Blog Picture">
+                                <div class="column">
+                                    <img :src="`/images/blog/${post.image}`"
+                                         alt="Blog Picture">
                                 </div>
                                 <div class="column">
                                     <h3>{{ post.title }}</h3>
@@ -156,10 +157,11 @@ export default {
   components: {},
   data() {
     return {
-      posts: []
-    };
-  },
-    methods: {
+        dateFormat: this.$store.state.date_format,
+        posts: []
+        }
+    },
+methods: {
     ...mapActions(["getBlogPosts", "submitEntry"]),
   },
   mounted() {

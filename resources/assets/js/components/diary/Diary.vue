@@ -39,7 +39,7 @@ export default {
       entries: "",
       loading: true,
       showEntry: false,
-      dateFormat : { year: 'numeric', month: 'long', day: 'numeric' }
+      dateFormat : this.$store.state.date_format
     };
   },
   methods: {
