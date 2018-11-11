@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Comment extends Model
+class DiaryComment extends Model
 {
     protected $fillable = array('body', 'diary_entry_id');
 

@@ -5,7 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class DiaryEntry extends Model
 {
-    protected $table = 'diaryEntries';
+    protected $table = 'diary_entries';
 
     protected $fillable = array('title', 'tag', 'content');
 
@@ -18,7 +18,7 @@ class DiaryEntry extends Model
 
     public function comments()
     {
-        return $this->hasMany(Comment::class);
+        return $this->hasMany(DiaryComment::class);
     }
     public function user()
     {

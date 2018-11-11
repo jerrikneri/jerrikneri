@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class CodeProjects extends Model
+class BlogPosts extends Model
 {
     //
 }

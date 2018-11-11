@@ -17,6 +17,9 @@ import Code from "./components/code/Code";
 import Diary from "./components/diary/Diary";
 import Epitome from "./components/epitome/Epitome";
 
+// import moment from 'moment';
+// Vue.use(moment);
+
 const router = new VueRouter({
     mode: "history",
     scrollBehavior(to, from, savedPosition) {

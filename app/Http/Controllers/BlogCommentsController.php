@@ -3,17 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Comment;
-use App\DiaryEntry;
+use App\BlogComment;
+use App\BlogPost;
 
-class CommentsController extends Controller
+class BlogCommentsController extends Controller
 {
-    public function store(DiaryEntry $entry)
+    public function store(BlogPost $post)
     {
         $this->validate(request(), [
             'body' => 'required|min:3'
         ]);
-        $entry->addComment(request('body'));
+        $post->addComment(request('body'));
 
         return back();
     }

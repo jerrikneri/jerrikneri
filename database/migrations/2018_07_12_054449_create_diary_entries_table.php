@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDiaryPostsTable extends Migration
+class CreateDiaryEntriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateDiaryPostsTable extends Migration
      */
     public function up()
     {
-        Schema::create('diaryEntries', function(Blueprint $table) {
+        Schema::create('diary_entries', function(Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('user_id');
             $table->string('title');
@@ -30,6 +30,6 @@ class CreateDiaryPostsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('diaryEntries');
+        Schema::dropIfExists('diary_entries');
     }
 }

@@ -23,8 +23,9 @@
           <slot></slot>
         </section>
         <footer class="modal-card-foot columns has-text-centered">
-            <!-- <div class="column is-size-4">{{ date }}</div> -->
+            <div class="column is-size-4">{{ date }}</div>
             <div class="column is-size-4">{{ tag }}</div>
+
           </footer>
       </div>
     </div>
@@ -41,9 +42,9 @@ export default {
     title: {
       type: String
     },
-    // date: {
-    //   type: String
-    // },
+    date: {
+      type: String
+    },
     tag: {
       type: String
     },

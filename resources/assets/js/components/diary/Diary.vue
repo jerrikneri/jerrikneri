@@ -1,31 +1,31 @@
 <template>
-  <div class="">
-    <div v-show="preview === true">
-      <!-- <h3>Write with me...</h3> -->
-    </div> 
+    <div class="">
+        <div v-show="preview === true">
+            <!-- <h3>Write with me...</h3> -->
+        </div>
+        <section v-show="preview == null"
+                 class="box section">
 
-    <!-- <EntryForm></EntryForm> -->
-    <section v-show="preview == null" class="box section">
-      <div v-for="entry in entries">
-        <Entry
-          :title="entry.title"
-          :tag="entry.tag"
-          :content="entry.content">
-          </Entry>
-          <span v-if="entry !== entries[entries.length-1]">
+            <div v-for="entry in entries">
+                <Entry :title="entry.title"
+                       :tag="entry.tag"
+                       :content="entry.content"
+                       :date="moment(entry.created_at).format('MMMM Do YYYY, h:mm a')"
+                       :id="entry.id">
+                </Entry>
+                <span v-if="entry !== entries[entries.length-1]">
             <hr>
             <div class="is-divider" data-content="..."></div>
           </span>
-      </div>
+            </div>
 
-      <!-- <Pagination :listData=entries></Pagination> -->
-
-    </section>
-
-  </div> 
+            <!-- <Pagination :listData=entries></Pagination> -->
+        </section>
+    </div>
 
 </template>
 <script>
+var moment = require('moment');
 import Entry from "./Entry";
 import EntryForm from "./EntryForm";
 import Pagination from "../UI/Pagination";
@@ -39,11 +39,12 @@ export default {
     return {
       entries: "",
       loading: true,
-      showEntry: false
+      showEntry: false,
+      moment: moment
     };
   },
   methods: {
-    ...mapActions(["getDiaryEntries", "submitEntry"])
+    ...mapActions(["getDiaryEntries", "submitEntry"]),
   },
   mounted() {
     let self = this;

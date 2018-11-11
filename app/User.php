@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\DiaryEntry;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -41,9 +42,9 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function posts()
+    public function diaryEntries()
     {
-      return $this->hasMany(Post::class);
+      return $this->hasMany(DiaryEntry::class);
     }
 
     public function publish(DiaryEntry $entry)
