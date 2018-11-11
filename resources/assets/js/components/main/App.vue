@@ -3,7 +3,7 @@
     <Navbar></Navbar>
     <Header></Header>
     <section class="section is-flex">
-      <img class="has-image-centered" src="http://placehold.it/1050x350" alt="Place holder face">
+      <img class="has-image-centered" src="/images/car.jpg" alt="Place holder face">
     </section>
     
     <hr>
