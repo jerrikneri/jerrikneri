@@ -10,7 +10,7 @@
                 <Entry :title="entry.title"
                        :tag="entry.tag"
                        :content="entry.content"
-                       :date="moment(entry.created_at).format('MMMM Do YYYY, h:mm a')"
+                       :date="new Date(Date.parse(entry.created_at)).toLocaleDateString('en-US', dateFormat)"
                        :id="entry.id">
                 </Entry>
                 <span v-if="entry !== entries[entries.length-1]">
@@ -25,7 +25,6 @@
 
 </template>
 <script>
-import moment from 'moment';
 import Entry from "./Entry";
 import EntryForm from "./EntryForm";
 import Pagination from "../UI/Pagination";
@@ -40,7 +39,7 @@ export default {
       entries: "",
       loading: true,
       showEntry: false,
-      moment: moment
+      dateFormat : { year: 'numeric', month: 'long', day: 'numeric' }
     };
   },
   methods: {
