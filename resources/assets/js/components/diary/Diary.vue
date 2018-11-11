@@ -25,7 +25,7 @@
 
 </template>
 <script>
-var moment = require('moment');
+import moment from 'moment';
 import Entry from "./Entry";
 import EntryForm from "./EntryForm";
 import Pagination from "../UI/Pagination";
