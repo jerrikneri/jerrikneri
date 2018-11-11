@@ -5,24 +5,20 @@ export default {
         axios
             .get("diary/all")
             .then(response => {
-                commit("updateEntries", response.data);
+                commit("updateDiaryEntries", response.data);
             })
             .catch(error => {
                 console.error("Unable to load entries.", error);
             });
     },
-
-    submitEntry: ({ commit, state }, entry) => {
-        return axios
-            .post("diary/post", {
-                title: entry.title,
-                date: entry.date,
-                tag: entry.tag,
-                content: entry.content
+    getBlogPosts: ({ commit, state }) => {
+        axios
+            .get("blog/all")
+            .then(response => {
+                commit("updateBlogPosts", response.data);
             })
-            .then(response => {})
             .catch(error => {
-                console.error("Post submission unsuccessful.", error);
+                console.error("Unable to load entries.", error);
             });
-    }
+    },
 };

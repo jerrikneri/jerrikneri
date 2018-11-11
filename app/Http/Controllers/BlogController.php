@@ -2,20 +2,26 @@
 
 namespace App\Http\Controllers;
 
-use App\BlogEntries;
+use App\BlogPost;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Input;
 
+class BlogController extends Controller
+{
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => ['show', 'index']]);
+    }
 
-
-
-class BlogController extends Controller {
     public function index()
     {
-        $entries = BlogEntries::where('id', '>', '0')
-          ->orderBy('id', 'desc')->get();
-        return $entries;
+        return BlogPost::getPosts();
+    }
+
+    public function show(BlogPost $blog)
+    {
+        return view('blog.show', compact('blog'));
     }
 
     public function edit()
@@ -26,16 +32,16 @@ class BlogController extends Controller {
     {
         $this->validate(request(), [
             'title' => 'required',
-            'date' => 'required',
+            'image' => 'required',
             'tag' => 'required',
             'content' => 'required'
         ]);
-
-        BlogEntries::create([
-        $entry->title = Input::get('title'),
-        $entry->date = Input::get('date'),
-        $entry->tag = Input::get('tag'),
-        $entry->content = Input::get('content')
+        BlogPost::create([
+        'title' => Input::get('title'),
+        'image' => Input::get('image'),
+        'tag' => Input::get('tag'),
+        'content' => Input::get('content'),
+        'user_id' => auth()->id()
         ]);
 
         // return response($entry->jsonSerialize(), Response::HTTP_CREATED);

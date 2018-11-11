@@ -43,12 +43,12 @@ export default {
     };
   },
   methods: {
-    ...mapActions(["getDiaryEntries", "submitEntry"]),
+    ...mapActions(["getDiaryEntries"]),
   },
   mounted() {
     let self = this;
     this.getDiaryEntries().then(() => {
-      self.entries = self.$store.state.entries;
+      self.entries = self.$store.state.diary_entries;
       // self.entries = self.addShowProperty(self.$store.state.entries);
       self.loading = false;
     });

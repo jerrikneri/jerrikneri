@@ -1,7 +1,9 @@
 export default {
-  updateEntries: (state, entries) => {
-    console.log('updateEntries', entries);
-    state.entries = entries;
+  updateDiaryEntries: (state, entries) => {
+    state.diary_entries = entries;
+  },
+  updateBlogPosts: (state, posts) => {
+    state.blog_posts = posts;
   },
 
 };

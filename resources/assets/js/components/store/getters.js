@@ -1,3 +1,4 @@
 export default {
-  entries: state => state.entries
+  blog: state => state.blog_posts,
+  diary: state => state.diary_entries
 };

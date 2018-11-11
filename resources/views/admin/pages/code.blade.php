@@ -22,5 +22,6 @@
         rows="20" required></textarea>
     <button type="submit"
         class="">Submit Entry</button>
+        @include('partials.errors')
 </form>
 @endsection

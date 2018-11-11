@@ -42,7 +42,7 @@ class BlogPostPolicy
      */
     public function update(User $user, BlogPost $blogPost)
     {
-        //
+        return $blogPost->user_id === $user->id;
     }
 
     /**

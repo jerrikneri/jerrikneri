@@ -1,3 +1,4 @@
 export default {
-  entries: [],
+  diary_entries: [],
+  blog_posts: [],
 };

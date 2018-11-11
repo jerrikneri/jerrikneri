@@ -15,12 +15,18 @@
         class="form-control"
         name="tag"
         placeholder="Tag" required>
-
+    <p>Image Path:</p>
+    <input type="text"
+        id="image"
+        class="form-control"
+        name="image"
+        placeholder="Image Path" required>
     <p>Dance with words:</p>
     <textarea name="content"
         class="form-control-content"
         rows="20" required></textarea>
     <button type="submit"
         class="">Submit Entry</button>
+        @include('partials.errors')
 </form>
 @endsection

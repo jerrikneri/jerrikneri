@@ -54,14 +54,14 @@ Route::post('diary/{diary}/comments', 'DiaryCommentsController@store');
 Route::get('diary/{diary}', 'DiaryController@show');
 
 Route::group(['prefix' => 'blog', 'middleware' => 'can:update,blog'], function () {
-    Route::get('/all', 'BlogController@index');
-    Route::get('/{blog}', 'BlogController@show');
     Route::get('/{blog}/edit', 'BlogController@edit');
     Route::patch('/{blog}/edit', 'BlogController@update');
     Route::post('/', 'BlogController@store');
     Route::delete('/{blog}', 'BlogController@destroy');
     Route::post('/{blog}/comments', 'BlogCommentsController@store');
 });
+Route::get('blog/all', 'BlogController@index');
+Route::get('blog/{blog}', 'BlogController@show');
 
 Route::group(['prefix' => 'project', 'middleware' => 'can:update,project'], function () {
     Route::get('/all', 'ProjectController@index');

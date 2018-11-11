@@ -8,6 +8,7 @@ $factory->define(BlogPost::class, function (Faker $faker) {
         'user_id' => 1,
         'title' => $faker->sentence(),
         'tag' => $faker->word(),
-        'content' => $faker->paragraph()
+        'content' => $faker->paragraph(),
+        'image' => '/images/ls.jpg'
     ];
 });
