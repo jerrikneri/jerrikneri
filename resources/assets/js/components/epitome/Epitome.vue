@@ -6,11 +6,13 @@
 	<div class="container">
 		<header class="columns">
 		<div class="column">
-			<img class="" src="http://placehold.it/200x200" alt="Place holder face">
+			<figure class="image is-128x128">
+				<img class="is-rounded" src="/images/epitome/me.jpg" alt="Place holder face">
+			</figure>
 		</div>
 		<div class="column">
 			<div class="title">Jerrik Neri</div>
-			<div class="subtitle">Self taught Front End Web Developer</div>    
+			<div class="subtitle">Self taught Front End Web Developer</div>
 		</div>
 		</header>
 		<hr>
@@ -19,7 +21,7 @@
 			From a young age, I have always been highly passionate about computers and technology, and I hope to bring into this industry the same passion, dedication, and discipline that I have learned in traversing the path to becoming​ a better programmer.
 		</div>
 		<div class="section is-flex">
-				<img class="has-image-centered" src="http://placehold.it/1000x400" alt="Main middle picture">
+				<img class="has-image-centered" src="/images/epitome/motorcycle.jpg" alt="Main middle picture">
 		</div>
 
 		<div class="title has-text-centered">Featured Work</div>
@@ -28,7 +30,7 @@
 			<div class="column">
 				<a href="https://github.com/jerrikneri/multi-user-blog">
 				<section>
-					<img class="" src="http://placehold.it/300x300" alt="Bokeh">
+					<img class="" src="/images/epitome/blog.jpg" alt="Bokeh">
 					<h3>Multi User Blog</h3>
 				</section>
 				</a>
@@ -36,7 +38,7 @@
 			<div class="column">
 				<a href="https://codepen.io/jaewrek/full/PKWQQV/">
 				<section>
-					<img class="" src="http://placehold.it/300x300" alt="Bokeh">
+					<img class="" src="/images/epitome/twitch.jpg" alt="Bokeh">
 					<h3>Twitch App</h3>
 				</section>
 				</a>
@@ -44,7 +46,7 @@
 			<div class="column">
 				<a href="https://codepen.io/jaewrek/full/xLdBGd">
 				<section>
-					<img class="" src="http://placehold.it/300x300" alt="Bokeh">
+					<img class="" src="/images/epitome/calculator.jpg" alt="Bokeh">
 					<h3>Calculator</h3>
 				</section>
 				</a>
@@ -52,7 +54,7 @@
 			<div class="column">
 				<a href="https://codepen.io/jaewrek/full/NydLvP/">
 				<section>
-					<img class="" src="http://placehold.it/300x300" alt="Bokeh">
+					<img class="" src="/images/epitome/pomodoro.jpg" alt="Bokeh">
 					<h3>Pomodoro Clock</h3>
 				</section>
 				</a>

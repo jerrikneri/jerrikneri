@@ -9,6 +9,6 @@ $factory->define(BlogPost::class, function (Faker $faker) {
         'title' => $faker->sentence(),
         'tag' => $faker->word(),
         'content' => $faker->paragraph(),
-        'image' => '/images/ls.jpg'
+        'image' => 'ls.jpg'
     ];
 });

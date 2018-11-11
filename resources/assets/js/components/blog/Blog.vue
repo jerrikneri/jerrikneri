@@ -12,7 +12,7 @@
                         <a :href="`/blog/${post.id}`">
                             <div class="columns">
                               <div class="column">
-                                    <img :src="post.image" alt="Blog Picture">
+                                    <img :src="`/images/blog/${post.image}`" alt="Blog Picture">
                                 </div>
                                 <div class="column">
                                     <h3>{{ post.title }}</h3>
