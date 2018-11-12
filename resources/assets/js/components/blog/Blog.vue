@@ -3,7 +3,7 @@
         <div v-show="preview === true">
             <!-- <h3>Read with me...</h3> -->
         </div>
-        <section class="section box"
+        <section class="container section box"
                  v-show="preview == null">
             <div class="content is-large">
                 <div class="has-text-centered">

@@ -1,5 +1,5 @@
 <template>
-    <div class="">
+    <div class="content">
 
         <div v-show="preview === true"
              class="">
@@ -7,7 +7,7 @@
         <!-- <h3>Build with me...</h3> -->
         <!-- <img class="img-center" src="../../../img/ls.jpg" height="250px"> -->
         <section v-show="preview == null"
-                 class="box content has-text-centered is-large">
+                 class="box container has-text-centered is-large">
             <span class="title is-size-2"><u>PROJECTS</u></span>
             <div class="section">
                 <h3>JERRIKNERI.COM</h3>

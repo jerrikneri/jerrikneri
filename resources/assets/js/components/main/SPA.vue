@@ -1,5 +1,5 @@
 <template>
-    <section class="section">
+    <section class="container section">
       <div class="columns">
 
         <div class="column has-text-centered is-size-4">
