@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="is-fluid">
     <Navbar></Navbar>
     <Header></Header>
-    <section class="section is-flex">
+    <section class="section container is-flex is-fluid">
       <img v-show="$route.path==='/'" class="has-image-centered" src="/images/hike.jpg" alt="Place holder face">
     </section>
     

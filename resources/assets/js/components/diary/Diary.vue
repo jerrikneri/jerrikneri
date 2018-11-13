@@ -1,10 +1,10 @@
 <template>
-    <div class="">
+    <div class="container box">
         <div v-show="preview === true">
             <!-- <h3>Write with me...</h3> -->
         </div>
         <section v-show="preview == null"
-                 class="box section">
+                 class="container section">
 
             <div v-for="entry in entries">
                 <Entry :title="entry.title"

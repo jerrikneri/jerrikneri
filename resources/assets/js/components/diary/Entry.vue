@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <div @click="showModal = true" class="content"
       @mouseover="hover = !hover" @mouseout="hover = !hover"
       :class="{ 'has-background-light' : hover }">
