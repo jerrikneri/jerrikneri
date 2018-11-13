@@ -31,6 +31,9 @@ const router = new VueRouter({
                 selector: to.hash
             };
         }
+        if (to.path === '/') {
+            return { x: 0, y: 0 };
+        }
         return { x: 0, y: 150 };
     },
     routes: [
