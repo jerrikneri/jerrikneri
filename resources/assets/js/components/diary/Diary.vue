@@ -1,5 +1,5 @@
 <template>
-    <div class="container box">
+    <div class="">
         <div v-show="preview === true">
             <!-- <h3>Write with me...</h3> -->
         </div>
