@@ -1,9 +1,9 @@
 <template>
-<div class="content">
+<div class="box container section">
     <!-- <div class="links">
     	<a href="https://www.linkedin.com/in/jerrik-neri">LinkedIn</a>
     </div> -->
-	<div class="container">
+	<div class="">
 		<header class="columns">
 		<div class="column">
 			<figure class="image is-128x128">
@@ -16,7 +16,7 @@
 		</div>
 		</header>
 		<hr>
-		<div class="container">
+		<div class="section">
 			I am a self-taught Front-End Web Developer who has been diving head first into all of the readily available resources to acquire the tools and skillsets required in this industry. Over the past couple of years, I have taken Computer Programming / Engineering classes at UCSD, Udacity, and Free Code Camp to absorb as many skills and perspectives as I can, to effectively utilize them as I begin to step foot into a Front End Web Development career.
 			From a young age, I have always been highly passionate about computers and technology, and I hope to bring into this industry the same passion, dedication, and discipline that I have learned in traversing the path to becoming​ a better programmer.
 		</div>

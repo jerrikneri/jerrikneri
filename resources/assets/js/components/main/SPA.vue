@@ -1,5 +1,5 @@
 <template>
-    <section class="container section">
+    <section v-show="$route.path==='/'" class="container section">
       <div class="columns">
 
         <div class="column has-text-centered is-size-4">

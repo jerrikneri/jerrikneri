@@ -3,7 +3,7 @@
     <Navbar></Navbar>
     <Header></Header>
     <section class="section is-flex">
-      <img class="has-image-centered" src="/images/hike.jpg" alt="Place holder face">
+      <img v-show="$route.path==='/'" class="has-image-centered" src="/images/hike.jpg" alt="Place holder face">
     </section>
     
     <hr>
@@ -14,7 +14,7 @@
     
     <!-- <div class="is-divider" data-content="JAN"></div> -->
     <div class="section"></div>
-    <!-- <About></About> -->
+    <About v-show="$route.path==='/'"></About>
     <Footer></Footer>
   </div>
 </template>
