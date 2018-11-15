@@ -2,11 +2,10 @@
     <div class="is-fluid">
         <Navbar></Navbar>
         <Header></Header>
-        <Subscribe></Subscribe>
         <section class="section container is-flex is-fluid">
             <img v-show="$route.path==='/'"
                  class="has-image-centered"
-                 src="/images/hike.jpg"
+                 src="/images/car.jpg"
                  alt="Place holder face">
         </section>
 
@@ -19,6 +18,7 @@
         <!-- <div class="is-divider" data-content="JAN"></div> -->
         <div class="section"></div>
         <About v-show="$route.path==='/'"></About>
+        <Subscribe></Subscribe>
         <Footer></Footer>
     </div>
 </template>

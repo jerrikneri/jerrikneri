@@ -1,13 +1,10 @@
 <template>
-<div>
-  <div class="section container">
-      About section
-    <!-- <img class="img-center" src="../../../img/me.jpg" height="250px"> -->
+    <div>
+        <div class="section container">
+            ABOUT
 
-  </div>
-
-<hr>
-</div>
+        </div>
+    </div>
 </template>
 
 <script>

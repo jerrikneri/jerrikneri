@@ -1,25 +1,30 @@
 <template>
-    <div>
-        <div class="field">
-            <label class="label">Name</label>
-            <div class="control">
-                <input class="input"
-                       type="text"
-                       placeholder="Enter Name"
-                       v-model="name">
+    <div class="m-b-lg container">
+        <div class="box section">
+            <div class="
+             field">
+                <label class="label">Name</label>
+                <div class="control">
+                    <input class="input"
+                           type="text"
+                           placeholder="Enter Name"
+                           v-model="name">
+                </div>
             </div>
-        </div>
 
-        <div class="field">
-            <label class="label">Email</label>
-            <div class="control has-icons-left has-icons-right">
-                <input class="input is-danger"
-                       type="email"
-                       placeholder="Enter Email Address"
-                       v-model="email">
-                <span class="icon is-small is-left">
-                <i class="fas fa-envelope"></i>
-            </span>
+            <div class="field">
+                <label class="label">Email</label>
+                <div class="control has-icons-left has-icons-right">
+                    <input class="input is-danger"
+                           type="email"
+                           placeholder="Enter Email Address"
+                           v-model="email">
+                    <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                </span>
+                </div>
+            </div>
+            <div class="field">
                 <div class="field is-grouped">
                     <div class="control">
                         <button @click="submit"
@@ -28,7 +33,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 
 </template>
@@ -47,7 +51,6 @@ export default {
     submit() {
         let name = this.name;
         let email = this.email;
-        console.log({ name, email})
         this.newsletterSubscribe({ name, email });
     }
     },
