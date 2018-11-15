@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Third Party Services
@@ -25,6 +24,14 @@ return [
         'region' => env('SES_REGION', 'us-east-1'),
     ],
 
+    'sendlane' => [
+        'api_key' => env('SENDLANE_API'),
+        'hash_key' => env('SENDLANE_HASH'),
+        'uri' => env('SENDLANE_URI'),
+        'list_id' => '1',
+        'tag_id' => '1'
+    ],
+
     'sparkpost' => [
         'secret' => env('SPARKPOST_SECRET'),
     ],
@@ -34,5 +41,4 @@ return [
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
-
 ];

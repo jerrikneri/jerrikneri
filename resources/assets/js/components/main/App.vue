@@ -1,22 +1,26 @@
 <template>
-  <div class="is-fluid">
-    <Navbar></Navbar>
-    <Header></Header>
-    <section class="section container is-flex is-fluid">
-      <img v-show="$route.path==='/'" class="has-image-centered" src="/images/hike.jpg" alt="Place holder face">
-    </section>
-    
-    <hr>
+    <div class="is-fluid">
+        <Navbar></Navbar>
+        <Header></Header>
+        <Subscribe></Subscribe>
+        <section class="section container is-flex is-fluid">
+            <img v-show="$route.path==='/'"
+                 class="has-image-centered"
+                 src="/images/hike.jpg"
+                 alt="Place holder face">
+        </section>
 
-    <SPA></SPA>
+        <hr>
 
-    <router-view v-show="$route.path!=='/'"></router-view>
-    
-    <!-- <div class="is-divider" data-content="JAN"></div> -->
-    <div class="section"></div>
-    <About v-show="$route.path==='/'"></About>
-    <Footer></Footer>
-  </div>
+        <SPA></SPA>
+
+        <router-view v-show="$route.path!=='/'"></router-view>
+
+        <!-- <div class="is-divider" data-content="JAN"></div> -->
+        <div class="section"></div>
+        <About v-show="$route.path==='/'"></About>
+        <Footer></Footer>
+    </div>
 </template>
 
 <script>
@@ -28,6 +32,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import SPA from "./SPA";
+import Subscribe from "../forms/Subscribe";
 
 export default {
   name: "Home",
@@ -39,6 +44,7 @@ export default {
     Header,
     Footer,
     Navbar,
+    Subscribe,
     SPA
   },
   data() {

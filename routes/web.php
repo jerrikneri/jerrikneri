@@ -72,3 +72,5 @@ Route::group(['prefix' => 'project', 'middleware' => 'can:update,project'], func
     Route::delete('/{project}', 'ProjectController@destroy');
     Route::post('/{project}/comments', 'ProjectCommentsController@store');
 });
+
+Route::post('subscribe-to-newsletter', 'NewsletterSubscribeController@store');
