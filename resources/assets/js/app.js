@@ -17,8 +17,11 @@ import Code from "./components/code/Code";
 import Diary from "./components/diary/Diary";
 import Epitome from "./components/epitome/Epitome";
 
-// import moment from 'moment';
-// Vue.use(moment);
+import moment from 'moment';
+Vue.use(moment);
+
+import VeeValidate from 'vee-validate';
+Vue.use(VeeValidate);
 
 const router = new VueRouter({
     mode: "history",

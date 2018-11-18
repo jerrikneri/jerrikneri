@@ -7,8 +7,10 @@
                 <div class="control">
                     <input class="input"
                            type="text"
+                           name="name"
                            placeholder="Enter Name"
-                           v-model="name">
+                           v-model="name"
+                           v-validate="'required'">
                 </div>
             </div>
 
@@ -17,11 +19,14 @@
                 <div class="control has-icons-left has-icons-right">
                     <input class="input is-danger"
                            type="email"
+                           name="email"
                            placeholder="Enter Email Address"
-                           v-model="email">
+                           v-model="email"
+                           v-validate="'required|email'">
                     <span class="icon is-small is-left">
                     <i class="fas fa-envelope"></i>
-                </span>
+                    </span>
+                    <span>{{ errors.first('email') }}</span>
                 </div>
             </div>
             <div class="field">
@@ -38,6 +43,7 @@
 </template>
 <script>
 import { mapGetters, mapMutations, mapActions } from "vuex";
+
 export default {
     name: "SubscribeForm",
     data() {
@@ -49,6 +55,9 @@ export default {
     methods: {
     ...mapActions(["newsletterSubscribe"]),
     submit() {
+        if (this.errors.first('email')) {
+            return;
+        }
         let name = this.name;
         let email = this.email;
         this.newsletterSubscribe({ name, email });
