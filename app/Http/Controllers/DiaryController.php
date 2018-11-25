@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Validator;
+use App\Tag;
 
 class DiaryController extends Controller
 {
@@ -44,7 +45,7 @@ class DiaryController extends Controller
         return redirect('/');
     }
 
-    public function store()
+    public function store(Request $request)
     {
         $input = Input::only('title', 'tag', 'content');
         $rules = [
@@ -59,11 +60,14 @@ class DiaryController extends Controller
 
         $entry = new DiaryEntry();
         $entry->title = Input::get('title');
-        $entry->tag = Input::get('tag');
         $entry->content = Input::get('content');
         $entry->user_id = auth()->id();
 
         $entry->save();
+
+        $id = DiaryEntry::latest()->first()->id;
+        $tags = $request->tag;
+        $this->parseTags($tags, $id);
 
         // return response($entry->jsonSerialize(), Response::HTTP_CREATED);
         return view('admin.postSuccess');
@@ -73,5 +77,18 @@ class DiaryController extends Controller
     {
         $diary->delete();
         return redirect('/');
+    }
+
+    protected function parseTags($tags, $diaryId){
+        $tags = explode(",", $tags);
+        foreach($tags as $tag)
+        {
+            $tag = trim($tag);
+            Tag::firstOrCreate([
+                'name' => $tag
+            ]);
+            $tagId = Tag::where('name', $tag)->get()->first()->id;
+            DiaryEntry::find($diaryId)->tags()->attach($tagId);
+        }
     }
 }

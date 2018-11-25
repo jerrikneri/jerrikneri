@@ -14,7 +14,7 @@ class CreateDiaryEntryTagTable extends Migration
     public function up()
     {
         Schema::create('diary_entry_tag', function (Blueprint $table) {
-            $table->primary('diary_entry_id', 'tag_id');
+            $table->primary(['diary_entry_id', 'tag_id']);
             $table->unsignedInteger('diary_entry_id');
             $table->unsignedInteger('tag_id');
 
