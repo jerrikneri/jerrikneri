@@ -8,11 +8,15 @@
             <div v-if="entries.length === 0">
                 Journal entries coming soon...
             </div>
-            <div v-else class="has-text-right p-b-xl">
-              Filter:
-              <input type="text" v-model="filter" @keyup.enter="filterBy">
-            </div>
-            <div v-for="entry in entries">
+            <div v-else>
+              <div class="has-text-right p-b-md">
+                Filter:
+                <input type="text" v-model="filter" @keyup.enter="filterBy">
+              </div>
+              <div class="has-text-centered p-b-lg">
+                <p class="title">Dance with Words</p>
+              </div>
+              <div v-for="entry in entries">
                 <Entry :title="entry.title"
                   :tags="entry.tags"
                   :content="entry.content"
@@ -23,8 +27,8 @@
                   <hr>
                 <div class="is-divider" data-content="..."></div>
                 </span>
-          </div>
-
+              </div>
+            </div>
             <!-- <Pagination :listData=entries></Pagination> -->
         </section>
     </div>

@@ -19,7 +19,7 @@
     <CardModal :visible="showModal"
       @close="showModal = false"
       :title="title" :tags="tags" :date="date">
-      <h1><a :href="`/diary/${id}`">View</a></h1>
+      <!-- <h1><a :href="`/diary/${id}`">View</a></h1> -->
       <p v-for="line in formattedContent"
         class="mb5"
         :class="line==formattedContent[formattedContent.length-1] ? 'mb50' : ''"
