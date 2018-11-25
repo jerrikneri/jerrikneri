@@ -1,4 +1,4 @@
-<div class="navbar">
+<div class="">
     <div class="links">
         @if (Auth::check())
             @include('admin.partials.navbar')

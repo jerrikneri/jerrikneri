@@ -8,6 +8,7 @@
     </button>
 </a>
 @endif
+@include('admin.partials.navbar')
 
 <section class="hero is-info is-medium is-bold">
     <div class="hero-body">
@@ -29,7 +30,7 @@
                         <div class="media-content has-text-centered">
                             <p class="article-title p-b-md">
                                 @foreach ($blog->tags as $tag)
-                                    <span># {{ $tag->name }}</span>
+                                    <span class="button is-static is-small">#{{ $tag->name }}</span>
                                 @endforeach
                             </p>
                             <div class="tags has-addons level-item p-b-md">

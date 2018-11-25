@@ -1,11 +1,13 @@
 <template>
-    <div class="">
+  <div>
+    <section>
         <div v-show="preview === true">
             <!-- <h3>Write with me...</h3> -->
         </div>
         <section v-show="preview == null"
             class="container section">
-            <div v-if="entries.length === 0">
+            <div v-if="cachedEntries.length === 0"
+            class="has-text-centered">
                 Journal entries coming soon...
             </div>
             <div v-else>
@@ -31,7 +33,8 @@
             </div>
             <!-- <Pagination :listData=entries></Pagination> -->
         </section>
-    </div>
+    </section>
+  </div>
 
 </template>
 <script>
