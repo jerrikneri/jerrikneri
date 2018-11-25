@@ -37,20 +37,20 @@ import Navbar from "./Navbar";
 import SPA from "./SPA";
 
 export default {
-  name: "Home",
-  components: {
-    About,
-    Blog,
-    Code,
-    Diary,
-    Header,
-    Footer,
-    Navbar,
-    SPA
-  },
-  data() {
-    return {};
-  }
+    name: "Home",
+    components: {
+        About,
+        Blog,
+        Code,
+        Diary,
+        Header,
+        Footer,
+        Navbar,
+        SPA
+    },
+    data() {
+        return {};
+    }
 };
 </script>
 

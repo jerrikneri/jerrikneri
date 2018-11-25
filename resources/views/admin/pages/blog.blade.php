@@ -1,32 +1,41 @@
 @extends('admin.layouts.admin')
 
 @section('content')
-<form method="POST" action="blog" class="content">
-    {{ csrf_field() }}
-    <p>Title:</p>
-    <input type="text"
-        id="title"
-        class="form-control"
-        name="title"
-        placeholder="Post Title" required>
-    <p>Tag:</p>
-    <input type="text"
-        id="tag"
-        class="form-control"
-        name="tag"
-        placeholder="Tag" required>
-    <p>Image Path:</p>
-    <input type="text"
-        id="image"
-        class="form-control"
-        name="image"
-        placeholder="Image Path" required>
-    <p>Dance with words:</p>
-    <textarea name="content"
-        class="form-control-content"
-        rows="20" required></textarea>
-    <button type="submit"
-        class="">Submit Entry</button>
+<div class="container">
+    <form method="POST" action="blog">
+        {{ csrf_field() }}
+        <div class="field">
+            <label class="label">Title:</label>
+            <div class="control">
+                <input class="input" type="text" name="title" placeholder="Blog Post Title" required>
+            </div>
+        </div>
+        <div class="field">
+                <label class="label">Image Path:</label>
+                <div class="control">
+                    <input class="input" type="text" name="image" placeholder="Image Path" required>
+                </div>
+            </div>
+        <div class="field">
+            <label class="label">Tags:</label>
+            <div class="control">
+                <input class="input" type="text" name="tag" placeholder="Tags" required>
+            </div>
+        </div>
+        <div class="field">
+            <label class="label">Content:</label>
+            <div class="control">
+                <textarea class="textarea" name="content" placeholder="Content"></textarea>
+            </div>
+        </div>
+
+        <div class="field is-grouped">
+            <div class="control">
+                <button type="submit" class="button is-link">Submit</button>
+            </div>
+        </div>
         @include('partials.errors')
-</form>
+    </form>
+</div>
+
 @endsection

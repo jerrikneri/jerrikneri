@@ -11,7 +11,7 @@
             <div v-else>
               <div class="has-text-right p-b-md">
                 Filter:
-                <input type="text" v-model="filter" @keyup.enter="filterBy">
+                <input type="text" v-model="filter" @keyup="filterBy">
               </div>
               <div class="has-text-centered p-b-lg">
                 <p class="title">Dance with Words</p>
@@ -46,6 +46,7 @@ export default {
   components: { EntryForm, Entry, Pagination },
   data() {
     return {
+      cachedEntries: '',
       entries: "",
       filter: '',
       loading: true,
@@ -56,9 +57,13 @@ export default {
   methods: {
     ...mapActions(["getDiaryEntries"]),
     filterBy() {
-      this.entries = this.entries.filter(entry => {
-        return entry.title.toLowerCase().includes(this.filter.toLowerCase()) ||
-          entry.tags.includes(this.filter.toLowerCase())
+      this.entries = this.cachedEntries.filter(entry => {
+          let doesTitleMatch = entry.title.toLowerCase().includes(this.filter.toLowerCase());
+          let doesTagMatch = [];
+          entry.tags.forEach( tag => {
+            doesTagMatch.push(tag.name.toLowerCase().includes(this.filter.toLowerCase()))
+          });
+          return doesTitleMatch || doesTagMatch.includes(true);
       });
     }
   },
@@ -69,6 +74,7 @@ export default {
     this.getDiaryEntries().then(() => {
       self.entries = self.$store.state.diary_entries;
       self.loading = false;
+      self.cachedEntries = self.entries;
     });
   },
   computed: {

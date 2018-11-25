@@ -16,7 +16,7 @@
       </router-link>
       <router-link class="navbar-item"
         to="/diary">
-        <span class="">Diary</span>  
+        <span class="">Diary</span>
       </router-link>
       <router-link class="navbar-item"
         to="/epitome">
@@ -26,9 +26,8 @@
   </div>
   <div class="navbar-brand">
       <div class="is-size-4 hide-desktop pl5 pt10">A BLOG CODE DIARY</div>
-      <a @click="showNav = !showNav" role="button" class="navbar-burger" 
+      <a @click="showNav = !showNav" role="button" class="navbar-burger"
       aria-label="menu" aria-expanded="false" :class="{ 'is-active': showNav }">
-      
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -47,7 +46,7 @@
           </router-link>
           <router-link class="navbar-item"
             to="/diary">
-            <span class="">Diary</span>  
+            <span class="">Diary</span>
           </router-link>
           <router-link class="navbar-item"
             to="/epitome">
@@ -75,12 +74,15 @@
       </router-link>
       <router-link class="navbar-item"
         to="/diary">
-        <span class="">Diary</span>  
+        <span class="">Diary</span>
       </router-link>
       <router-link class="navbar-item"
         to="/epitome">
         <span>Epitome</span>
       </router-link>
+      <a class="navbar-item" href="/view/resume.pdf">
+        <span class="button is-link">View Resume</span>
+      </a>
     </div>
   </div>
   

@@ -2,7 +2,11 @@
 
 @section('content')
 @if (Auth::check())
-<a href="{{ url('blog/' . $blog->id . '/edit') }}">Edit</a>
+<a href="{{ url('blog/' . $blog->id . '/edit') }}">
+    <button class="button is-primary">
+        Edit
+    </button>
+</a>
 @endif
 
 <section class="hero is-info is-medium is-bold">

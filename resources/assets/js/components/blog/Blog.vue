@@ -11,6 +11,10 @@
                     <div v-if="posts.length === 0">
                         Blog posts coming soon...
                     </div>
+                    <div class="has-text-right p-b-md">
+                        Filter:
+                        <input type="text" v-model="filter" @keyup="filterBy">
+                    </div>
                     <div v-for="post in posts">
                         <a :href="`/blog/${post.id}`">
                             <div class="columns">
@@ -48,18 +52,32 @@ export default {
     data() {
         return {
             dateFormat: this.$store.state.date_format,
-            posts: []
+            filter: '',
+            posts: [],
+            cachedPosts: [],
             }
     },
 methods: {
-    ...mapActions(["getBlogPosts", "submitEntry"]),
+    ...mapActions(["getBlogPosts"]),
+    filterBy() {
+        this.posts = this.cachedPosts.filter(posts => {
+            let doesTitleMatch = posts.title.toLowerCase().includes(this.filter.toLowerCase());
+            let doesTagMatch = [];
+            posts.tags.forEach( tag => {
+                doesTagMatch.push(tag.name.toLowerCase().includes(this.filter.toLowerCase()))
+            });
+            return doesTitleMatch || doesTagMatch.includes(true);
+        });
+    }
     },
     mounted() {
         let self = this;
         this.getBlogPosts().then(() => {
         self.posts = self.$store.state.blog_posts;
         self.loading = false;
+        self.cachedPosts = self.posts;
         });
+        
     },
 };
 </script>
