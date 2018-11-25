@@ -3,10 +3,18 @@
 		<div class="">
 			<header class="columns">
 				<div class="column">
+
 				</div>
 				<div class="column">
 					<div class="title">Jerrik Neri</div>
 					<div class="subtitle">Self taught Front End Web Developer</div>
+					<div class="field">
+						<div class="control ">
+							<a href="/view/resume.pdf">
+								<button class="button is-link">Download Resume</button>
+							</a>
+						</div>
+					</div>
 				</div>
 			</header>
 			<hr>
@@ -106,6 +114,13 @@
 				<a href="https://www.linkedin.com/in/jerrik-neri">linkedin</a> |
 				<a href="https://github.com/jerrikneri">github</a> |
 				<a href="https://codepen.io/jaewrek/">codepen</a>
+			</div>
+			<div class="field">
+				<div class="control has-text-centered">
+					<a href="/view/resume.pdf">
+						<button class="button is-link">Download Resume</button>
+					</a>
+				</div>
 			</div>
 		</div>
 
