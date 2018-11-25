@@ -21,9 +21,15 @@ class BlogPost extends Model
     {
         return $this->hasMany(BlogComment::class);
     }
+
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class);
     }
 
     public function addNew($data_arr)
