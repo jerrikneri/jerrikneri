@@ -8,9 +8,9 @@
             <div v-if="entries.length === 0">
                 Journal entries coming soon...
             </div>
-            <div v-else>
+            <div v-else class="has-text-right p-b-xl">
               Filter:
-              <input type="text"> 
+              <input type="text" v-model="filter" @keyup.enter="filterBy">
             </div>
             <div v-for="entry in entries">
                 <Entry :title="entry.title"
@@ -43,6 +43,7 @@ export default {
   data() {
     return {
       entries: "",
+      filter: '',
       loading: true,
       showEntry: false,
       dateFormat : this.$store.state.date_format
@@ -50,6 +51,12 @@ export default {
   },
   methods: {
     ...mapActions(["getDiaryEntries"]),
+    filterBy() {
+      this.entries = this.entries.filter(entry => {
+        return entry.title.toLowerCase().includes(this.filter.toLowerCase()) ||
+          entry.tags.includes(this.filter.toLowerCase())
+      });
+    }
   },
   mounted() {
   },

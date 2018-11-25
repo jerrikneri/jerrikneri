@@ -9,8 +9,8 @@
         </div>
         <div class="is-divider-vertical" data-content="*"></div>
         <div class="column">
-          <h3><span v-for="tag in tags">
-            #{{ tag.name }}</span></h3>
+          <h5><span v-for="tag in tags">
+            #{{ tag.name }}</span></h5>
           <h3>{{ date }}</h3>
         </div>
       </div>

@@ -22,8 +22,8 @@
                                     <h3>{{ post.title }}</h3>
                                 </div>
                                 <div class="column">
-                                    <h3><span v-for="tag in post.tags">
-                                        #{{ tag.name }}</span></h3>
+                                    <h5><span v-for="tag in post.tags">
+                                        #{{ tag.name }}</span></h5>
                                     <h3>{{ new
                                         Date(Date.parse(post.created_at)).toLocaleDateString('en-US',
                                         dateFormat) }}</h3>

@@ -48,7 +48,7 @@ export default {
       type: String
     },
     tags: {
-      type: String
+      type: Array
     },
     visible: {
       type: Boolean,
