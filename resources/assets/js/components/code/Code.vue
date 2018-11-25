@@ -17,14 +17,15 @@
                     <li>SASS & Bulma</li>
                 </ul>
             </div>
+            <hr>
             <div class="section">
                 <div class="columns">
-                    <div class="column">
+                    <div class="column order-2">
                         <img class="image"
                              src="/images/project/hackintosh.jpg"
                              alt="Computer">
                     </div>
-                    <div class="column">
+                    <div class="column order-1">
                         <h3>Hackintosh</h3>
                         <ul class="text-center">
                             <li>Intel i7 4790k @4.7GHz</li>
@@ -40,7 +41,7 @@
                     </div>
                 </div>
             </div>
-
+            <hr>
             <div class="section">
                 <div class="columns">
                     <div class="column">

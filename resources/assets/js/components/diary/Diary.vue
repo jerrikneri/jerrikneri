@@ -4,14 +4,16 @@
             <!-- <h3>Write with me...</h3> -->
         </div>
         <section v-show="preview == null"
-                 class="container section">
-
+            class="container section">
+            <div v-if="entries.length === 0">
+                Journal entries coming soon...
+            </div>
             <div v-for="entry in entries">
                 <Entry :title="entry.title"
-                       :tag="entry.tag"
-                       :content="entry.content"
-                       :date="new Date(Date.parse(entry.created_at)).toLocaleDateString('en-US', dateFormat)"
-                       :id="entry.id">
+                  :tag="entry.tag"
+                  :content="entry.content"
+                  :date="new Date(Date.parse(entry.created_at)).toLocaleDateString('en-US', dateFormat)"
+                  :id="entry.id">
                 </Entry>
                 <span v-if="entry !== entries[entries.length-1]">
             <hr>

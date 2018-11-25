@@ -1,19 +1,22 @@
 <template>
     <div>
         <div class="section container">
-            ABOUT
+            <Resume position="center"></Resume>
 
         </div>
     </div>
 </template>
 
 <script>
+import Resume from './Resume';
 export default {
-  name: "About",
-  components: {},
-  data() {
-    return {};
-  }
+    name: "About",
+    components: {
+        Resume
+    },
+    data() {
+        return {};
+    }
 };
 </script>
 

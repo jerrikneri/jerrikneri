@@ -6,6 +6,26 @@ $desktop: 812px;
         display: none !important;
     }
 }
+@media only screen and (max-width: $desktop) {
+    .order-1 {
+        order: 1 !important;
+    }
+    .order-2 {
+        order: 2 !important;
+    }
+}
+$purple: #8A4D76;
+$pink: #FA7C91;
+$brown: #757763;
+$beige-light: #D0D1CD;
+$beige-lighter: #EFF0EB;
+
+// $grey-dark: $brown;
+// $grey-light: $beige-light;
+$primary: $purple;
+$link: $pink;
+
+
 
 // Body
 $body-bg: #fff;

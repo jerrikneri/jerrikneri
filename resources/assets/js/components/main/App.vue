@@ -4,9 +4,13 @@
         <Header></Header>
         <section class="section container is-flex is-fluid">
             <img v-show="$route.path==='/'"
-                 class="has-image-centered"
-                 src="/images/car.jpg"
-                 alt="Place holder face">
+                class="image has-image-centered"
+                src="/images/car.jpg"
+                srcset="/images/car.jpg 1024w,
+                    /images/car.jpg 640w,
+                    /images/car.jpg 320w"
+                sizes="(min-width: 1024px) 1024px, 100vw"
+                alt="Jaewrek Scion tC">
         </section>
 
         <hr>
@@ -18,7 +22,6 @@
         <!-- <div class="is-divider" data-content="JAN"></div> -->
         <div class="section"></div>
         <About v-show="$route.path==='/'"></About>
-        <Subscribe></Subscribe>
         <Footer></Footer>
     </div>
 </template>
@@ -32,7 +35,6 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import SPA from "./SPA";
-import Subscribe from "../forms/Subscribe";
 
 export default {
   name: "Home",
@@ -44,7 +46,6 @@ export default {
     Header,
     Footer,
     Navbar,
-    Subscribe,
     SPA
   },
   data() {

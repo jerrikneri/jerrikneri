@@ -1,6 +1,9 @@
 <template>
     <div class="m-b-lg container">
         <div class="box section">
+            <div class="has-text-centered p-b-md">
+                Want to follow me on my journey or know when my next blog is released? Subscribe below to stay in touch!
+            </div>
             <div class="
              field">
                 <label class="label">Name</label>
@@ -16,16 +19,13 @@
 
             <div class="field">
                 <label class="label">Email</label>
-                <div class="control has-icons-left has-icons-right">
-                    <input class="input is-danger"
+                <div class="control">
+                    <input class="input"
                            type="email"
                            name="email"
                            placeholder="Enter Email Address"
                            v-model="email"
                            v-validate="'required|email'">
-                    <span class="icon is-small is-left">
-                    <i class="fas fa-envelope"></i>
-                    </span>
                     <span>{{ errors.first('email') }}</span>
                 </div>
             </div>
@@ -33,7 +33,7 @@
                 <div class="field is-grouped">
                     <div class="control">
                         <button @click="submit"
-                                class="button is-link">Subscribe!</button>
+                                class="button is-primary">Subscribe!</button>
                     </div>
                 </div>
             </div>
