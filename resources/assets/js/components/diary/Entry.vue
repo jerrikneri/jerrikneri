@@ -4,20 +4,21 @@
       @mouseover="hover = !hover" @mouseout="hover = !hover"
       :class="{ 'has-background-light' : hover }">
       <div class="columns has-text-centered">
-        <span class="column">
+        <div class="column">
           <h3>{{ title }}</h3>
-        </span>
+        </div>
         <div class="is-divider-vertical" data-content="*"></div>
-        <span class="column">
-          <h3>{{ tag }}</h3>
+        <div class="column">
+          <h3><span v-for="tag in tags">
+            #{{ tag.name }}</span></h3>
           <h3>{{ date }}</h3>
-        </span>
+        </div>
       </div>
     </div>
 
     <CardModal :visible="showModal"
       @close="showModal = false"
-      :title="title" :tag="tag" :date="date">
+      :title="title" :tags="tags" :date="date">
       <h1><a :href="`/diary/${id}`">View</a></h1>
       <p v-for="line in formattedContent"
         class="mb5"
@@ -35,7 +36,7 @@ import CardModal from "./CardModal";
 import EntryModal from "./EntryModal";
 
 export default {
-  props: ["title", "tag", "content", "id", "date"],
+  props: ["title", "tags", "content", "id", "date"],
   name: "Entry",
   components: { CardModal, EntryModal },
   data() {

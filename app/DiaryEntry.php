@@ -39,7 +39,7 @@ class DiaryEntry extends Model
 
     public static function getEntries()
     {
-        return static::where('id', '>', '0')
+        return static::with('tags:name')->where('id', '>', '0')
             ->orderBy('id', 'desc')->get();
     }
 

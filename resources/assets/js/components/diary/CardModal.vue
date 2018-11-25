@@ -24,7 +24,9 @@
         </section>
         <footer class="modal-card-foot columns has-text-centered">
             <div class="column is-size-4">{{ date }}</div>
-            <div class="column is-size-4">{{ tag }}</div>
+            <div class="column is-size-4">
+              <span v-for="tag in tags">
+                #{{ tag.name}}</span></div>
 
           </footer>
       </div>
@@ -45,7 +47,7 @@ export default {
     date: {
       type: String
     },
-    tag: {
+    tags: {
       type: String
     },
     visible: {

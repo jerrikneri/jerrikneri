@@ -8,18 +8,22 @@
             <div v-if="entries.length === 0">
                 Journal entries coming soon...
             </div>
+            <div v-else>
+              Filter:
+              <input type="text"> 
+            </div>
             <div v-for="entry in entries">
                 <Entry :title="entry.title"
-                  :tag="entry.tag"
+                  :tags="entry.tags"
                   :content="entry.content"
                   :date="new Date(Date.parse(entry.created_at)).toLocaleDateString('en-US', dateFormat)"
                   :id="entry.id">
                 </Entry>
                 <span v-if="entry !== entries[entries.length-1]">
-            <hr>
-            <div class="is-divider" data-content="..."></div>
-          </span>
-            </div>
+                  <hr>
+                <div class="is-divider" data-content="..."></div>
+                </span>
+          </div>
 
             <!-- <Pagination :listData=entries></Pagination> -->
         </section>
@@ -48,14 +52,14 @@ export default {
     ...mapActions(["getDiaryEntries"]),
   },
   mounted() {
+  },
+  created() {
     let self = this;
     this.getDiaryEntries().then(() => {
       self.entries = self.$store.state.diary_entries;
-      // self.entries = self.addShowProperty(self.$store.state.entries);
       self.loading = false;
     });
   },
-  created() {},
   computed: {
     entriesLoaded() {
       return !this.loading;

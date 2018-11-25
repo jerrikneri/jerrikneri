@@ -41,7 +41,7 @@ class BlogPost extends Model
 
     public static function getPosts()
     {
-        return static::where('id', '>', '0')
+        return static::with('tags:name')->where('id', '>', '0')
             ->orderBy('id', 'desc')->get();
     }
 
