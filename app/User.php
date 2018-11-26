@@ -47,6 +47,16 @@ class User extends Authenticatable
       return $this->hasMany(DiaryEntry::class);
     }
 
+    public function blogComments()
+    {
+      return $this->hasMany(BlogComment::class);
+    }
+
+    public function diaryComments()
+    {
+      return $this->hasMany(DiaryComment::class);
+    }
+
     public function publish(DiaryEntry $entry)
     {
       $this->posts()->save($entry);

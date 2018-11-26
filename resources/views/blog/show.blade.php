@@ -8,7 +8,7 @@
     </button>
 </a>
 @endif
-@include('admin.partials.navbar')
+{{-- @include('admin.partials.navbar') --}}
 
 <section class="hero is-info is-medium is-bold">
     <div class="hero-body">
@@ -46,16 +46,39 @@
                     </div>
                 </div>
             </div>
+            <div class="p-t-lg">
+                <p class="subtitle">Comments</p>
+                    @foreach ($blog->comments as $comment)
+                    <article class="media">
+                    <figure class="media-left">
+                            <p class="image is-64x64">
+                              <img src="https://bulma.io/images/placeholders/128x128.png">
+                            </p>
+                          </figure>
+                          <div class="media-content">
+                            <div class="content">
+                                    {{ $comment->created_at->diffForHumans() }}: &nbsp;
+                                    {{ $comment->body  }}
+                            </div>
+                          </div>
+                          @if (Auth::check())
+                            <form action="comment/{{$comment->id}}" method="POST">
+                                {{ csrf_field() }}
+                                {{ method_field('DELETE') }}
+                                
+                                <button class="button is-light" type="submit">Delete</button>
+                            </form>
+                          @endif
+                        </figure>
+                    </article>
+                    @endforeach
+            </div>
+           
         </div>
     </section>
 
-    <div>
-        @foreach ($blog->comments as $comment)
-            <article>
-                {{ $comment->created_at->diffForHumans() }}: &nbsp;
-                {{ $comment->body  }}
-            </article>
-        @endforeach
+    <div class="container">
+
     </div>
 
     <section class="comments">

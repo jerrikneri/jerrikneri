@@ -8,13 +8,21 @@ use App\BlogPost;
 
 class BlogCommentsController extends Controller
 {
-    public function store(BlogPost $post)
+    public function store(BlogPost $blog)
     {
         $this->validate(request(), [
             'body' => 'required|min:3'
         ]);
-        $post->addComment(request('body'));
+
+        $blog->addComment(request('body'));
 
         return back();
+    }
+
+    public function destroy(BlogComment $comment)
+    {
+        $comment->delete();
+        return back();
+
     }
 }
