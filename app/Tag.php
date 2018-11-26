@@ -12,4 +12,9 @@ class Tag extends Model
     {
         return $this->belongsToMany(DiaryEntry::class);
     }
+
+    public function blogPosts()
+    {
+        return $this->belongsToMany(BlogPost::class);
+    }
 }

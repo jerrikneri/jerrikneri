@@ -8,7 +8,7 @@ class DiaryEntry extends Model
 {
     public $timestamps = true;
     protected $table = 'diary_entries';
-    protected $fillable = ['title', 'tag', 'content'];
+    protected $fillable = ['title', 'content'];
 
     public function addComment($body)
     {
