@@ -21,9 +21,15 @@ class BlogPost extends Model
     {
         return $this->hasMany(BlogComment::class);
     }
+
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class);
     }
 
     public function addNew($data_arr)
@@ -35,7 +41,7 @@ class BlogPost extends Model
 
     public static function getPosts()
     {
-        return static::where('id', '>', '0')
+        return static::with('tags:name')->where('id', '>', '0')
             ->orderBy('id', 'desc')->get();
     }
 

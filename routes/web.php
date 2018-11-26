@@ -58,10 +58,15 @@ Route::group(['prefix' => 'blog', 'middleware' => 'can:update,blog'], function (
     Route::patch('/{blog}/edit', 'BlogController@update');
     Route::post('/', 'BlogController@store');
     Route::delete('/{blog}', 'BlogController@destroy');
-    Route::post('/{blog}/comments', 'BlogCommentsController@store');
 });
 Route::get('blog/all', 'BlogController@index');
 Route::get('blog/{blog}', 'BlogController@show');
+Route::post('blog/{blog}/comments', 'BlogCommentsController@store');
+
+Route::group(['prefix' => 'blog', 'middleware' => 'can:update,comment'], function () {
+    Route::delete('/comment/{comment}', 'BlogCommentsController@destroy');
+});
+
 
 Route::group(['prefix' => 'project', 'middleware' => 'can:update,project'], function () {
     Route::get('/all', 'ProjectController@index');

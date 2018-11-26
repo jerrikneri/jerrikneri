@@ -1,15 +1,14 @@
 <?php
+
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
 class DiaryEntry extends Model
 {
-    protected $table = 'diary_entries';
-
-    protected $fillable = array('title', 'tag', 'content');
-
     public $timestamps = true;
+    protected $table = 'diary_entries';
+    protected $fillable = ['title', 'content'];
 
     public function addComment($body)
     {
@@ -20,9 +19,15 @@ class DiaryEntry extends Model
     {
         return $this->hasMany(DiaryComment::class);
     }
+
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class);
     }
 
     public function addNew($data_arr)
@@ -34,7 +39,7 @@ class DiaryEntry extends Model
 
     public static function getEntries()
     {
-        return static::where('id', '>', '0')
+        return static::with('tags:name')->where('id', '>', '0')
             ->orderBy('id', 'desc')->get();
     }
 

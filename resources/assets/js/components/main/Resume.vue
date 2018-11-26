@@ -3,7 +3,7 @@
         <div class="control"
             :class="position == 'center' ? 'has-text-centered' : '' ">
             <a href="/view/resume.pdf">
-                <button class="button is-link">Download Resume</button>
+                <button class="button is-link">View Resume</button>
             </a>
         </div>
     </div>
