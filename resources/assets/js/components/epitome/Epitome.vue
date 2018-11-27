@@ -7,6 +7,15 @@
 				<Resume></Resume>
 			</header>
 			<hr>
+			<div class="section is-flex">
+				<img class="has-image-centered image"
+					src="/images/epitome/motorcycle.jpg"
+					srcset="/images/epitome/motorcycle.jpg 1024w,
+						/images/epitome/motorcycle.jpg 640w,
+						/images/epitome/motorcycle.jpg 320w"
+					sizes="(min-width: 1024px) 1024px, 100vw"
+				     alt="Main middle picture">
+			</div>
 			<div class="section">
 				I am a self-taught Front End Engineer who has been diving head first
 				into all of the readily available resources to acquire the tools and
@@ -20,16 +29,7 @@
 				dedication, and discipline that I have learned in traversing the path to
 				becoming​ a better programmer.
 			</div>
-			<div class="section is-flex">
-				<img class="has-image-centered image"
-					src="/images/epitome/motorcycle.jpg"
-					srcset="/images/epitome/motorcycle.jpg 1024w,
-						/images/epitome/motorcycle.jpg 640w,
-						/images/epitome/motorcycle.jpg 320w"
-					sizes="(min-width: 1024px) 1024px, 100vw"
-				     alt="Main middle picture">
-			</div>
-
+			<hr>
 			<div class="title has-text-centered">Featured Work</div>
 
 			<section class="columns has-text-centered is-multiline">

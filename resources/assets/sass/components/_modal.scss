@@ -2,8 +2,31 @@
 .modal {
     font-weight: 400;
 }
+.modal-card-head,
+.modal-card-body,
+.modal-card-foot {
+    background: $linear-gradient2;
+}
 
 $modal-content-width: 900px;
 $modal-card-title-color: $body-font-color;
 $modal-card-title-size: 2rem;
 
+$modal-content-margin-mobile: 1rem;
+$modal-content-spacing-mobile: 1rem;
+$modal-content-spacing-tablet: 2rem;
+// $modal-close-dimensions	size	40px
+// $modal-close-right	size	20px
+// $modal-close-top	size	20px
+// $modal-card-spacing	size	40px
+// $modal-card-head-background-color: black;
+// $modal-card-head-border-bottom	size	1px solid $border
+// $modal-card-head-padding	size	20px
+// $modal-card-head-radius	size	$radius-large	6px
+// $modal-card-title-color	color	$text-strong	hsl(0, 0%, 21%)
+// $modal-card-title-line-height	string	1
+// $modal-card-title-size	size	$size-4	1.5rem
+// $modal-card-foot-radius	size	$radius-large	6px
+// $modal-card-foot-border-top	size	1px solid $border
+// $modal-card-body-background-color: black;
+// $modal-card-body-padding
