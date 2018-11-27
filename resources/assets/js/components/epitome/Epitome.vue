@@ -123,7 +123,7 @@
 			<div>
 				<a href="mailto:jaewrek@gmail.com">jaewrek@gmail.com</a>
 			</div>
-			<div class="">
+			<div class="p-b-xl">
 				<a href="https://www.linkedin.com/in/jerrik-neri">linkedin</a> |
 				<a href="https://github.com/jerrikneri">github</a> |
 				<a href="https://codepen.io/jerrikneri/">codepen</a>

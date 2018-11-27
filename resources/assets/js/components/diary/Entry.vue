@@ -5,13 +5,19 @@
       :class="{ 'has-background-light' : hover }">
       <div class="columns has-text-centered">
         <div class="column">
-          <h3>{{ title }}</h3>
+          <p class="title is-size-3">
+            {{ title }}
+          </p>
         </div>
         <div class="is-divider-vertical" data-content="*"></div>
         <div class="column">
-          <h5><span v-for="tag in tags">
-            #{{ tag.name }}</span></h5>
-          <h3>{{ date }}</h3>
+          <p class="title is-size-5">
+            <span v-for="tag in tags">
+            #{{ tag.name }}</span>
+          </p>
+          <p class="title is-size-3">
+            {{ date }}
+          </p>
         </div>
       </div>
     </div>

@@ -5,10 +5,13 @@
             <!-- <h3>Write with me...</h3> -->
         </div>
         <section v-show="preview == null"
-            class="container section">
+            class="container section box">
             <div v-if="cachedEntries.length === 0"
             class="has-text-centered">
-                Journal entries coming soon...
+            <p class="title is-size-1">
+              Journal entries coming soon...
+            </p>
+                
             </div>
             <div v-else>
               <div class="has-text-right p-b-md">

@@ -1,2 +1,19 @@
 // * 		abstracts: Put all your functions here, along with variables and mixins.
 // In short, all your helpers.
+
+// Color Palette
+$primary: #141414;
+$secondary: rgb(39, 40, 46);
+$link: #D5ECE9;
+$text: white;
+$body-font-color: white;
+
+hr {
+    background-color: $primary !important;
+}
+
+// Gradients
+$blue-gradient: linear-gradient(to right, #141414, #2D3047, #D5ECE9);
+$linear-gradient: linear-gradient(120deg, #D5ECE9, #446CB3);
+$linear-gradient2: linear-gradient(120deg, #122B40, #446CB3);
+// $blue-gradient: linear-gradient(120deg, #032336, #113951 #6F8FA2);

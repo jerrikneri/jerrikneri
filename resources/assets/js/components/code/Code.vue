@@ -10,7 +10,9 @@
                  class="box container has-text-centered is-large">
             <span class="title is-size-2"><u>PROJECTS</u></span>
             <div class="section">
-                <h3>JERRIKNERI.COM</h3>
+                <p class="title is-size-3">
+                    JERRIKNERI.COM
+                </p>
                 <ul class="text-center">
                     <li>Laravel</li>
                     <li>VueJS</li>
@@ -26,7 +28,9 @@
                              alt="Computer">
                     </div>
                     <div class="column order-1">
-                        <h3>Hackintosh</h3>
+                        <p class="title is-size-3">
+                            Hackintosh
+                        </p>
                         <ul class="text-center">
                             <li>Intel i7 4790k @4.7GHz</li>
                             <li>Noctua D15</li>
@@ -45,7 +49,9 @@
             <div class="section">
                 <div class="columns">
                     <div class="column">
-                        <h3>Let's Split</h3>
+                        <p class="title is-size-3">
+                            Let's Split
+                        </p>
                         <ul class="text-center">
                             <li>Acrylic sandwich plate</li>
                             <li>Cherry Silent Black MX Switches</li>
@@ -62,7 +68,9 @@
             </div>
 
             <div class="box section">
-                <h3>Coding Projects</h3>
+                <p class="title is-size-3">
+                    Coding Projects
+                </p>
                 <div class="columns">
                     <div class="column">
                         <a href="https://github.com/jerrikneri">github:

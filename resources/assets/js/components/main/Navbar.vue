@@ -1,5 +1,5 @@
 <template>
-<nav class="box navbar is-fixed-top is-light">
+<nav class="navbar is-fixed-top">
   <div class="navbar-item has-dropdown is-hoverable navbar__dropdown--hide">
     <router-link class="navbar-item"
       to="/">
@@ -80,18 +80,20 @@
         to="/epitome">
         <span>Epitome</span>
       </router-link>
-      <a class="navbar-item" href="/view/resume.pdf">
-        <span class="button is-link">View Resume</span>
-      </a>
+      <Resume class="navbar-item"></Resume>
     </div>
   </div>
-  
+
 </nav>
 </template>
 
 <script>
+import Resume from './Resume';
 export default {
   name: "Navbar",
+  components: {
+    Resume
+  },
   data() {
     return {
       showNav: false

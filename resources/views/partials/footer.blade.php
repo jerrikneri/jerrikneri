@@ -1,3 +1,9 @@
+@if(Request::is('blog/*'))
+<footer class="footer">
+</footer>
+@endif
+
+
 <script>
     window.Laravel = <?php echo json_encode([
         'csrfToken' => csrf_token(),
