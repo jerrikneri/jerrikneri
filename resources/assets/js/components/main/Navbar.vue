@@ -1,5 +1,5 @@
 <template>
-<nav class="box navbar is-fixed-top is-light">
+<nav class="navbar is-fixed-top">
   <div class="navbar-item has-dropdown is-hoverable navbar__dropdown--hide">
     <router-link class="navbar-item"
       to="/">
