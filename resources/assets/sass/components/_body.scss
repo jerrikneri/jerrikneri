@@ -1,0 +1,22 @@
+// Body
+$body-bg: $primary;
+
+$body-font-weight: 400;
+$font-family-sans-serif: 'Raleway', sans-serif;
+$font-size-base: 1.1rem;
+$line-height-base: 1.6;
+html {
+    font-size: 100%;
+}
+.body {
+    color: $body-font-color;
+    // background-color: $body-bg;
+    background: white;
+    font-family: $font-family-sans-serif;
+    font-size: $font-size-base;
+    font-weight: $body-font-weight;
+    margin: 0;
+}
+nav, .footer {
+    background: $linear-gradient;
+}

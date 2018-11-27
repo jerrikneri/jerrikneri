@@ -3,14 +3,14 @@
         <Navbar></Navbar>
         <Header></Header>
         <section class="section container is-flex is-fluid has-text-centered">
-            <!-- <img v-show="$route.path==='/'"
+            <img v-show="$route.path==='/'"
                 class="image has-image-centered is-rounded"
                 src="/images/sunset.jpg"
                 srcset="/images/sunset.jpg 1024w,
                     /images/sunset.jpg 640w,
                     /images/sunset.jpg 320w"
                 sizes="(min-width: 1024px) 1024px, 100vw"
-                alt="Main image"> -->
+                alt="Main image">
             <div class="has-text-white container has-text-centered is-size-1"> 
                 <p class="has-text-white title">
                     JERRIK NERI

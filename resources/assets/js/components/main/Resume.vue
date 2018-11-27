@@ -1,5 +1,5 @@
 <template>
-    <div class="field p-t-lg">
+    <div class="field">
         <div class="control has-text-black"
             :class="position == 'center' ? 'has-text-centered' : '' ">
             <a href="/view/resume.pdf">

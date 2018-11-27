@@ -14,88 +14,12 @@ $desktop: 812px;
         order: 2 !important;
     }
 }
-$purple: #8A4D76;
-$pink: #FA7C91;
-$brown: #757763;
-$beige-light: #D0D1CD;
-$beige-lighter: #EFF0EB;
-
-$blue-gradient: linear-gradient(to right, #141414, #2D3047, #D5ECE9);
-// $blue-gradient: linear-gradient(120deg, #032336, #113951 #6F8FA2);
-
-// $grey-dark: $brown;
-// $grey-light: $beige-light;
-$primary: #141414;
-$secondary: #101013;
-$link: #D5ECE9;
-
-
-
-// Body
-$body-bg: $primary;
-$body-font-color: white;
-$body-font-weight: 400;
-$font-family-sans-serif: 'Raleway', sans-serif;
-$font-size-base: 1.1rem;
-$line-height-base: 1.6;
-html {
-    font-size: 100%;
-}
-.body {
-    color: $body-font-color;
-    // background-color: $body-bg;
-    background: $blue-gradient;
-    font-family: $font-family-sans-serif;
-    font-size: $font-size-base;
-    font-weight: $body-font-weight;
-    margin: 0;
-}
-hr {
-    background-color: $primary !important;
-}
-
-// Columns - Bulma
-$column-gap: 2rem;
 
 // Header
 $title-line-height: 5rem;
-
-
-// Footer
-$footer-background-color: $secondary;
-$footer-bg: #333;
-$footer-font-size: 3rem;
-$footer-font-color: #fff;
-
-
-// Modal
-.modal {
-    font-weight: 400;
-}
-
-$modal-content-width: 900px;
-$modal-card-title-color: $body-font-color;
-$modal-card-title-size: 2rem;
-
-// Navigation Bar
-$navbar-background-color: $secondary;
-$navbar-item-color: white;
-
-// Bulma specific
-$navbar-dropdown-arrow: #333;
-$box-padding: 0;
-$box-background-color: $secondary;
-$box-color: white;
 
 @media only screen and (max-device-width: $desktop) {
     .navbar__dropdown--hide {
         display: none !important;
     }
 }
-
-//  Section
-.box {
-    margin-bottom: 0;
-}
-
-

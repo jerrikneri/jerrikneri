@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="section container">
-            <Resume position="center"></Resume>
+            <!-- <Resume position="center"></Resume> -->
 
         </div>
     </div>
