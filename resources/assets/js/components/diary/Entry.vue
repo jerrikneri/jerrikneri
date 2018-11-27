@@ -2,7 +2,7 @@
   <div class="container">
     <div @click="showModal = true" class="content"
       @mouseover="hover = !hover" @mouseout="hover = !hover"
-      :class="{ 'has-background-light' : hover }">
+      :class="{ 'lighten' : hover }">
       <div class="columns has-text-centered">
         <div class="column">
           <p class="title is-size-3">
@@ -64,4 +64,7 @@ export default {
 </script>
 
 <style>
+.lighten {
+  opacity: .5;
+}
 </style>
