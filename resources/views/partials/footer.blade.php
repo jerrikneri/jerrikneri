@@ -1,3 +1,7 @@
+<footer class="footer">
+
+</footer>
+
 <script>
     window.Laravel = <?php echo json_encode([
         'csrfToken' => csrf_token(),

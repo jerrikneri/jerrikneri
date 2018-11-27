@@ -9,7 +9,9 @@
                 <div class="has-text-centered">
                     <!-- <h1><u>BLOG</u></h1> -->
                     <div v-if="cachedPosts.length === 0">
-                        Blog posts coming soon...
+                        <p class="title is-size-1">
+                            Blog posts coming soon...
+                        </p>
                     </div>
                     <div v-else>
                         <div class="has-text-right p-b-md">
@@ -24,14 +26,20 @@
                                             alt="Blog Picture">
                                     </div>
                                     <div class="column">
-                                        <h3>{{ post.title }}</h3>
+                                        <p class="title is-size-3">
+                                            {{ post.title }}
+                                        </p>
                                     </div>
                                     <div class="column">
-                                        <h5><span v-for="tag in post.tags">
-                                            #{{ tag.name }}</span></h5>
-                                        <h3>{{ new
+                                        <p class="title is-size-5">
+                                            <span v-for="tag in post.tags">
+                                            #{{ tag.name }}</span>
+                                        </p>
+                                        <p class="title is-size-3">
+                                            {{ new
                                             Date(Date.parse(post.created_at)).toLocaleDateString('en-US',
-                                            dateFormat) }}</h3>
+                                            dateFormat) }}
+                                        </p>
                                     </div>
                                 </div>
                                 <hr>

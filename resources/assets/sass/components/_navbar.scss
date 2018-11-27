@@ -3,8 +3,9 @@ $navbar-item-hover-color: black;
 // Navigation Bar
 $navbar-background-color: $linear-gradient;
 $navbar-item-color: white;
-$navbar-dropdown-background-color: white;
-$navbar-dropdown-item-hover-color: $link;
+$navbar-dropdown-background-color: $linear-gradient2;
+$navbar-dropdown-item-hover-background-color: $link;
+$navbar-dropdown-item-hover-color: black;
 $navbar-item-hover-background-color: $link;
 
 // Bulma specific
