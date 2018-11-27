@@ -17,6 +17,6 @@ html {
     font-weight: $body-font-weight;
     margin: 0;
 }
-nav, .footer {
-    background: $linear-gradient;
+nav, .footer, section.hero {
+    background: $linear-gradient2 !important;
 }
