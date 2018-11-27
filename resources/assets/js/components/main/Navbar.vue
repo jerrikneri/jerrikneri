@@ -80,18 +80,20 @@
         to="/epitome">
         <span>Epitome</span>
       </router-link>
-      <a class="navbar-item" href="/view/resume.pdf">
-        <span class="button is-link">View Resume</span>
-      </a>
+      <Resume class="navbar-item"></Resume>
     </div>
   </div>
-  
+
 </nav>
 </template>
 
 <script>
+import Resume from './Resume';
 export default {
   name: "Navbar",
+  components: {
+    Resume
+  },
   data() {
     return {
       showNav: false

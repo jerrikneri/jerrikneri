@@ -20,14 +20,14 @@ $brown: #757763;
 $beige-light: #D0D1CD;
 $beige-lighter: #EFF0EB;
 
-$black-gradient: linear-gradient(to right, #040404, #000000, #656565);
-$blue-gradient: linear-gradient(120deg, #414b56, #00a2e1);
+$blue-gradient: linear-gradient(to right, #141414, #2D3047, #D5ECE9);
+// $blue-gradient: linear-gradient(120deg, #032336, #113951 #6F8FA2);
 
 // $grey-dark: $brown;
 // $grey-light: $beige-light;
-$primary: #4c516d;
-$secondary: #1d2951;
-$link: #57a0d3;
+$primary: #141414;
+$secondary: #101013;
+$link: #D5ECE9;
 
 
 
@@ -99,5 +99,3 @@ $box-color: white;
 }
 
 
-// Title
-$title-color: white;

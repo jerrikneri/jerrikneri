@@ -19,7 +19,6 @@
             
         </section>
 
-        <hr>
 
         <SPA></SPA>
 
