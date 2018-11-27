@@ -25,7 +25,10 @@
     </div>
   </div>
   <div class="navbar-brand">
+    <router-link class="navbar-item"
+      to="/">
       <div class="is-size-4 hide-desktop pl5 pt10">A BLOG CODE DIARY</div>
+    </router-link>
       <a @click="showNav = !showNav" role="button" class="navbar-burger"
       aria-label="menu" aria-expanded="false" :class="{ 'is-active': showNav }">
         <span aria-hidden="true"></span>

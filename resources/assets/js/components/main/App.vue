@@ -6,6 +6,9 @@
                 <p class="has-text-white title">
                     JERRIK NERI
                 </p>
+                <div class="hide-desktop">
+                    <Resume position="center"></Resume>
+                </div>
             </div>
         <section class="section container is-flex is-fluid has-text-centered">
             <!-- <img v-show="$route.path==='/'"
@@ -40,6 +43,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import SPA from "./SPA";
+import Resume from "./Resume";
 
 export default {
     name: "Home",
@@ -51,6 +55,7 @@ export default {
         Header,
         Footer,
         Navbar,
+        Resume,
         SPA
     },
     data() {
