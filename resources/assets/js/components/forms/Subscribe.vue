@@ -6,7 +6,7 @@
             </div>
             <div class="
              field">
-                <label class="label">Name</label>
+                <label class="label has-text-white">Name</label>
                 <div class="control">
                     <input class="input"
                            type="text"
@@ -18,7 +18,7 @@
             </div>
 
             <div class="field">
-                <label class="label">Email</label>
+                <label class="label has-text-white">Email</label>
                 <div class="control">
                     <input class="input"
                            type="email"

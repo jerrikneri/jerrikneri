@@ -51,17 +51,21 @@
             </div>
         </section>
         <div v-show="preview == null">
-            <Pagination class="p-t-lg" :listData=[...cachedPosts] :perPage="perPage" @update="updatePage"/>
+            <Pagination v-show="cachedPosts.length > perPage" class="p-t-lg p-b-xl" :listData=[...cachedPosts] :perPage="perPage" @update="updatePage"/>
+            <div class="container has-text-left">
+                <Subscribe class="m-t-lg p-l-xxl p-r-xxl"></Subscribe>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
 import Pagination from "../UI/Pagination";
+import Subscribe from "../forms/Subscribe";
 export default {
     props: ["preview"],
     name: "Blog",
-    components: {Pagination},
+    components: {Pagination, Subscribe},
     data() {
         return {
             dateFormat: this.$store.state.date_format,
