@@ -1,33 +1,47 @@
 <template>
     <div class="m-b-lg is-fluid">
         <div class="box section column is-one-third my-auto">
-            <div class="has-text-centered my-auto">
+            <div class="has-text-centered my-auto p-b-md">
                 Want to follow me on my journey or know when my next blog is released? Subscribe below to stay in touch!
             </div>
             <div class="has-text-centered">
                 <div class="column my-auto is-paddingless">
                     <label class="label has-text-white">Name</label>
-                    <div class="control"
+                    <div class="control p-b-md"
                         :class="loading ? 'is-loading' : ''">
-                        <input class="input"
-                            type="text"
-                            name="name"
-                            placeholder="Enter Name"
-                            v-model="name"
-                            v-validate="'required'" required>
+                        <p class="control has-icons-left has-icons-right">
+                            <input class="input" type="text" placeholder="Name"
+                                name="name"
+                                v-model="name"
+                                v-validate="'required'">
+                            <span class="icon is-small is-left">
+                                <i class="fa fa-user"></i>
+                            </span>
+                            <span v-show="!errors.first('name') && name !== ''" class="icon is-small is-right">
+                                <i class="fa fa-check"></i>
+                            </span>
+                        </p>
+
+
                         <span class="help is-danger">{{ errors.first('name') }}</span>
                     </div>
                 </div>
                 <div class="column my-auto is-paddingless">
                     <label class="label has-text-white">Email</label>
-                    <div class="control"
+                    <div class="control has-icons-right p-b-md"
                         :class="loading ? 'is-loading' : ''">
-                        <input class="input"
-                            type="email"
-                            name="email"
-                            placeholder="Enter Email Address"
-                            v-model="email"
-                            v-validate="'required|email'" required>
+                        <p class="control has-icons-left has-icons-right">
+                            <input class="input" type="email" placeholder="Email"
+                                name="email"
+                                v-model="email"
+                                v-validate="'required|email'">
+                            <span class="icon is-small is-left">
+                                <i class="fa fa-envelope"></i>
+                            </span>
+                            <span v-show="!errors.first('email') && email !== ''" class="icon is-small is-right">
+                                <i class="fa fa-check"></i>
+                            </span>
+                        </p>
                         <span class="help is-danger">{{ errors.first('email') }}</span>
                     </div>
                 </div>
@@ -36,7 +50,7 @@
             <div class="field m-t-md">
                 <div class="has-text-centered">
                     <button @click="submit"
-                        class="button is-link has-text-dark">Subscribe!</button>
+                        class="button is-link has-text-dark is-fullwidth">Subscribe!</button>
                 </div>
             </div>
         </div>
