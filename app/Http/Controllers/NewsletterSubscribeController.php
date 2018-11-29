@@ -24,9 +24,9 @@ class NewsletterSubscribeController extends Controller
             'email' => 'required|email',
             'name' => 'required'
         ]);
-
-        $first_name;
-        $last_name;
+        $name = explode(' ', request('name'));
+        $first_name = $name[0];
+        $last_name = $name[1];
         $data = [
             'api' => config('services.sendlane.api_key'),
             'hash' => config('services.sendlane.hash_key'),

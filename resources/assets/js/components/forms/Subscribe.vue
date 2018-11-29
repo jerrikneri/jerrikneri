@@ -13,7 +13,8 @@
                            name="name"
                            placeholder="Enter Name"
                            v-model="name"
-                           v-validate="'required'">
+                           v-validate="'required'" required>
+                        <span class="help is-danger">{{ errors.first('name') }}</span>
                 </div>
             </div>
 
@@ -25,7 +26,7 @@
                            name="email"
                            placeholder="Enter Email Address"
                            v-model="email"
-                           v-validate="'required|email'">
+                           v-validate="'required|email'" required>
                     <span class="help is-danger">{{ errors.first('email') }}</span>
                 </div>
             </div>
