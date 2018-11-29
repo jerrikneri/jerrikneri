@@ -30,11 +30,9 @@
                 </div>
             </div>
             <div class="field">
-                <div class="field is-grouped">
-                    <div class="control">
-                        <button @click="submit"
-                                class="button is-primary">Subscribe!</button>
-                    </div>
+                <div class="has-text-centered">
+                    <button @click="submit"
+                            class="button is-link has-text-dark">Subscribe!</button>
                 </div>
             </div>
         </div>
