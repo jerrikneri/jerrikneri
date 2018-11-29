@@ -62,7 +62,7 @@
     <div class="navbar-start">
       <div class="navbar-item">
         <div class="has-text-centered is-size-4">
-          A Blog Code Diary <span class="is-size-6"><i>Read, code, and write with me.</i></span>
+          A Blog Code Diary: <span class="is-size-6"><i>Read, code, and write with me.</i></span>
         </div>
       </div>
     </div>

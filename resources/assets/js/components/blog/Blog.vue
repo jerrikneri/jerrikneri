@@ -46,49 +46,49 @@
                             </a>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </section>
-
+        <div v-show="preview == null">
+            <Pagination class="p-t-lg" :listData=[...cachedPosts] :perPage="perPage" @update="updatePage"/>
+        </div>
     </div>
 </template>
 
 <script>
-import { mapGetters, mapMutations, mapActions } from "vuex";
+import Pagination from "../UI/Pagination";
 export default {
     props: ["preview"],
     name: "Blog",
-    components: {},
+    components: {Pagination},
     data() {
         return {
             dateFormat: this.$store.state.date_format,
             filter: '',
             posts: [],
             cachedPosts: [],
+            perPage: 5
             }
     },
-methods: {
-    ...mapActions(["getBlogPosts"]),
-    filterBy() {
-        this.posts = this.cachedPosts.filter(posts => {
-            let doesTitleMatch = posts.title.toLowerCase().includes(this.filter.toLowerCase());
-            let doesTagMatch = [];
-            posts.tags.forEach( tag => {
-                doesTagMatch.push(tag.name.toLowerCase().includes(this.filter.toLowerCase()))
+    methods: {
+        filterBy() {
+            this.posts = this.cachedPosts.filter(posts => {
+                let doesTitleMatch = posts.title.toLowerCase().includes(this.filter.toLowerCase());
+                let doesTagMatch = [];
+                posts.tags.forEach( tag => {
+                    doesTagMatch.push(tag.name.toLowerCase().includes(this.filter.toLowerCase()))
+                });
+                return doesTitleMatch || doesTagMatch.includes(true);
             });
-            return doesTitleMatch || doesTagMatch.includes(true);
-        });
-    }
+        },
+        updatePage(data) {
+            this.posts = data;
+        }
     },
-    mounted() {
-        let self = this;
-        this.getBlogPosts().then(() => {
-        self.posts = self.$store.state.blog_posts;
-        self.loading = false;
-        self.cachedPosts = self.posts;
-        });
-        
+    created() {
+        this.posts = [...this.$store.state.blog_posts].slice(0, this.perPage);
+        this.cachedPosts = this.$store.state.blog_posts;
     },
 };
 </script>

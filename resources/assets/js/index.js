@@ -23,6 +23,8 @@ Vue.use(moment);
 import VeeValidate from 'vee-validate';
 Vue.use(VeeValidate);
 
+import routes from './routes.js';
+
 const router = new VueRouter({
     mode: "history",
     scrollBehavior(to, from, savedPosition) {
@@ -39,34 +41,7 @@ const router = new VueRouter({
         }
         return { x: 0, y: 150 };
     },
-    routes: [
-        {
-            path: "/",
-            name: "Home",
-            alias: "*",
-            component: Home
-        },
-        {
-            path: "/blog",
-            name: "Blog",
-            component: Blog
-        },
-        {
-            path: "/code",
-            name: "Code",
-            component: Code
-        },
-        {
-            path: "/diary",
-            name: "Diary",
-            component: Diary
-        },
-        {
-            path: "/epitome",
-            name: "Epitome",
-            component: Epitome
-        }
-    ]
+    routes: routes
 });
 
 const store = new Vuex.Store({

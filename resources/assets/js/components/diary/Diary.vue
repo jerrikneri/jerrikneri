@@ -1,9 +1,6 @@
 <template>
   <div>
     <section>
-        <div v-show="preview === true">
-            <!-- <h3>Write with me...</h3> -->
-        </div>
         <section v-show="preview == null"
             class="container section box">
             <div v-if="cachedEntries.length === 0"
@@ -21,22 +18,24 @@
               <div class="has-text-centered p-b-lg">
                 <p class="title">Dance with Words</p>
               </div>
-              <div v-for="entry in entries">
+              <div v-for="entry in currentPage">
                 <Entry :title="entry.title"
                   :tags="entry.tags"
                   :content="entry.content"
                   :date="new Date(Date.parse(entry.created_at)).toLocaleDateString('en-US', dateFormat)"
                   :id="entry.id">
                 </Entry>
-                <span v-if="entry !== entries[entries.length-1]">
+                <span v-if="entry !== currentPage[currentPage.length-1]">
                   <hr>
                 <div class="is-divider" data-content="..."></div>
                 </span>
               </div>
             </div>
-            <!-- <Pagination :listData=entries></Pagination> -->
         </section>
     </section>
+    <div v-show="preview == null">
+      <Pagination class="p-t-lg" :listData=[...cachedEntries] :perPage="perPage" @update="updatePage"/>
+    </div>
   </div>
 
 </template>
@@ -44,7 +43,6 @@
 import Entry from "./Entry";
 import EntryForm from "./EntryForm";
 import Pagination from "../UI/Pagination";
-import { mapGetters, mapMutations, mapActions } from "vuex";
 
 export default {
   props: ["preview"],
@@ -53,17 +51,16 @@ export default {
   data() {
     return {
       cachedEntries: '',
-      entries: "",
+      currentPage: "",
       filter: '',
-      loading: true,
       showEntry: false,
-      dateFormat : this.$store.state.date_format
+      dateFormat : this.$store.state.date_format,
+      perPage: 10
     };
   },
   methods: {
-    ...mapActions(["getDiaryEntries"]),
     filterBy() {
-      this.entries = this.cachedEntries.filter(entry => {
+      this.currentPage = this.cachedEntries.filter(entry => {
           let doesTitleMatch = entry.title.toLowerCase().includes(this.filter.toLowerCase());
           let doesTagMatch = [];
           entry.tags.forEach( tag => {
@@ -71,23 +68,16 @@ export default {
           });
           return doesTitleMatch || doesTagMatch.includes(true);
       });
+    },
+    updatePage(data) {
+      console.log(data);
+      this.currentPage = data;
     }
-  },
-  mounted() {
   },
   created() {
-    let self = this;
-    this.getDiaryEntries().then(() => {
-      self.entries = self.$store.state.diary_entries;
-      self.loading = false;
-      self.cachedEntries = self.entries;
-    });
+    this.currentPage = [...this.$store.getters.diary].slice(0, this.perPage)
+    this.cachedEntries = this.$store.getters.diary;
   },
-  computed: {
-    entriesLoaded() {
-      return !this.loading;
-    }
-  }
 };
 </script>
 
