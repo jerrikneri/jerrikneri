@@ -13,13 +13,14 @@ $desktop: 812px;
     .order-2 {
         order: 2 !important;
     }
+    .navbar__dropdown--hide {
+        display: none !important;
+    }
+    .mobile-padding {
+        padding: 1rem !important;
+    }
 }
 
 // Header
 $title-line-height: 5rem;
 
-@media only screen and (max-device-width: $desktop) {
-    .navbar__dropdown--hide {
-        display: none !important;
-    }
-}

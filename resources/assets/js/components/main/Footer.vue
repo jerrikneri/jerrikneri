@@ -17,19 +17,15 @@
                     IG <strong>|</strong> FB <strong>|</strong> YT
                 </div> -->
             </div>
-            <!-- <div class="container has-text-left">
-                <Subscribe class="m-t-lg p-l-xxl p-r-xxl"></Subscribe>
-            </div> -->
         </div>
     </div>
 </template>
 
 <script>
-import Subscribe from "../forms/Subscribe";
+
 export default {
   name: "Footer",
   components: {
-      Subscribe
   },
   data() {
     return {

@@ -17,6 +17,27 @@
                     <li>Laravel</li>
                     <li>VueJS</li>
                     <li>SASS & Bulma</li>
+                    TODO:
+                    	<li class="striked">Admin section to create, edit, and delete existing models.</li>
+	<li class="striked">Add color</li>
+	<li class="striked">Filter by tags</li>
+	<li class="striked">Add downloadable resume</li>
+	<li class="no strike">Track visitors (analytics? expand) / PHP log all IPs that visit and what pages visited?</li>
+	<li class="no strike">SEO</li>
+	<li class="no strike">Google Tag Manager? if necessary</li>
+	<li class="no strike">Clean up Featured Work section in Epitome</li>
+	<li class="no strike">Personalized comments? Visitor accounts…? or hook into facebook/google accounts?</li>
+	<li class="no strike">Re-order Hackintosh image and text in Projects section</li>
+	<li class="no strike">Finalize a view / process for Projects section (can create, edit, delete, but not currently pulling JSON from DB)</li>
+	<li class="no strike">Add more projects</li>
+	<li class="striked">Style subscribe component</li>
+	<li class="striked">Decide where to include subscribe component on blog/ general app</li>
+	<li class="no strike">add success toaster or message when ajax request for subscribe complete</li>
+	<li class="no strike">Set up automation in Sendlane account</li>
+	<li class="no strike">Set up templates for blog updates as campaigns in sendlane</li>
+	<li class="striked">Rename to Coding Repos</li>
+	<li class="no strike">Add more detail to http://Jerrikneri.com project</li>
+	<li class="striked">Add pagination</li>
                 </ul>
             </div>
             <hr>
@@ -109,5 +130,8 @@ ul,
 li {
     margin: 0 !important;
     list-style-type: none;
+}
+.striked {
+    text-decoration: line-through;
 }
 </style>

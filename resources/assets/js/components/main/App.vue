@@ -22,14 +22,16 @@
 
         </section>
 
-
         <SPA></SPA>
 
         <router-view v-show="$route.path!=='/'"></router-view>
 
-        <!-- <div class="is-divider" data-content="JAN"></div> -->
-        <div class="section"></div>
+        <div class="container has-text-left">
+            <Subscribe class="m-t-lg p-b-md"></Subscribe>
+        </div>
+
         <About v-show="$route.path==='/'"></About>
+
         <Footer></Footer>
     </div>
 </template>
@@ -42,6 +44,7 @@ import Diary from "./../diary/Diary";
 import Header from "./Header";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
+import Subscribe from "../forms/Subscribe";
 import SPA from "./SPA";
 import Resume from "./Resume";
 
@@ -56,7 +59,8 @@ export default {
         Footer,
         Navbar,
         Resume,
-        SPA
+        SPA,
+        Subscribe
     },
     data() {
         return {};

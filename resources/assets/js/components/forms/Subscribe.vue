@@ -1,5 +1,5 @@
 <template>
-    <div class="m-b-lg container">
+    <div class="m-b-lg container is-fluid">
         <div class="box section">
             <div class="has-text-centered p-b-md">
                 Want to follow me on my journey or know when my next blog is released? Subscribe below to stay in touch!
