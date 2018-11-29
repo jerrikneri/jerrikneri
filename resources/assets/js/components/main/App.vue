@@ -26,7 +26,7 @@
 
         <router-view v-show="$route.path!=='/'"></router-view>
 
-        <div class="container has-text-left">
+        <div class="container">
             <Subscribe class="m-t-lg p-b-md"></Subscribe>
         </div>
 

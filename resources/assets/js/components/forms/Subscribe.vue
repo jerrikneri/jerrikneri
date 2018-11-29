@@ -1,39 +1,42 @@
 <template>
-    <div class="m-b-lg container is-fluid">
+    <div class="m-b-lg is-fluid">
         <div class="box section">
-            <div class="has-text-centered p-b-md">
+            <div class="has-text-centered column is-half my-auto">
                 Want to follow me on my journey or know when my next blog is released? Subscribe below to stay in touch!
             </div>
-            <div class="
-             field">
-                <label class="label has-text-white">Name</label>
-                <div class="control">
-                    <input class="input"
-                           type="text"
-                           name="name"
-                           placeholder="Enter Name"
-                           v-model="name"
-                           v-validate="'required'" required>
+            <div class="has-text-centered">
+                <div class="column is-one-third my-auto is-paddingless">
+                    <label class="label has-text-white">Name</label>
+                    <div class="control"
+                        :class="loading ? 'is-loading' : ''">
+                        <input class="input"
+                            type="text"
+                            name="name"
+                            placeholder="Enter Name"
+                            v-model="name"
+                            v-validate="'required'" required>
                         <span class="help is-danger">{{ errors.first('name') }}</span>
+                    </div>
+                </div>
+                <div class="column is-one-third my-auto is-paddingless">
+                    <label class="label has-text-white">Email</label>
+                    <div class="control"
+                        :class="loading ? 'is-loading' : ''">
+                        <input class="input"
+                            type="email"
+                            name="email"
+                            placeholder="Enter Email Address"
+                            v-model="email"
+                            v-validate="'required|email'" required>
+                        <span class="help is-danger">{{ errors.first('email') }}</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="field">
-                <label class="label has-text-white">Email</label>
-                <div class="control">
-                    <input class="input"
-                           type="email"
-                           name="email"
-                           placeholder="Enter Email Address"
-                           v-model="email"
-                           v-validate="'required|email'" required>
-                    <span class="help is-danger">{{ errors.first('email') }}</span>
-                </div>
-            </div>
-            <div class="field">
+            <div class="field m-t-md">
                 <div class="has-text-centered">
                     <button @click="submit"
-                            class="button is-link has-text-dark">Subscribe!</button>
+                        class="button is-link has-text-dark">Subscribe!</button>
                 </div>
             </div>
         </div>
@@ -56,6 +59,7 @@ export default {
             displayTime: 3000,
             name: '',
             email: '',
+            loading: false,
             notification: '',
             submitted: false,
             subscribed: false
@@ -69,10 +73,11 @@ export default {
         || this.email == '') {
             return;
         }
-        
+
         let self = this;
         let name = this.name;
         let email = this.email;
+        this.loading = true;
 
         this.newsletterSubscribe({ name, email })
             .then((status) => {
@@ -92,8 +97,8 @@ export default {
                 setTimeout(() => {
                     self.submitted = false;
                     }, this.displayTime);
-                });
-    }
+            });
+        }
     },
     computed: {
         show() {
