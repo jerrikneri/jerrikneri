@@ -50,7 +50,9 @@
                 </div>
             </div>
         </section>
-        <Pagination class="p-t-lg" :listData=[...cachedPosts] :perPage="perPage" @update="updatePage"/>
+        <div v-show="preview == null">
+            <Pagination class="p-t-lg" :listData=[...cachedPosts] :perPage="perPage" @update="updatePage"/>
+        </div>
     </div>
 </template>
 

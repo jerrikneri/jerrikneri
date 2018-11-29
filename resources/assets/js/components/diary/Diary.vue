@@ -33,7 +33,9 @@
             </div>
         </section>
     </section>
+    <div v-show="preview == null">
       <Pagination class="p-t-lg" :listData=[...cachedEntries] :perPage="perPage" @update="updatePage"/>
+    </div>
   </div>
 
 </template>
