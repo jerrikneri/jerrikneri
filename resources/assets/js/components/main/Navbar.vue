@@ -41,19 +41,19 @@
         <div class="navbar-end">
           <router-link class="navbar-item"
             to="/blog">
-            <span>Blog</span>
+            <span><i class="fa fa-desktop"></i> Blog</span>
           </router-link>
           <router-link class="navbar-item"
             to="/code">
-            <span>Code</span>
+            <span><i class="fa fa-code"></i> Code</span>
           </router-link>
           <router-link class="navbar-item"
             to="/diary">
-            <span class="">Diary</span>
+            <span class=""><i class="fa fa-book"></i> Diary</span>
           </router-link>
           <router-link class="navbar-item"
             to="/epitome">
-            <span>Epitome</span>
+            <span><i class="fa fa-user-o"></i> Epitome</span>
           </router-link>
         </div>
       </div>
