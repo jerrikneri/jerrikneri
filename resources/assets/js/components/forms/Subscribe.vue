@@ -26,7 +26,7 @@
                            placeholder="Enter Email Address"
                            v-model="email"
                            v-validate="'required|email'">
-                    <span>{{ errors.first('email') }}</span>
+                    <span class="help is-danger">{{ errors.first('email') }}</span>
                 </div>
             </div>
             <div class="field">
@@ -35,6 +35,12 @@
                             class="button is-link has-text-dark">Subscribe!</button>
                 </div>
             </div>
+        </div>
+
+        <div class="toast has-text-centered notification"
+            v-show="show"
+            :class="subscribed ? 'is-success' : 'is-danger'">
+            {{ notification }}
         </div>
     </div>
 
@@ -46,22 +52,67 @@ export default {
     name: "SubscribeForm",
     data() {
         return {
+            displayTime: 3000,
             name: '',
-            email: ''
+            email: '',
+            notification: '',
+            submitted: false,
+            subscribed: false
         }
     },
     methods: {
     ...mapActions(["newsletterSubscribe"]),
     submit() {
-        if (this.errors.first('email')) {
+        if (this.errors.first('email')
+        || this.name == ''
+        || this.email == '') {
             return;
         }
+        
+        let self = this;
         let name = this.name;
         let email = this.email;
-        this.newsletterSubscribe({ name, email });
+
+        this.newsletterSubscribe({ name, email })
+            .then((status) => {
+                self.submitted = true;
+                self.subscribed = true;
+                self.notification = "You're now subscribed to my newsletter!"
+                self.name = '';
+                self.email = '';
+                setTimeout(() => {
+                    self.submitted = false;
+                    }, this.displayTime);
+            })
+            .catch((err) => {
+                console.log(err.message);
+                self.submitted = true;
+                self.notification = "There was an error in your request. Try again!"
+                setTimeout(() => {
+                    self.submitted = false;
+                    }, this.displayTime);
+                });
     }
     },
+    computed: {
+        show() {
+            return this.submitted;
+        }
+    }
 }
 </script>
 <style>
+.toast {
+    color: #000;
+    line-height: 1.5;
+    margin-bottom: 1em;
+    padding: 1.25em;
+    top: 1em;
+    transition: 0.15s ease-in-out;
+    width: 325px;
+    margin: 0 auto;
+}
+.toast.on {
+    transform: translateX(-365px);
+}
 </style>
