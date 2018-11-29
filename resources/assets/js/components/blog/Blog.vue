@@ -3,7 +3,7 @@
         <div v-show="preview === true">
             <!-- <h3>Read with me...</h3> -->
         </div>
-        <section class="container section box"
+        <section class="container box section"
             v-show="preview == null">
             <div class="content is-large">
                 <div class="has-text-centered">
@@ -18,32 +18,35 @@
                         <i class="fa fa-filter"></i>
                         <input type="text" v-model="filter" @keyup="filterBy">
                         </div>
-                        <div v-for="post in posts">
+                        <div class="columns is-multiline">
+                        <div v-for="post in posts" class="column is-one-third ">
                             <a :href="`/blog/${post.id}`">
-                                <div class="columns">
-                                    <div class="column">
+                                    <div class="">
                                         <img :src="`/images/blog/${post.image}`"
                                             alt="Blog Picture">
+                                        <hr>
                                     </div>
-                                    <div class="column">
-                                        <p class="title is-size-3">
+                                    <div class="">
+                                        <p class="is-size-3">
                                             {{ post.title }}
                                         </p>
-                                    </div>
-                                    <div class="column">
-                                        <p class="title is-size-5">
-                                            <span v-for="tag in post.tags">
+                                        <!-- <p>
+                                            {{ post.content.slice(1,100) }}...
+                                        </p> -->
+                                        <div class="tags has-text-centered">
+                                            <span class="tag is-info" v-for="tag in post.tags">
                                             #{{ tag.name }}</span>
-                                        </p>
-                                        <p class="title is-size-3">
+                                        </div>
+                                    </div>
+                                    <!-- <div class="">
+                                        <p class="title is-size-6">
                                             {{ new
                                             Date(Date.parse(post.created_at)).toLocaleDateString('en-US',
                                             dateFormat) }}
                                         </p>
-                                    </div>
-                                </div>
-                                <hr>
+                                    </div> -->
                             </a>
+                        </div>
                         </div>
                     </div>
 
@@ -68,7 +71,7 @@ export default {
             filter: '',
             posts: [],
             cachedPosts: [],
-            perPage: 5
+            perPage: 9
             }
     },
     methods: {

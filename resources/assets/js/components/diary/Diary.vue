@@ -16,7 +16,8 @@
                 <input type="text" v-model="filter" @keyup="filterBy">
               </div>
               <div class="has-text-centered p-b-lg">
-                <p class="title">Dance with Words</p>
+                <p class="title">Dances with Words</p>
+                <p class="subtitle is-3">Table of Contents:</p>
               </div>
               <div v-for="entry in currentPage">
                 <Entry :title="entry.title"
