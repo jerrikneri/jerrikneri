@@ -32,84 +32,78 @@
 			<hr>
 			<div class="title has-text-centered">Featured Work</div>
 
-			<section class="columns has-text-centered is-multiline">
+			<section class="columns has-text-centered is-multiline level">
 				<div class="column">
 					<a href="https://github.com/jerrikneri/multi-user-blog">
 						<section>
-							<img class=""
-							     width="300"
-							     src="/images/epitome/blog.jpg"
-							     alt="Blog Project Picture">
-							<button class="button">
-								<h3>Multi User Blog</h3>
-							</button>
+							<span class="fa fa-desktop fa-5x"></span>
+							<div class="p-t-sm block has-text-centered">
+								<button class="button is-primary">
+									<h3>Multi User Blog</h3>
+								</button>
+							</div>
 						</section>
 					</a>
 				</div>
 				<div class="column">
 					<a href="https://codepen.io/jaewrek/full/PKWQQV/">
 						<section>
-							<img class=""
-							     width="300"
-							     src="/images/epitome/twitch.jpg"
-							     alt="Twitch Project Picture">
-							<button class="button">
-								<h3>Twitch App</h3>
-							</button>
+							<span class="fa fa-twitch fa-5x"></span>
+							<div class="p-t-sm block has-text-centered">
+								<button class="button is-primary">
+									<h3>Twitch</h3>
+								</button>
+							</div>
 						</section>
 					</a>
 				</div>
 				<div class="column">
 					<a href="https://codepen.io/jaewrek/full/NydLvP/">
 						<section>
-							<img class=""
-							     width="300"
-							     src="/images/epitome/pomodoro.jpg"
-							     alt="Pomodoro Project Picture">
-							<button class="button">
-								<h3>Pomodoro Clock</h3>
-							</button>
+							<span class="fa fa-hourglass-half fa-5x"></span>
+							<div class="p-t-sm block has-text-centered">
+								<button class="button is-primary">
+									<h3>Pomodoro Clock</h3>
+								</button>
+							</div>
 						</section>
 					</a>
 				</div>
 			</section>
-			<section class="columns has-text-centered is-multiline">
+			<section class="columns has-text-centered is-multiline level">
 				<div class="column">
 					<a href="https://codepen.io/jaewrek/full/xLdBGd">
 						<section>
-							<img class=""
-							     width="300"
-							     src="/images/epitome/calculator.jpg"
-							     alt="VueJS Calculator Project Picture">
-							<button class="button">
-								<h3>Calculator</h3>
-							</button>
+							<span class="fa fa-calculator fa-5x"></span>
+							<div class="p-t-sm block has-text-centered">
+								<button class="button is-primary">
+									<h3>Calculator</h3>
+								</button>
+							</div>
 						</section>
 					</a>
 				</div>
 				<div class="column">
 					<a href="https://github.com/jerrikneri/TicTacToe">
 						<section>
-							<img class=""
-							     width="300"
-							     src="/images/epitome/ttt.jpg"
-							     alt="TicTacToe Project Picture">
-							<button class="button">
-								<h3>Tic Tac Toe</h3>
-							</button>
+							<span class="fa fa-plus-square-o fa-5x"></span>
+							<div class="p-t-sm block has-text-centered">
+								<button class="button is-primary">
+									<h3>Tic Tac Toe</h3>
+								</button>
+							</div>
 						</section>
 					</a>
 				</div>
 				<div class="column">
 					<a href="https://github.com/jerrikneri/simongame">
 						<section>
-							<img class=""
-								width="500"
-							     src="/images/epitome/simon.jpg"
-							     alt="Simon Project Picture">
-							<button class="button">
-								<h3>Simon</h3>
-							</button>
+							<span class="fa fa-gamepad fa-5x"></span>
+							<div class="p-t-sm block has-text-centered">
+								<button class="button is-primary">
+									<h3>Simon</h3>
+								</button>
+							</div>
 						</section>
 					</a>
 				</div>
@@ -151,4 +145,7 @@ export default {
 </script>
 
 <style>
+.block{
+	display: block;
+}
 </style>

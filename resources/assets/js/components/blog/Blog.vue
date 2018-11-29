@@ -14,8 +14,8 @@
                         </p>
                     </div>
                     <div v-else>
-                        <div class="has-text-right p-b-md">
-                        Filter:
+                        <div class="has-text-right p-b-xl">
+                        <i class="fa fa-filter"></i>
                         <input type="text" v-model="filter" @keyup="filterBy">
                         </div>
                         <div v-for="post in posts">

@@ -8,19 +8,19 @@
     <div class="navbar-dropdown">
       <router-link class="navbar-item"
       to="/blog">
-        <span>Blog</span>
+        <span><i class="fa fa-desktop"></i> Blog</span>
       </router-link>
       <router-link class="navbar-item"
         to="/code">
-        <span>Code</span>
+        <span><i class="fa fa-code"></i> Code</span>
       </router-link>
       <router-link class="navbar-item"
         to="/diary">
-        <span class="">Diary</span>
+        <span class=""><i class="fa fa-book"></i> Diary</span>
       </router-link>
       <router-link class="navbar-item"
         to="/epitome">
-        <span>Epitome</span>
+        <span><i class="fa fa-user-o"></i> Epitome</span>
       </router-link>
     </div>
   </div>
@@ -62,7 +62,7 @@
     <div class="navbar-start">
       <div class="navbar-item">
         <div class="has-text-centered is-size-4">
-          A Blog Code Diary: <span class="is-size-6"><i>Read, code, and write with me.</i></span>
+            A Blog Code Diary: <span class="is-size-6"><i>Read, code, and write with me.</i></span>
         </div>
       </div>
     </div>

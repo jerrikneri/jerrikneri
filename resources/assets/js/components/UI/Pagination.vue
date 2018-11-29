@@ -1,26 +1,36 @@
 <template>
   <div @click="$emit('update', paginatedData)" class="has-text-centered">
-    <button @click="pageChange(1)" class="button is-link is-active is-outlined"
-      :disabled="pageNumber===0">
-      First
-    </button>
-    ...
-    <button @click="prevPage" class="button is-link is-active is-outlined"
-      :disabled="pageNumber===0">
-      Prev
-    </button>
-    <button class="button is-link is-active is-outlined is-static">
-      {{ pageNumber+1 }}
-    </button>
-    <button @click="nextPage" class="button is-link is-active is-outlined"
-      :disabled="pageNumber >= pageCount">
-      Next
-    </button>
-    ...
-    <button @click="pageChange(pageCount)" class="button is-link is-active is-outlined"
-      :disabled="pageNumber >= pageCount">
-      Last
-    </button>
+
+    <div class="container section">
+      <button @click="pageChange(0)" class="button is-link is-active is-outlined"
+        :disabled="pageNumber===0">
+        First
+      </button>
+
+      <button @click="prevPage" class="button is-link is-active is-outlined"
+        :disabled="pageNumber===0">
+        <span class="fa fa-arrow-left"></span>
+      </button>
+      <button v-show="pageNumber" @click="pageChange(pageNumber-1)" class="button is-link is-outlined">
+        {{ pageNumber }}
+      </button>
+      <button @click="pageChange(pageNumber)" class="button is-link is-active is-static">
+        {{ pageNumber+1 }}
+      </button>
+      <button @click="pageChange(pageNumber+1)" class="button is-link is-outlined" v-show="pageNumber+1 <= pageCount">
+        {{ pageNumber+2 }}
+      </button>
+      <button @click="nextPage" class="button is-link is-active is-outlined"
+        :disabled="pageNumber >= pageCount">
+        <span class="fa fa-arrow-right"></span>
+      </button>
+
+      <button @click="pageChange(pageCount)" class="button is-link is-active is-outlined"
+        :disabled="pageNumber >= pageCount">
+        Last
+      </button>
+    </div>
+
   </div>
 </template>
 <script>
