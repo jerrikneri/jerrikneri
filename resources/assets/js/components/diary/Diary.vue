@@ -18,22 +18,22 @@
               <div class="has-text-centered p-b-lg">
                 <p class="title">Dance with Words</p>
               </div>
-              <div v-for="entry in entries">
+              <div v-for="entry in currentPage">
                 <Entry :title="entry.title"
                   :tags="entry.tags"
                   :content="entry.content"
                   :date="new Date(Date.parse(entry.created_at)).toLocaleDateString('en-US', dateFormat)"
                   :id="entry.id">
                 </Entry>
-                <span v-if="entry !== entries[entries.length-1]">
+                <span v-if="entry !== currentPage[currentPage.length-1]">
                   <hr>
                 <div class="is-divider" data-content="..."></div>
                 </span>
               </div>
             </div>
-            <!-- <Pagination :listData=entries></Pagination> -->
         </section>
     </section>
+      <Pagination class="p-t-lg" :listData=[...cachedEntries] :perPage="perPage" @update="updatePage"/>
   </div>
 
 </template>
@@ -49,15 +49,16 @@ export default {
   data() {
     return {
       cachedEntries: '',
-      entries: "",
+      currentPage: "",
       filter: '',
       showEntry: false,
-      dateFormat : this.$store.state.date_format
+      dateFormat : this.$store.state.date_format,
+      perPage: 10
     };
   },
   methods: {
     filterBy() {
-      this.entries = this.cachedEntries.filter(entry => {
+      this.currentPage = this.cachedEntries.filter(entry => {
           let doesTitleMatch = entry.title.toLowerCase().includes(this.filter.toLowerCase());
           let doesTagMatch = [];
           entry.tags.forEach( tag => {
@@ -65,12 +66,16 @@ export default {
           });
           return doesTitleMatch || doesTagMatch.includes(true);
       });
+    },
+    updatePage(data) {
+      console.log(data);
+      this.currentPage = data;
     }
   },
   created() {
-    this.entries = this.$store.getters.diary;
-    this.cachedEntries = this.entries;
-  }
+    this.currentPage = [...this.$store.getters.diary].slice(0, this.perPage)
+    this.cachedEntries = this.$store.getters.diary;
+  },
 };
 </script>
 

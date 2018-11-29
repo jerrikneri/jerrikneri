@@ -1,30 +1,35 @@
 <template>
-<div>
-  <ul>
-    <li v-for="p in paginatedData">
-      {{p.first}} 
-      {{p.last}}  
-      {{p.suffix}}
-    </li>
-  </ul>
-  <button @click="prevPage"
-    :disabled="pageNumber===0">
-    Previous
-  </button>
-  <button @click="nextPage"
-    :disabled="pageNumber >= pagecount -1">
-    Next
-  </button>
-</div>
+  <div @click="$emit('update', paginatedData)" class="has-text-centered">
+    <button @click="pageChange(1)" class="button is-link is-active is-outlined"
+      :disabled="pageNumber===0">
+      First
+    </button>
+    ...
+    <button @click="prevPage" class="button is-link is-active is-outlined"
+      :disabled="pageNumber===0">
+      Prev
+    </button>
+    <button class="button is-link is-active is-outlined is-static">
+      {{ pageNumber+1 }}
+    </button>
+    <button @click="nextPage" class="button is-link is-active is-outlined"
+      :disabled="pageNumber >= pageCount">
+      Next
+    </button>
+    ...
+    <button @click="pageChange(pageCount)" class="button is-link is-active is-outlined"
+      :disabled="pageNumber >= pageCount">
+      Last
+    </button>
+  </div>
 </template>
 <script>
 export default {
   props: {
     listData: {
-      type: Array,
       required: true
     },
-    size: {
+    perPage: {
       type: Number,
       required: false,
       default: 5
@@ -33,7 +38,7 @@ export default {
   name: "Pagination",
   data() {
     return {
-      pageNumnber: 0
+      pageNumber: 0
     };
   },
   methods: {
@@ -42,19 +47,23 @@ export default {
     },
     prevPage() {
       this.pageNumber--;
+    },
+    pageChange(page) {
+      this.pageNumber = page;
     }
   },
   computed: {
     pageCount() {
       let l = this.listData.length,
-        s = this.size;
-      return Math.floor(l / s);
+        s = this.perPage;
+      return Math.floor(l / s) - 1;
     },
     paginatedData() {
-      const start = this.pageNumber * this.size,
-        end = start + this.size;
-
-      return this.listData.slice(start, end);
+      let start = parseInt(this.pageNumber+1) * this.perPage,
+        end = parseInt(start) + parseInt(this.perPage);
+        console.log(start, end);
+        console.log('currentpage', [...this.listData].slice(start, end))
+      return [...this.listData].slice(start, end);
     }
   }
 };
