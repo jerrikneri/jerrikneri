@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 export default {
-    getDiaryEntries: ({ commit, state }) => {
-        axios
+    async fetchDiary({ commit, state }) {
+        await axios
             .get('diary/all')
             .then(response => {
                 commit('updateDiaryEntries', response.data);
@@ -11,8 +11,8 @@ export default {
                 console.error('Unable to load entries.', error);
             });
     },
-    getBlogPosts: ({ commit, state }) => {
-        axios
+    async fetchBlog ({ commit, state }) {
+        await axios
             .get('blog/all')
             .then(response => {
                 commit('updateBlogPosts', response.data);

@@ -40,7 +40,7 @@ class DiaryEntry extends Model
     public static function getEntries()
     {
         return static::with('tags:name')->where('id', '>', '0')
-            ->orderBy('id', 'desc')->get();
+            ->orderBy('id', 'desc')->paginate();
     }
 
     public function scopeEntries($query)

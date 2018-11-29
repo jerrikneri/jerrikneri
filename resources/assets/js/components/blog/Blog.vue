@@ -46,7 +46,7 @@
                             </a>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </section>
@@ -81,14 +81,9 @@ methods: {
         });
     }
     },
-    mounted() {
-        let self = this;
-        this.getBlogPosts().then(() => {
-        self.posts = self.$store.state.blog_posts;
-        self.loading = false;
-        self.cachedPosts = self.posts;
-        });
-        
+    created() {
+        this.posts = this.$store.state.blog_posts;
+        this.cachedPosts = this.posts;
     },
 };
 </script>

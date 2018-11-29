@@ -1,9 +1,6 @@
 <template>
   <div>
     <section>
-        <div v-show="preview === true">
-            <!-- <h3>Write with me...</h3> -->
-        </div>
         <section v-show="preview == null"
             class="container section box">
             <div v-if="cachedEntries.length === 0"
@@ -44,7 +41,6 @@
 import Entry from "./Entry";
 import EntryForm from "./EntryForm";
 import Pagination from "../UI/Pagination";
-import { mapGetters, mapMutations, mapActions } from "vuex";
 
 export default {
   props: ["preview"],
@@ -55,13 +51,11 @@ export default {
       cachedEntries: '',
       entries: "",
       filter: '',
-      loading: true,
       showEntry: false,
       dateFormat : this.$store.state.date_format
     };
   },
   methods: {
-    ...mapActions(["getDiaryEntries"]),
     filterBy() {
       this.entries = this.cachedEntries.filter(entry => {
           let doesTitleMatch = entry.title.toLowerCase().includes(this.filter.toLowerCase());
@@ -73,20 +67,9 @@ export default {
       });
     }
   },
-  mounted() {
-  },
   created() {
-    let self = this;
-    this.getDiaryEntries().then(() => {
-      self.entries = self.$store.state.diary_entries;
-      self.loading = false;
-      self.cachedEntries = self.entries;
-    });
-  },
-  computed: {
-    entriesLoaded() {
-      return !this.loading;
-    }
+    this.entries = this.$store.getters.diary;
+    this.cachedEntries = this.entries;
   }
 };
 </script>

@@ -69,7 +69,7 @@
 
             <div class="box section">
                 <p class="title is-size-3">
-                    Coding Projects
+                    Coding Repos
                 </p>
                 <div class="columns">
                     <div class="column">
