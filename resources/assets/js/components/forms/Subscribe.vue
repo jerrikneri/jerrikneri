@@ -1,11 +1,11 @@
 <template>
     <div class="m-b-lg is-fluid">
-        <div class="box section">
-            <div class="has-text-centered column is-half my-auto">
+        <div class="box section column is-one-third my-auto">
+            <div class="has-text-centered my-auto">
                 Want to follow me on my journey or know when my next blog is released? Subscribe below to stay in touch!
             </div>
             <div class="has-text-centered">
-                <div class="column is-one-third my-auto is-paddingless">
+                <div class="column my-auto is-paddingless">
                     <label class="label has-text-white">Name</label>
                     <div class="control"
                         :class="loading ? 'is-loading' : ''">
@@ -18,7 +18,7 @@
                         <span class="help is-danger">{{ errors.first('name') }}</span>
                     </div>
                 </div>
-                <div class="column is-one-third my-auto is-paddingless">
+                <div class="column my-auto is-paddingless">
                     <label class="label has-text-white">Email</label>
                     <div class="control"
                         :class="loading ? 'is-loading' : ''">
