@@ -32,14 +32,8 @@ export default {
             });
     },
     newsletterSubscribe: ({ commit }, form_data) => {
-        console.log('inactino', form_data);
-        axios
-            .post('subscribe-to-newsletter', form_data)
-            .then(response => {
-                console.log('success', form_data);
-            })
-            .catch(error => {
-                console.error('Unable to load entries.', error);
-            });
+        console.log('in action', form_data);
+        return axios
+            .post('subscribe-to-newsletter', form_data);
     }
 };

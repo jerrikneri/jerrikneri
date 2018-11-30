@@ -23,7 +23,7 @@
         name="tag"
         placeholder="Tag">
 
-    <p>Dance with words:</p>
+    <p>Dances with words:</p>
     <textarea name="content" 
         class="form-control-content"
         v-model="content"

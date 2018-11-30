@@ -1,5 +1,5 @@
 <template>
-    <div class="content">
+    <div class="content p-b-lg">
 
         <div v-show="preview === true"
              class="">
@@ -11,7 +11,7 @@
             <span class="title is-size-2"><u>PROJECTS</u></span>
             <div class="section">
                 <p class="title is-size-3">
-                    JERRIKNERI.COM
+                    JERRIKNERI.COM <span class="fa fa-tv"></span>
                 </p>
                 <ul class="text-center">
                     <li>Laravel</li>
@@ -29,7 +29,7 @@
                     </div>
                     <div class="column order-1">
                         <p class="title is-size-3">
-                            Hackintosh
+                            Hackintosh <span class="fa fa-server"></span>
                         </p>
                         <ul class="text-center">
                             <li>Intel i7 4790k @4.7GHz</li>
@@ -50,7 +50,7 @@
                 <div class="columns">
                     <div class="column">
                         <p class="title is-size-3">
-                            Let's Split
+                            Let's Split <span class="fa fa-keyboard-o"></span>
                         </p>
                         <ul class="text-center">
                             <li>Acrylic sandwich plate</li>
@@ -109,5 +109,8 @@ ul,
 li {
     margin: 0 !important;
     list-style-type: none;
+}
+.striked {
+    text-decoration: line-through;
 }
 </style>

@@ -35,7 +35,7 @@
                             </p>
                             <div class="tags has-addons level-item p-b-md">
                                 <span class="tag is-rounded is-info">{{ $blog->user->name }}</span>
-                                <span class="tag is-rounded">{{ $blog->created_at->toFormattedDateString() }}</span>
+                                <span class="tag is-rounded has-text-dark">{{ $blog->created_at->toFormattedDateString() }}</span>
                             </div>
                         </div>
                     </div>

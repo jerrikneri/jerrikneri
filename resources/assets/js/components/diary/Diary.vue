@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="p-b-lg">
     <section>
         <section v-show="preview == null"
             class="container section box">
@@ -11,12 +11,13 @@
                 
             </div>
             <div v-else>
-              <div class="has-text-right p-b-md">
-                Filter:
+              <div class="has-text-right p-b-xl">
+                <i class="fa fa-filter"></i>
                 <input type="text" v-model="filter" @keyup="filterBy">
               </div>
               <div class="has-text-centered p-b-lg">
-                <p class="title">Dance with Words</p>
+                <p class="title">Dances with Words</p>
+                <p class="subtitle is-3">Table of Contents:</p>
               </div>
               <div v-for="entry in currentPage">
                 <Entry :title="entry.title"
@@ -34,7 +35,7 @@
         </section>
     </section>
     <div v-show="preview == null">
-      <Pagination class="p-t-lg" :listData=[...cachedEntries] :perPage="perPage" @update="updatePage"/>
+      <Pagination v-show="cachedEntries.length > perPage" :listData=[...cachedEntries] :perPage="perPage" @update="updatePage"/>
     </div>
   </div>
 

@@ -5,17 +5,17 @@
       :class="{ 'lighten' : hover }">
       <div class="columns has-text-centered">
         <div class="column">
-          <p class="title is-size-3">
+          <p class="subtitle ">
             {{ title }}
           </p>
         </div>
         <div class="is-divider-vertical" data-content="*"></div>
         <div class="column">
-          <p class="title is-size-5">
-            <span v-for="tag in tags">
+          <p class="subtitle tags">
+            <span class="tag is-dark" v-for="tag in tags">
             #{{ tag.name }}</span>
           </p>
-          <p class="title is-size-3">
+          <p class="subtitle">
             {{ date }}
           </p>
         </div>
