@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="p-b-lg">
     <section>
         <section v-show="preview == null"
             class="container section box">
@@ -35,7 +35,7 @@
         </section>
     </section>
     <div v-show="preview == null">
-      <Pagination class="p-t-lg" :listData=[...cachedEntries] :perPage="perPage" @update="updatePage"/>
+      <Pagination v-show="cachedEntries.length > perPage" :listData=[...cachedEntries] :perPage="perPage" @update="updatePage"/>
     </div>
   </div>
 

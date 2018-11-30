@@ -26,9 +26,9 @@
 
         <router-view v-show="$route.path!=='/'"></router-view>
 
-        <div class="container">
+        <!-- <div class="container">
             <Subscribe class="m-t-lg p-b-md"></Subscribe>
-        </div>
+        </div> -->
 
         <About v-show="$route.path==='/'"></About>
 

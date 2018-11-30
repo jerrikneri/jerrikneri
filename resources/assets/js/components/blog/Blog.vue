@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="p-b-lg">
         <div v-show="preview === true">
             <!-- <h3>Read with me...</h3> -->
         </div>
@@ -54,7 +54,7 @@
             </div>
         </section>
         <div v-show="preview == null">
-            <Pagination v-show="cachedPosts.length > perPage" class="p-t-lg" :listData=[...cachedPosts] :perPage="perPage" @update="updatePage"/>
+            <Pagination v-show="cachedPosts.length > perPage" :listData=[...cachedPosts] :perPage="perPage" @update="updatePage"/>
         </div>
     </div>
 </template>
