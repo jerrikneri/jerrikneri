@@ -1,4 +1,4 @@
-@if(Request::is('blog/*'))
+@if(Request::is('blog/*') || Request::is('diary/*'))
 <footer class="footer">
 </footer>
 @endif
