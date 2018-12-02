@@ -1,5 +1,5 @@
 <template>
-    <div class="p-b-lg">
+    <div class="">
         <div v-show="preview === true">
             <!-- <h3>Read with me...</h3> -->
         </div>

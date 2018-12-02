@@ -1,5 +1,5 @@
 <template>
-    <div class="content p-b-lg">
+    <div class="content">
 
         <div v-show="preview === true"
              class="">
@@ -79,7 +79,7 @@
                     <div class="is-divider-vertical"
                          data-content="OR"></div>
                     <div class="column">
-                        <a href="https://codepen.io/jaewrek/">codepen:
+                        <a href="https://codepen.io/jerrikneri/">codepen:
                             jerrikneri</a>
                     </div>
 

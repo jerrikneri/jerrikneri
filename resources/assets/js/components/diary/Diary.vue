@@ -1,5 +1,5 @@
 <template>
-  <div class="p-b-lg">
+  <div class="">
     <section>
         <section v-show="preview == null"
             class="container section box">
@@ -8,7 +8,6 @@
             <p class="title is-size-1">
               Journal entries coming soon...
             </p>
-                
             </div>
             <div v-else>
               <div class="has-text-right p-b-xl">
