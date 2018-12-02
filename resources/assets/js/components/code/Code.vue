@@ -1,5 +1,5 @@
 <template>
-    <div class="content">
+    <div class="content code-font">
 
         <div v-show="preview === true"
              class="">
@@ -10,7 +10,7 @@
                  class="box container has-text-centered is-large">
             <span class="title is-size-2"><u>PROJECTS</u></span>
             <div class="section">
-                <p class="title is-size-3">
+                <p class="title is-size-3 jerrikneri">
                     JERRIKNERI.COM <span class="fa fa-tv"></span>
                 </p>
                 <ul class="text-center">

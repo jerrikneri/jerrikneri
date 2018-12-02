@@ -3,7 +3,7 @@
         <Navbar></Navbar>
         <Header></Header>
         <div v-show="$route.path==='/'" class="has-text-white container has-text-centered is-size-1 p-t-xl p-b-xl">
-                <p class="has-text-white title">
+                <p class="has-text-white title jerrikneri">
                     JERRIK NERI
                 </p>
                 <div class="hide-desktop">

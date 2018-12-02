@@ -7,6 +7,6 @@ $factory->define(DiaryEntry::class, function (Faker $faker) {
     return [
         'user_id' => 1,
         'title' => $faker->sentence(),
-        'content' => $faker->paragraph()
+        'content' => $faker->paragraph(100)
     ];
 });

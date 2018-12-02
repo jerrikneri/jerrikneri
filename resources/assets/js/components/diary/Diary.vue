@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="diary-font">
     <section>
         <section v-show="preview == null"
             class="container section box">

@@ -1,5 +1,5 @@
 <template>
-	<div class="">
+	<div class="epitome-font">
 		<div class="box container section">
 			<div class="">
 

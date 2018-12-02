@@ -1,6 +1,8 @@
 
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,600');
+
+@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Poppins|Sedgwick+Ave|Cinzel|Playfair+Display+SC|Press+Start+2P');
+
 @import './font-awesome/font-awesome';
 // Bootstrap
 // @import "~bootstrap/scss/bootstrap";
@@ -9,6 +11,7 @@
 @import 'abstracts';
 @import 'base';
 @import 'components';
+@import 'global-styles';
 @import 'layout';
 @import 'pages';
 @import 'spacing';

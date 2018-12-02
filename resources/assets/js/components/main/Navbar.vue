@@ -1,5 +1,5 @@
 <template>
-<nav class="navbar is-fixed-top">
+<nav class="navbar is-fixed-top navbar-font">
   <div class="navbar-item has-dropdown is-hoverable navbar__dropdown--hide">
     <router-link class="navbar-item"
       to="/">
@@ -61,7 +61,7 @@
   <div class="navbar-menu">
     <div class="navbar-start">
       <div class="navbar-item">
-        <div class="has-text-centered is-size-4">
+        <div class="has-text-centered is-size-4 navbar-motto">
             A Blog Code Diary: <span class="is-size-6"><i>Read, code, and write with me.</i></span>
         </div>
       </div>

@@ -2,7 +2,20 @@
 $body-bg: $primary;
 
 $body-font-weight: 400;
-$font-family-sans-serif: 'Raleway', sans-serif;
+
+// Poppins
+$font-primary: 'Poppins', sans-serif;
+$font-navbar-footer: 'Black Han Sans', sans-serif;
+$font-motto: 'Sedgwick Ave', sans-serif;
+
+// $font-motto: 'Cinzel', sans-serif;
+$font-code: 'Cinzel', sans-serif;
+$font-diary: 'Playfair Display SC', sans-serif;
+$font-epitome: 'Press Start 2P', sans-serif;
+
+$font-brand: 'Black Han Sans', sans-serif;
+// $font-brand: 'Cinzel', sans-serif;
+
 $font-size-base: 1.1rem;
 $line-height-base: 1.6;
 html {
@@ -12,11 +25,8 @@ html {
     color: $body-font-color;
     // background-color: $body-bg;
     background: black;
-    font-family: $font-family-sans-serif;
+    font-family: $font-primary;
     font-size: $font-size-base;
     font-weight: $body-font-weight;
     margin: 0;
-}
-nav, .footer, section.hero {
-    background: $linear-gradient2 !important;
 }
