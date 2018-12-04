@@ -3,15 +3,21 @@
 		<div class="box container section">
 			<div class="">
 
-				<header class="section">
-					<div class="title">Jerrik Neri</div>
-					<div class="subtitle">Self taught Front End Engineer</div>
-					<Resume></Resume>
+				<header class="section columns">
+					<div class="column">
+						<div class="title">Jerrik Neri</div>
+						<div class="subtitle">Self taught Front End Engineer</div>
+						<Resume></Resume>
+					</div>
+					<div class="column">
+						<img class="has-image-centered image"
+							src="/images/epitome/8bitcomputer.gif">
+					</div>
 				</header>
 
 				<hr>
 
-				<div class="section is-flex">
+				<!-- <div class="section is-flex">
 					<img class="has-image-centered image"
 						src="/images/epitome/motorcycle.jpg"
 						srcset="/images/epitome/motorcycle.jpg 1024w,
@@ -19,7 +25,7 @@
 							/images/epitome/motorcycle.jpg 320w"
 						sizes="(min-width: 1024px) 1024px, 100vw"
 						alt="Main middle picture">
-				</div>
+				</div> -->
 
 				<div class="section">
 					I am a self-taught Front End Engineer who has been diving head first
