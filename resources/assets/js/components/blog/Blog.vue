@@ -15,8 +15,29 @@
                     </div>
                     <div v-else>
                         <div class="has-text-right p-b-xl">
-                        <i class="fa fa-filter"></i>
-                        <input type="text" v-model="filter" @keyup="filterBy">
+                            <i class="fa fa-filter"></i>
+                            <input type="text" v-model="filter" @keyup="filterBy">
+                        </div>
+                        <div class="has-text-center p-b-xl">
+                            <p class="title">
+                                Share Knowledge!
+                            </p>
+                        </div>
+                        <div class="content p-b-md">
+                            <p>
+                                This is a couple of things for me. My attempt at regurgitating information with the
+                                intention of retaining what’s important as well as solidifying my knowledge - or lack
+                                thereof - and taking a stab at more formal writing. I love creative writing and playing
+                                with the aesthetics of words, but formally writing in school was a bit of a challenge?
+                                This style of writing should help me create concise, structured sentences that are to
+                                the point to balance out the run-on sentences of emotions that spill out of my hands
+                                and mind when I write. I’m sure my character and tone of writing - whatever that is - will
+                                leak out occasionally from time to time, but hopefully after some time we’ll figure out
+                                what type of presence and language I really want to convey!
+                            </p>
+                            <p>
+                                Join me as I attempt to explain topics of interest and expand someone’s knowledge!
+                            </p>
                         </div>
                         <div class="columns is-multiline">
                         <div v-for="post in posts" class="column is-one-third ">
