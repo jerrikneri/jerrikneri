@@ -1,5 +1,5 @@
 <template>
-    <div class="footer has-text-centered">
+    <div class="m-t-xl footer footer-font has-text-centered">
         <div class="">
             <figure class="has-image-centered image is-128x128">
                 <img class="is-rounded"
