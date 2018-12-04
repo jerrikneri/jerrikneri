@@ -9,7 +9,7 @@
         <section v-show="preview == null"
                  class="box container has-text-centered is-large">
             <span class="title is-size-2"><u>PROJECTS</u></span>
-            <div class="section">
+            <div class="box section">
                 <p class="title is-size-3 jerrikneri">
                     JERRIKNERI.COM <span class="fa fa-tv"></span>
                 </p>
@@ -19,8 +19,7 @@
                     <li>SASS & Bulma</li>
                 </ul>
             </div>
-            <hr>
-            <div class="section">
+            <div class="box section">
                 <div class="columns">
                     <div class="column order-2">
                         <img class="image"
@@ -45,8 +44,7 @@
                     </div>
                 </div>
             </div>
-            <hr>
-            <div class="section">
+            <div class="box section">
                 <div class="columns">
                     <div class="column">
                         <p class="title is-size-3">

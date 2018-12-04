@@ -4,7 +4,7 @@
 @include('partials.header')
 @endif
 
-@if(Request::is('blog/*'))
+@if(Request::is('blog/*') || Request::is('diary/*'))
 <body class="body">
 @else
     <body class="body has-navbar-fixed-top">
