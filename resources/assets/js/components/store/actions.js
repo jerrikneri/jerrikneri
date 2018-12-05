@@ -21,6 +21,14 @@ export default {
                 console.error('Unable to load entries.', error);
             });
     },
+    getTags ({commit, state}) {
+        axios.get('/tags')
+        .then(response => {
+            console.log('getTags', response);
+            commit('updateTags', response.data);
+        })
+        .catch(error => console.error('Unable to fetch tags.', error));
+    },
     getProjects: ({ commit, state }) => {
         axios
             .get('project/all')

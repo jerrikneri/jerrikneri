@@ -8,5 +8,8 @@ export default {
   updateProjects: (state, projects) => {
     state.projects = projects;
   },
+  updateTags: (state, tags) => {
+    state.tags = tags;
+  }
 
 };

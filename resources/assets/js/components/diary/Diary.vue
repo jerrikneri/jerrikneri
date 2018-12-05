@@ -10,14 +10,31 @@
             </p>
             </div>
             <div v-else>
-              <div class="has-text-right p-b-xl">
-                <i class="fa fa-filter"></i>
-                <input type="text" v-model="filter" @keyup="filterBy">
+              <div class="columns">
+                <div class="column">
+                  <p class="p-b-md">Popular Tags:</p>
+                  <div class="tags">
+                    <span v-for="tag in tags"
+                    class="tag is-link has-text-black"
+                    @click="tagFilter(tag.name)">
+                      #{{ tag.name }}
+                    </span>
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="has-text-centered p-b-lg">
+                    <p class="title">Dances with Words</p>
+                    <p class="subtitle is-3">Table of Contents:</p>
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="has-text-right p-b-xl">
+                    <i class="fa fa-filter"></i>
+                    <input type="text" v-model="filter" @keyup="filterBy">
+                  </div>
+                </div>
               </div>
-              <div class="has-text-centered p-b-lg">
-                <p class="title">Dances with Words</p>
-                <p class="subtitle is-3">Table of Contents:</p>
-              </div>
+
               <div v-for="entry in currentPage">
                 <Entry :title="entry.title"
                   :tags="entry.tags"
@@ -69,6 +86,10 @@ export default {
           return doesTitleMatch || doesTagMatch.includes(true);
       });
     },
+    tagFilter(tag) {
+      this.filter = tag;
+      this.filterBy();
+    },
     updatePage(data) {
       console.log(data);
       this.currentPage = data;
@@ -78,6 +99,11 @@ export default {
     this.currentPage = [...this.$store.getters.diary].slice(0, this.perPage)
     this.cachedEntries = this.$store.getters.diary;
   },
+  computed: {
+    tags() {
+      return this.$store.getters.tags;
+    }
+  }
 };
 </script>
 

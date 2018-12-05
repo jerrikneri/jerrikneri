@@ -17,4 +17,12 @@ class Tag extends Model
     {
         return $this->belongsToMany(BlogPost::class);
     }
+
+    public function getAll()
+    {
+        return static::all()
+                ->map(function ($tag) {
+                    return $tag->name;
+                });
+    }
 }
