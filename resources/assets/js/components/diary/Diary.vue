@@ -15,7 +15,7 @@
                   <p class="p-b-md">Popular Tags:</p>
                   <div class="tags">
                     <span v-for="tag in tags"
-                    class="tag is-link has-text-black"
+                    class="button tag is-link has-text-black"
                     @click="tagFilter(tag.name)">
                       #{{ tag.name }}
                     </span>
