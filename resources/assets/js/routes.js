@@ -41,6 +41,7 @@ export default [
         async beforeEnter(to, from, next) {
             if (!store.state.diary_entries.length) {
                 await store.dispatch('fetchDiary');
+                await store.dispatch('getTags');
             }
             next();
         }

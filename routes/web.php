@@ -79,3 +79,5 @@ Route::group(['prefix' => 'project', 'middleware' => 'can:update,project'], func
 });
 
 Route::post('subscribe-to-newsletter', 'NewsletterSubscribeController@store');
+
+Route::resource('/tags', 'TagsController');
