@@ -19,7 +19,7 @@
         <div class="field">
             <label class="label">Content:</label>
             <div class="control">
-                <textarea class="textarea" name="content" placeholder="Content"></textarea>
+                <textarea rows="35" class="textarea" name="content" placeholder="Content"></textarea>
             </div>
         </div>
 
