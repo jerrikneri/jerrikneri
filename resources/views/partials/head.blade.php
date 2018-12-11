@@ -9,4 +9,6 @@
         <title>A Blog Code Diary</title>
 
         <link href="{!! URL::asset('css/app.css') !!}" rel="stylesheet" type="text/css">
+
+        @include('partials.sendlaneTracking');
     </head>
