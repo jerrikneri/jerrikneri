@@ -39,7 +39,8 @@
                 <Entry :title="entry.title"
                   :tags="entry.tags"
                   :content="entry.content"
-                  :date="new Date(Date.parse(entry.created_at)).toLocaleDateString('en-US', dateFormat)"
+
+                  :date="moment(entry.created_at)"
                   :id="entry.id">
                 </Entry>
                 <span v-if="entry !== currentPage[currentPage.length-1]">
@@ -60,7 +61,7 @@
 import Entry from "./Entry";
 import EntryForm from "./EntryForm";
 import Pagination from "../UI/Pagination";
-
+let moment = require('moment');
 export default {
   props: ["preview"],
   name: "Diary",
@@ -76,6 +77,10 @@ export default {
     };
   },
   methods: {
+    moment(date) {
+      return moment(date).format('MMMM Do YYYY, h:mm:ss a');
+;
+    },
     filterBy() {
       this.currentPage = this.cachedEntries.filter(entry => {
           let doesTitleMatch = entry.title.toLowerCase().includes(this.filter.toLowerCase());
