@@ -62,6 +62,7 @@
 import Entry from "./Entry";
 import EntryForm from "./EntryForm";
 import Pagination from "../UI/Pagination";
+import { mapGetters } from 'vuex';
 let moment = require('moment');
 export default {
   props: ["preview"],
@@ -87,6 +88,10 @@ export default {
       this.filterBy();
     },
     filterBy() {
+      if (this.filter === '') {
+        console.log('cleared filter');
+        return this.currentPage = [...this.$store.getters.diary].slice(0, this.perPage);
+      }
       this.currentPage = this.cachedEntries.filter(entry => {
           let doesTitleMatch = entry.title.toLowerCase().includes(this.filter.toLowerCase());
           let doesTagMatch = [];
@@ -101,7 +106,6 @@ export default {
       this.filterBy();
     },
     updatePage(data) {
-      console.log(data);
       this.currentPage = data;
     }
   },
@@ -110,9 +114,7 @@ export default {
     this.cachedEntries = this.$store.getters.diary;
   },
   computed: {
-    tags() {
-      return this.$store.getters.tags;
-    }
+    ...mapGetters(['tags'])
   }
 };
 </script>
