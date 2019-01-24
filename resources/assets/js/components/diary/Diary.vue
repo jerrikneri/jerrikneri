@@ -31,6 +31,7 @@
                   <div class="has-text-right p-b-xl">
                     <i class="fa fa-filter"></i>
                     <input type="text" v-model="filter" @keyup="filterBy">
+                    <button v-show="filter !== ''" @click="clearFilter">Clear</button>
                   </div>
                 </div>
               </div>
@@ -80,6 +81,10 @@ export default {
     moment(date) {
       return moment(date).format('MMMM Do YYYY, h:mm:ss a');
 ;
+    },
+    clearFilter() {
+      this.filter = '';
+      this.filterBy();
     },
     filterBy() {
       this.currentPage = this.cachedEntries.filter(entry => {

@@ -17,6 +17,7 @@
                         <div class="has-text-right p-b-xl">
                             <i class="fa fa-filter"></i>
                             <input type="text" v-model="filter" @keyup="filterBy">
+                            <button v-show="filter !== ''" @click="clearFilter">Clear</button>
                         </div>
                         <div class="has-text-center p-b-xl">
                             <p class="title">
@@ -96,6 +97,10 @@ export default {
             }
     },
     methods: {
+        clearFilter() {
+            this.filter = '';
+            this.filterBy();
+        },
         filterBy() {
             this.posts = this.cachedPosts.filter(posts => {
                 let doesTitleMatch = posts.title.toLowerCase().includes(this.filter.toLowerCase());
