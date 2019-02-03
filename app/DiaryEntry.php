@@ -8,7 +8,7 @@ class DiaryEntry extends Model
 {
     public $timestamps = true;
     protected $table = 'diary_entries';
-    protected $fillable = ['title', 'content'];
+    protected $fillable = ['title', 'content', 'user_id'];
 
     public function addComment($body)
     {
@@ -37,9 +37,9 @@ class DiaryEntry extends Model
         return $this->id;
     }
 
-    public static function getEntries()
+    public function getEntries()
     {
-        return static::with('tags:name')->where('id', '>', '0')
+        return $this->with('tags:name')->where('id', '>', '0')
             ->orderBy('id', 'desc')->get();
     }
 

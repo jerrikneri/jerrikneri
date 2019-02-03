@@ -17,16 +17,6 @@
 
 				<hr>
 
-				<!-- <div class="section is-flex">
-					<img class="has-image-centered image"
-						src="/images/epitome/motorcycle.jpg"
-						srcset="/images/epitome/motorcycle.jpg 1024w,
-							/images/epitome/motorcycle.jpg 640w,
-							/images/epitome/motorcycle.jpg 320w"
-						sizes="(min-width: 1024px) 1024px, 100vw"
-						alt="Main middle picture">
-				</div> -->
-
 				<div class="section">
 					I am a self-taught Front End Engineer who has been diving head first
 					into all of the readily available resources to acquire the tools and
@@ -83,6 +73,7 @@
 						</a>
 					</div>
 				</section>
+
 				<section class="columns has-text-centered is-multiline level">
 					<div class="column">
 						<a href="https://codepen.io/jaewrek/full/xLdBGd">
@@ -140,20 +131,14 @@
 
 		</div>
 	</div>
-
-
 </template>
+
 <script>
 import Resume from '../main/Resume';
 export default {
 	name: "Epitome",
 	components: {
 		Resume
-	},
-	data() {
-	return {
-		test: "Test"
-	};
 	}
 };
 </script>

@@ -1,13 +1,12 @@
 <template>
     <div class="">
-        <div v-show="preview === true">
-            <!-- <h3>Read with me...</h3> -->
-        </div>
+
+        <div v-show="preview === true"></div>
+
         <section class="container box section"
             v-show="preview == null">
             <div class="content is-large">
                 <div class="has-text-centered">
-                    <!-- <h1><u>BLOG</u></h1> -->
                     <div v-if="cachedPosts.length === 0">
                         <p class="title is-size-1">
                             Blog posts coming soon...
@@ -75,9 +74,11 @@
                 </div>
             </div>
         </section>
+
         <div v-show="preview == null">
             <Pagination v-show="cachedPosts.length > perPage" :listData=[...cachedPosts] :perPage="perPage" @update="updatePage"/>
         </div>
+
     </div>
 </template>
 

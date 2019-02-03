@@ -8,19 +8,19 @@
           <Blog :preview="true"></Blog>
         </router-link>
         </div>
-        
+
         <div class="column has-text-centered is-size-4">
           <router-link class="box column" to="/code">
           PROJECTS
           <Code :preview="true"></Code>
         </router-link></div>
-        
+
         <div class="column has-text-centered is-size-4">
           <router-link class="box column" to="/diary">
           JOURNAL
           <Diary :preview="true"></Diary>
         </router-link></div>
-        
+
       </div>
     </section>
 </template>
@@ -32,10 +32,7 @@ import Diary from "./../diary/Diary";
 
 export default {
   name: "SPA",
-  components: { Blog, Code, Diary },
-  data() {
-    return {};
-  }
+  components: { Blog, Code, Diary }
 };
 </script>
 

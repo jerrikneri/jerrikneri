@@ -2,10 +2,9 @@
     <div class="content code-font">
 
         <div v-show="preview === true"
-             class="">
+            class="">
         </div>
-        <!-- <h3>Build with me...</h3> -->
-        <!-- <img class="img-center" src="../../../img/ls.jpg" height="250px"> -->
+
         <section v-show="preview == null"
                  class="box container has-text-centered is-large">
             <span class="title is-size-2"><u>PROJECTS</u></span>
@@ -91,14 +90,8 @@
 
 <script>
 export default {
-  props: ["preview"],
-  name: "Code",
-  components: {},
-  data() {
-    return {
-      test: "Test"
-    };
-  }
+    props: ["preview"],
+    name: "Code"
 };
 </script>
 

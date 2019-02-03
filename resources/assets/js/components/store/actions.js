@@ -40,7 +40,6 @@ export default {
             });
     },
     newsletterSubscribe: ({ commit }, form_data) => {
-        console.log('in action', form_data);
         return axios
             .post('subscribe-to-newsletter', form_data);
     }

@@ -3,7 +3,7 @@
 @section('content')
 EDIT
 
-<form method="post" action="{{ url('diary/edit/' . $diary->id) }}">
+<form method="post" action="{{ url('diary/' . $diary->id) . '/edit' }}">
     {{ csrf_field() }}
     {{ method_field('PATCH') }}
     <p>Title:</p>

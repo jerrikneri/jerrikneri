@@ -8,12 +8,12 @@
 </template>
 
 <script>
-import Resume from './Resume';
+// import Resume from './Resume';
 export default {
     name: "About",
-    components: {
-        Resume
-    },
+    // components: {
+    //     Resume
+    // },
     data() {
         return {};
     }

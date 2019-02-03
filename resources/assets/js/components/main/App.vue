@@ -1,7 +1,10 @@
 <template>
     <div class="is-fluid">
+
         <Navbar></Navbar>
+
         <Header></Header>
+
         <div v-show="$route.path==='/'" class="has-text-white container has-text-centered is-size-1 p-t-xl p-b-xl">
                 <p class="has-text-white title jerrikneri">
                     JERRIK NERI
@@ -10,6 +13,7 @@
                     <Resume position="center"></Resume>
                 </div>
         </div>
+
         <section class="section container is-flex is-fluid has-text-centered">
             <img v-show="$route.path==='/'"
                 class="image has-image-centered is-rounded"
@@ -19,7 +23,6 @@
                     /images/car.jpg 320w"
                 sizes="(min-width: 1024px) 1024px, 100vw"
                 alt="Main image">
-
         </section>
 
         <SPA></SPA>
@@ -33,6 +36,7 @@
         <About v-show="$route.path==='/'"></About>
 
         <Footer></Footer>
+
     </div>
 </template>
 
@@ -61,9 +65,6 @@ export default {
         Resume,
         SPA,
         Subscribe
-    },
-    data() {
-        return {};
     }
 };
 </script>

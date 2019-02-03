@@ -101,12 +101,6 @@ export default {
     return {
       showNav: false
     };
-  },
-  methods: {
-    toggleBurger(e) {
-      e.target.classList.toggle("is-active");
-      console.log("clicked", e);
-    }
   }
 };
 </script>
