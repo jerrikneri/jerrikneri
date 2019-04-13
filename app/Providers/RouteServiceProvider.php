@@ -6,7 +6,6 @@ use App\BlogPost;
 use App\DiaryEntry;
 use App\Project;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
-use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Route;
 
 class RouteServiceProvider extends ServiceProvider
@@ -23,17 +22,17 @@ class RouteServiceProvider extends ServiceProvider
     /**
      * Define your route model bindings, pattern filters, etc.
      */
-    public function boot(Router $router)
+    public function boot()
     {
-        parent::boot($router);
+        parent::boot();
 
-        $router->bind('blog', function ($id) {
+        Route::bind('blog', function ($id) {
             return BlogPost::find($id);
         });
-        $router->bind('diary', function ($id) {
+        Route::bind('diary', function ($id) {
             return DiaryEntry::find($id);
         });
-        $router->bind('project', function ($id) {
+        Route::bind('project', function ($id) {
             return Project::find($id);
         });
     }

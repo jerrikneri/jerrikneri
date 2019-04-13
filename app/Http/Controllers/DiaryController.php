@@ -5,13 +5,10 @@ namespace App\Http\Controllers;
 use App\DiaryEntry;
 use App\Http\Requests\DiaryRequest;
 use App\Http\Transformers\DiaryTransformer;
-use App\Tag;
-use Illuminate\Http\Request;
-use Illuminate\Http\Response;
-use Illuminate\Support\Facades\Input;
 use App\Services\DiaryService;
 use Illuminate\Database\Eloquent\Collection;
-use Illuminate\Support\Facades\Log;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Redirect;
 
 class DiaryController extends Controller
 {
@@ -49,10 +46,10 @@ class DiaryController extends Controller
         return view('diary.edit', compact('diary'));
     }
 
-    public function update(DiaryEntry $diary, DiaryRequest $request)
+    public function update(DiaryEntry $diary, DiaryRequest $request): RedirectResponse
     {
         $diary->update(
-            $this->diaryTransformer->updateTransformer($request->all())
+            $this->diaryTransformer->updateTransformer($request->validated())
         );
 
         $this->diaryService->associateTags($request->tag, $diary->id);

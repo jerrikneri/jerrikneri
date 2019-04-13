@@ -44,12 +44,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 });
 
 Route::resource('diary', 'DiaryController');
-Route::get('/diary/all', 'DiaryController@index');
 Route::post('diary/{diary}/comments', 'DiaryCommentsController@store');
 Route::get('diary/{diary}', 'DiaryController@show');
 
 Route::resource('blog', 'BlogController');
-Route::get('blog/all', 'BlogController@index');
 Route::get('blog/{blog}', 'BlogController@show');
 Route::post('blog/{blog}/comments', 'BlogCommentsController@store');
 

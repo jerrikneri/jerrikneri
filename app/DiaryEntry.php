@@ -3,9 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class DiaryEntry extends Model
 {
+    use SoftDeletes;
+
     public $timestamps = true;
     protected $table = 'diary_entries';
     protected $fillable = ['title', 'content', 'user_id'];
