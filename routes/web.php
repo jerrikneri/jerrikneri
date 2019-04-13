@@ -45,10 +45,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
 Route::resource('diary', 'DiaryController');
 Route::post('diary/{diary}/comments', 'DiaryCommentsController@store');
-Route::get('diary/{diary}', 'DiaryController@show');
 
 Route::resource('blog', 'BlogController');
-Route::get('blog/{blog}', 'BlogController@show');
 Route::post('blog/{blog}/comments', 'BlogCommentsController@store');
 
 Route::group(['prefix' => 'blog', 'middleware' => 'can:update,comment'], function () {
