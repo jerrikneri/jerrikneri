@@ -3,21 +3,25 @@
 namespace App\Http\Controllers;
 
 use App\BlogPost;
-use Illuminate\Http\Request;
-use Illuminate\Http\Response;
-use Illuminate\Support\Facades\Input;
+use App\Http\Requests\BlogPostStoreRequest;
 use App\Tag;
+use Illuminate\Support\Collection;
 
 class BlogController extends Controller
 {
-    public function __construct()
+    protected $blogPost;
+    protected $tag;
+
+    public function __construct(BlogPost $blogPost, Tag $tag)
     {
+        $this->blogPost = $blogPost;
+        $this->tag = $tag;
         $this->middleware('auth', ['except' => ['show', 'index']]);
     }
 
-    public function index()
+    public function index(): Collection
     {
-        return BlogPost::getPosts();
+        return $this->blogPost->getPosts();
     }
 
     public function show(BlogPost $blog)
@@ -29,25 +33,17 @@ class BlogController extends Controller
     {
     }
 
-    public function store(Request $request)
+    public function store(BlogPostStoreRequest $request)
     {
-        $this->validate(request(), [
-            'title' => 'required',
-            'image' => 'required',
-            'content' => 'required'
-        ]);
-        BlogPost::create([
-        'title' => Input::get('title'),
-        'image' => Input::get('image'),
-        'content' => Input::get('content'),
-        'user_id' => auth()->id()
-        ]);
+        $blogPost = $this->blogPost->create(
+            array_merge(
+                $request->validated(),
+                ['user_id' => auth()->id()]
+            )
+        );
 
-        $id = BlogPost::latest()->first()->id;
-        $tags = $request->tag;
-        $this->parseTags($tags, $id);
+        $this->parseTags($request->tag, $blogPost->id);
 
-        // return response($entry->jsonSerialize(), Response::HTTP_CREATED);
         return view('admin.postSuccess');
     }
 
@@ -59,16 +55,16 @@ class BlogController extends Controller
     {
     }
 
-    protected function parseTags($tags, $blogId){
-        $tags = explode(",", $tags);
-        foreach($tags as $tag)
-        {
+    protected function parseTags($tags, $blogId)
+    {
+        $tags = explode(',', $tags);
+        foreach ($tags as $tag) {
             $tag = trim($tag);
-            Tag::firstOrCreate([
+            $this->tag->firstOrCreate([
                 'name' => $tag
             ]);
-            $tagId = Tag::where('name', $tag)->get()->first()->id;
-            BlogPost::find($blogId)->tags()->attach($tagId);
+            $tagId = $this->tag->whereName($tag)->get()->first()->id;
+            $this->blogPost->find($blogId)->tags()->attach($tagId);
         }
     }
 }
